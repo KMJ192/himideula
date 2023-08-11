@@ -1,4 +1,4 @@
-import RootRouter from './Router/RootRouter';
+import RootRouter from './RootRouter';
 
 function App() {
   return <RootRouter />;
