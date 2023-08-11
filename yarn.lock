@@ -647,6 +647,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.11.1
     "@emotion/styled": ^11.11.0
+    "@himideula/react-utils": "workspace:^"
     "@types/react": 18.2.20
     "@types/react-dom": 18.2.7
     "@vitejs/plugin-react": ^4.0.3
@@ -658,7 +659,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@himideula/react-utils@workspace:packages/react-utils":
+"@himideula/react-utils@workspace:^, @himideula/react-utils@workspace:packages/react-utils":
   version: 0.0.0-use.local
   resolution: "@himideula/react-utils@workspace:packages/react-utils"
   dependencies:
@@ -668,12 +669,10 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.0.0
     "@typescript-eslint/parser": ^6.0.0
     "@vitejs/plugin-react": ^4.0.3
-    eslint: ^8.45.0
-    eslint-plugin-react-hooks: ^4.6.0
-    eslint-plugin-react-refresh: ^0.4.3
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.14.2
+    tsup: ^7.2.0
     typescript: ^5.0.2
     vite: ^4.4.5
   languageName: unknown
@@ -2337,15 +2336,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-refresh@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "eslint-plugin-react-refresh@npm:0.4.3"
-  peerDependencies:
-    eslint: ">=7"
-  checksum: 0332c950bb46c3058fd06acb1dbdc3ea0af05238645f4c0f575e0e367440dc56afb928f855833d321b9e8109e08c63d5f476cc55d507f883a80c289bfcd509cb
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-react@npm:^7.30.1":
   version: 7.33.1
   resolution: "eslint-plugin-react@npm:7.33.1"
@@ -2405,7 +2395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.21.0, eslint@npm:^8.45.0":
+"eslint@npm:^8.21.0":
   version: 8.46.0
   resolution: "eslint@npm:8.46.0"
   dependencies:
