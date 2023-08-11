@@ -1,4 +1,4 @@
-import type { RouterMap } from './types';
+import type { RouterMap } from '../components/Router/types';
 
 type PageURL = {
   readonly [key: string]: string;
