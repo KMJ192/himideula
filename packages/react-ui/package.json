@@ -1,12 +1,26 @@
 {
   "name": "@himideula/react-ui",
-  "private": true,
   "version": "0.0.01",
+  "description": "리액트에서 쓰는 UI,,, 몇개,,,",
+  "author": {
+    "name": "MyeongJunKim",
+    "email": "myeongjun222@gmail.com"
+  },
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
   "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "vite --host --port 3001",
-    "build": "tsup ./src/index.ts",
-    "preview": "vite preview"
+    "build": "rm -rf build && tsup ./src/index.ts",
+    "pub": "yarn build && npm publish"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -16,6 +30,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@vitejs/plugin-react": "^4.0.3",

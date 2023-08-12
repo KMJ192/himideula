@@ -9,4 +9,6 @@ export default defineConfig({
   },
   outDir: 'build',
   dts: true,
+  minify: true,
+  external: ['react', 'react-dom', 'react-router-dom'],
 });
