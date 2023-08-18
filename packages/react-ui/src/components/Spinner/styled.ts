@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
 import type { SpinnerBaseProps } from './Spinner';
 
 type Props = Pick<
@@ -6,7 +8,7 @@ type Props = Pick<
   'size' | 'borderWidth' | 'color' | 'color2'
 >;
 
-const rotation = `
+const rotation = css`
   @keyframes rotation {
     0% {
       transform: rotate(0deg);

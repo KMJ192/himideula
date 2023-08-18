@@ -17,6 +17,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "declaration": true,
+    "declarationDir": "build",
 
     /* Linting */
     "strict": true,
@@ -26,5 +28,5 @@
     "jsxImportSource": "@emotion/react"
   },
   "include": ["src", "./typings"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": ["node_modules"]
 }

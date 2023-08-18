@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { OVER_RIDABLE_PROPS } from '@src/types/types';
 import Styled from './styled';
-import { COLOR } from '@src/styles/color';
+import { COLOR } from '@src/color/color';
 
 type BaseProps = {
   type?: 'type-1' | 'type-2' | 'type-3';
