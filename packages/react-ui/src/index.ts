@@ -25,5 +25,7 @@ export { default as Spinner } from './components/Spinner/Spinner';
 export type { SpinnerProps } from './components/Spinner/Spinner';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
+export { default as Card } from './components/Card/Card';
+export type { CardProps } from './components/Card/Card';
 
 export { default as Test } from './components/Test/Test';
