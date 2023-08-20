@@ -906,10 +906,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-commonjs", "virtual:836db8c94cfc5e002cdede576448737fda78ebb665192b4314a1ffcdd77e602da8ef0577cf7277721a1ba540f1ad0fe4d0c5b494296974d608eb7fc486e8454c#npm:25.0.4"],\
             ["@rollup/plugin-terser", "virtual:836db8c94cfc5e002cdede576448737fda78ebb665192b4314a1ffcdd77e602da8ef0577cf7277721a1ba540f1ad0fe4d0c5b494296974d608eb7fc486e8454c#npm:0.4.3"],\
             ["@rollup/plugin-typescript", "virtual:836db8c94cfc5e002cdede576448737fda78ebb665192b4314a1ffcdd77e602da8ef0577cf7277721a1ba540f1ad0fe4d0c5b494296974d608eb7fc486e8454c#npm:11.1.2"],\
+            ["@types/lodash", "npm:4.14.197"],\
             ["@types/node", "npm:20.5.0"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["@types/rollup-plugin-peer-deps-external", "npm:2.2.1"],\
+            ["lodash", "npm:4.17.21"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:3639714a2a975930934bbff63ed4df2248a6a79d9a0f3456bc12b773ae0504e6bbcaa8d4f2c7bd92578183abfe1cf51396af1aafb0736267decc9400693ef57a#npm:18.2.0"],\
             ["rollup", "npm:3.28.0"],\
@@ -1659,6 +1661,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip/node_modules/@types/json5/",\
           "packageDependencies": [\
             ["@types/json5", "npm:0.0.29"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/lodash", [\
+        ["npm:4.14.197", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.197-8db1555bb5-53d7567d17.zip/node_modules/@types/lodash/",\
+          "packageDependencies": [\
+            ["@types/lodash", "npm:4.14.197"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4827,6 +4838,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["locate-path", "npm:6.0.0"],\
             ["p-locate", "npm:5.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
+          "packageDependencies": [\
+            ["lodash", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\

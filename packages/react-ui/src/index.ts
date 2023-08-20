@@ -31,11 +31,20 @@ export { default as Radio } from './components/Radio/Radio';
 export type { RadioProps } from './components/Radio/Radio';
 export { default as Switch } from './components/Switch/Switch';
 export type { SwitchProps } from './components/Switch/Switch';
-export { default as Tab } from './components/Tab/Tab';
-export type { TabProps } from './components/Tab/Tab';
 export { default as Spinner } from './components/Spinner/Spinner';
 export type { SpinnerProps } from './components/Spinner/Spinner';
+export { default as Tab } from './components/Tab/Tab';
+export type { TabProps } from './components/Tab/Tab';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
+
+export { SideNav, SideNavTemplate } from './components/SideNav';
+export type {
+  SideNavProps,
+  SideNavMenuProps,
+  SideNavMenuGroupProps,
+  SideNavItem,
+  SideNavKey,
+} from './components/SideNav';
 
 // export { default as Test } from './components/Test/Test';
