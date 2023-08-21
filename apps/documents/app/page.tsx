@@ -1,7 +1,5 @@
-'use client';
-
-import { Test, Button, Checkbox, Spinner } from '@himideula/react-ui';
+import { HamburgerMenu } from '@himideula/react-ui';
 
 export default function Home() {
-  return <main></main>;
+  return <HamburgerMenu type='type-3'></HamburgerMenu>;
 }
