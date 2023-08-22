@@ -39,7 +39,7 @@ const rollupConfig = {
   output: {
     dir: './build',
     format: 'esm',
-    banner: `"use client";import "./index.css";`,
+    banner: `import "./index.css";`,
   },
   plugins,
   external: ['react', 'react-dom'],
