@@ -1,16 +1,18 @@
-// // layouts
-// export { default as Center } from './layout/Center/Center';
-// export type { CenterProps } from './layout/Center/Center';
-// export { default as Flex } from './layout/Flex/Flex';
-// export type { FlexProps } from './layout/Flex/Flex';
-// export { default as Grid } from './layout/Grid/Grid';
-// export type { GridProps } from './layout/Grid/Grid';
-// export { default as Float } from './layout/Float/Float';
-// export type { FloatProps } from './layout/Float/Float';
-// export { default as Row } from './layout/Row/Row';
-// export type { RowProps } from './layout/Row/Row';
-// export { default as Spacing } from './layout/Spacing/Spacing';
-// export type { SpacingProps } from './layout/Spacing/Spacing';
+// layouts
+export { default as Center } from './layout/Center/Center';
+export type { CenterProps } from './layout/Center/Center';
+export { default as Flex } from './layout/Flex/Flex';
+export type { FlexProps } from './layout/Flex/Flex';
+export { default as Grid } from './layout/Grid/Grid';
+export type { GridProps } from './layout/Grid/Grid';
+export { default as Float } from './layout/Float/Float';
+export type { FloatProps } from './layout/Float/Float';
+export { default as Row } from './layout/Row/Row';
+export type { RowProps } from './layout/Row/Row';
+export { default as Spacing } from './layout/Spacing/Spacing';
+export type { SpacingProps } from './layout/Spacing/Spacing';
+export { default as Stack } from './layout/Stack/Stack';
+export type { StackProps } from './layout/Stack/Stack';
 
 // // components
 // export { default as Button } from './components/Button/Button';
