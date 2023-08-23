@@ -48,3 +48,6 @@ export type {
   SideNavItem,
   SideNavKey,
 } from './components/SideNav';
+
+export { default as PageTemplate } from './components/PageTemplate/PageTemplate';
+export type { PageTemplateProps } from './components/PageTemplate/PageTemplate';
