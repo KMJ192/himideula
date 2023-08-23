@@ -16,13 +16,13 @@ export default class ErrorBoundary extends React.Component<Props, State> {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  static getDerivedStateFromError(error: Error) {
+  static getDerivedStateFromError() {
     // Update state so the next render will show the fallback UI.
     return { hasError: true };
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch() {
     // You can also log the error to an error reporting service
     // logErrorToMyService(error, errorInfo);
   }

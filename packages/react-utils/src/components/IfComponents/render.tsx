@@ -1,4 +1,3 @@
-import React from 'react';
 import type { FCWithImplicitChildren } from './types';
 
 /**
@@ -10,5 +9,5 @@ export const render: FCWithImplicitChildren = (props) => {
     return <>{props.children()}</>;
   }
 
-  return <>{props.children || null}</>;
+  return <div>{props.children || null}</div>;
 };

@@ -10,7 +10,10 @@ type Props = {
   wrongAccessPage: ReactNode;
   notFoundPage: ReactNode;
   children: ReactNode;
-  extractElement?: (page: ReactNode, pageInfo: Omit<RouterMap, 'page'>) => ReactNode;
+  extractElement?: (
+    page: ReactNode,
+    pageInfo: Omit<RouterMap, 'page'>,
+  ) => ReactNode;
 };
 
 function Router({

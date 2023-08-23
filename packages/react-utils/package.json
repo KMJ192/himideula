@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "vite --host --port 3002",
-    "build": "rm -rf build && tsup ./src/index.ts",
+    "build": "rm -rf build && rollup -c --bundleConfigAsCjs",
     "pub": "yarn build && npm publish"
   },
   "dependencies": {
@@ -28,14 +28,19 @@
     "react-router-dom": "^6.14.2"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.0.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@types/react-router-dom": "^5.3.3",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "tsup": "^7.2.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "@types/rollup-plugin-peer-deps-external": "^2",
+    "rollup": "^3.28.1",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.1.6"
   }
 }
