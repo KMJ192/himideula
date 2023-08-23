@@ -34,5 +34,5 @@
     "wk:rut": "yarn workspace @himideula/react-utils",
     "clear:all": "sh ./scripts/clearDependencies.sh"
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@3.6.2"
 }

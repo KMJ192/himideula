@@ -1,5 +1,11 @@
-import { HamburgerMenu } from '@himideula/react-ui';
+import { Center, Flex, Float, HamburgerMenu } from '@himideula/react-ui';
 
 export default function Home() {
-  return <HamburgerMenu type='type-3'></HamburgerMenu>;
+  return (
+    <Flex>
+      <Float startDirection='rb' bottom={100} right={100}>
+        123
+      </Float>
+    </Flex>
+  );
 }
