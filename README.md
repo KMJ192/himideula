@@ -1,4 +1,4 @@
-# himideula 패키지 워크스페이스
+# ssamssam 패키지 워크스페이스
 - UI 라이브러리
 - UI Documents 페이지
 - React 패키지
@@ -6,9 +6,10 @@
 ### Getting start
 
 - UI
-  - yarn add @himideula/react-ui
+  - yarn add @ssamssam/react-ui
 - Module
-  - yarn add @himideula/react-utils
+  - yarn add @  - yarn add @ssam/react-ui
+/react-utils
 
 ### dev
 - React

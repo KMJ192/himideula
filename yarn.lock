@@ -2186,7 +2186,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ssamssam/react-modules@workspace:packages/react-modules":
+"@ssamssam/react-modules@^0.0.1, @ssamssam/react-modules@workspace:packages/react-modules":
   version: 0.0.0-use.local
   resolution: "@ssamssam/react-modules@workspace:packages/react-modules"
   dependencies:
@@ -2219,6 +2219,7 @@ __metadata:
     "@rollup/plugin-node-resolve": ^15.2.1
     "@rollup/plugin-terser": ^0.4.3
     "@rollup/plugin-typescript": ^11.1.2
+    "@ssamssam/react-modules": ^0.0.1
     "@types/lodash": ^4
     "@types/node": ^20.5.0
     "@types/react": 18.2.20
