@@ -24,7 +24,7 @@
   "scripts": {
     "build": "rm -rf build && rollup -c --bundleConfigAsCjs --environment ENTRY_POINT:./src/index.ts",
     "build:ind": "rm -rf build && rollup -c --bundleConfigAsCjs",
-    "pub": "yarn build && npm publish"
+    "pub": "npm publish"
   },
   "dependencies": {
     "@ssamssam/react-modules": "^0.0.1",
