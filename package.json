@@ -1,5 +1,5 @@
 {
-  "name": "@himideula/workspace",
+  "name": "@ssamssam/workspace",
   "private": true,
   "keywords": [],
   "version": "0.0.1",
@@ -29,10 +29,10 @@
     ]
   },
   "scripts": {
-    "wk:docs": "yarn workspace @himideula/documents",
-    "wk:rui": "yarn workspace @himideula/react-ui",
-    "wk:rut": "yarn workspace @himideula/react-utils",
+    "wk:docs": "yarn workspace @ssamssam/documents",
+    "wk:rui": "yarn workspace @ssamssam/react-ui",
+    "wk:rmo": "yarn workspace @ssamssam/react-modules",
     "clear:all": "sh ./scripts/clearDependencies.sh"
   },
-  "packageManager": "yarn@3.6.2"
+  "packageManager": "yarn@3.6.3"
 }

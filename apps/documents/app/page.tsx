@@ -1,4 +1,4 @@
-import { Center, Flex, Float, HamburgerMenu } from '@himideula/react-ui';
+import { Center, Flex, Float, HamburgerMenu } from '@ssamssam/react-ui';
 
 export default function Home() {
   return (

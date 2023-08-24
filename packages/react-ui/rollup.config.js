@@ -10,7 +10,7 @@ import terser from '@rollup/plugin-terser';
 import autoprefixer from 'autoprefixer';
 
 const banner = `"use client";import "./index.css";`;
-const entry = './src/index.ts';
+const entry = process.env.ENTRY_POINT ?? './src/index.ts';
 
 const plugins = [
   typescript({

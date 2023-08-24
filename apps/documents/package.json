@@ -1,5 +1,5 @@
 {
-  "name": "@himideula/documents",
+  "name": "@ssamssam/documents",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,8 +11,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@himideula/react-ui": "workspace:^",
     "@mui/material": "^5.14.5",
+    "@ssamssam/react-ui": "workspace:^",
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",

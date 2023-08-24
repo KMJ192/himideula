@@ -7,7 +7,6 @@
     "skipLibCheck": true,
     "strict": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -15,5 +14,8 @@
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   }
 }

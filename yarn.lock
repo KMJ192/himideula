@@ -1683,98 +1683,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@himideula/documents@workspace:apps/documents":
-  version: 0.0.0-use.local
-  resolution: "@himideula/documents@workspace:apps/documents"
-  dependencies:
-    "@emotion/react": ^11.11.1
-    "@emotion/styled": ^11.11.0
-    "@himideula/react-ui": "workspace:^"
-    "@mui/material": ^5.14.5
-    "@types/node": 20.4.9
-    "@types/react": 18.2.20
-    "@types/react-dom": 18.2.7
-    next: 13.4.13
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-components: ^6.0.7
-    typescript: 5.1.6
-  languageName: unknown
-  linkType: soft
-
-"@himideula/react-ui@workspace:^, @himideula/react-ui@workspace:packages/react-ui":
-  version: 0.0.0-use.local
-  resolution: "@himideula/react-ui@workspace:packages/react-ui"
-  dependencies:
-    "@himideula/react-utils": ^0.0.1
-    "@rollup/plugin-alias": ^5.0.0
-    "@rollup/plugin-commonjs": ^25.0.4
-    "@rollup/plugin-node-resolve": ^15.2.1
-    "@rollup/plugin-terser": ^0.4.3
-    "@rollup/plugin-typescript": ^11.1.2
-    "@types/lodash": ^4
-    "@types/node": ^20.5.0
-    "@types/react": 18.2.20
-    autoprefixer: ^10.4.15
-    classnames: ^2.3.2
-    lodash: ^4.17.21
-    postcss: ^8.4.28
-    react: ^18.2.0
-    rollup: ^3.28.1
-    rollup-plugin-analyzer: ^4.0.0
-    rollup-plugin-peer-deps-external: ^2.2.4
-    rollup-plugin-postcss: ^4.0.2
-    sass: ^1.66.1
-    tslib: ^2.6.2
-    typescript: ^5.1.6
-  peerDependencies:
-    react: ^18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@himideula/react-utils@^0.0.1, @himideula/react-utils@workspace:packages/react-utils":
-  version: 0.0.0-use.local
-  resolution: "@himideula/react-utils@workspace:packages/react-utils"
-  dependencies:
-    "@rollup/plugin-alias": ^5.0.0
-    "@rollup/plugin-commonjs": ^25.0.4
-    "@rollup/plugin-node-resolve": ^15.2.1
-    "@rollup/plugin-terser": ^0.4.3
-    "@rollup/plugin-typescript": ^11.1.2
-    "@types/react": ^18.2.15
-    "@types/react-dom": ^18.2.7
-    "@types/react-router-dom": ^5.3.3
-    "@types/rollup-plugin-peer-deps-external": ^2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-router-dom: ^6.14.2
-    rollup: ^3.28.1
-    rollup-plugin-analyzer: ^4.0.0
-    rollup-plugin-peer-deps-external: ^2.2.4
-    tslib: ^2.6.2
-    typescript: ^5.1.6
-  languageName: unknown
-  linkType: soft
-
-"@himideula/workspace@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@himideula/workspace@workspace:."
-  dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.32.0
-    "@typescript-eslint/parser": ^5.32.0
-    eslint: ^8.21.0
-    eslint-config-airbnb: ^19.0.4
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-import: ^2.26.0
-    eslint-plugin-jsx-a11y: ^6.6.1
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: ^7.30.1
-    eslint-plugin-react-hooks: ^4.6.0
-    prettier: ^2.7.1
-    typescript: ^5.1.6
-  languageName: unknown
-  linkType: soft
-
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -2259,6 +2167,97 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ssamssam/documents@workspace:apps/documents":
+  version: 0.0.0-use.local
+  resolution: "@ssamssam/documents@workspace:apps/documents"
+  dependencies:
+    "@emotion/react": ^11.11.1
+    "@emotion/styled": ^11.11.0
+    "@mui/material": ^5.14.5
+    "@ssamssam/react-ui": "workspace:^"
+    "@types/node": 20.4.9
+    "@types/react": 18.2.20
+    "@types/react-dom": 18.2.7
+    next: 13.4.13
+    react: 18.2.0
+    react-dom: 18.2.0
+    styled-components: ^6.0.7
+    typescript: 5.1.6
+  languageName: unknown
+  linkType: soft
+
+"@ssamssam/react-modules@workspace:packages/react-modules":
+  version: 0.0.0-use.local
+  resolution: "@ssamssam/react-modules@workspace:packages/react-modules"
+  dependencies:
+    "@rollup/plugin-alias": ^5.0.0
+    "@rollup/plugin-commonjs": ^25.0.4
+    "@rollup/plugin-node-resolve": ^15.2.1
+    "@rollup/plugin-terser": ^0.4.3
+    "@rollup/plugin-typescript": ^11.1.2
+    "@types/react": ^18.2.15
+    "@types/react-dom": ^18.2.7
+    "@types/react-router-dom": ^5.3.3
+    "@types/rollup-plugin-peer-deps-external": ^2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-router-dom: ^6.14.2
+    rollup: ^3.28.1
+    rollup-plugin-analyzer: ^4.0.0
+    rollup-plugin-peer-deps-external: ^2.2.4
+    tslib: ^2.6.2
+    typescript: ^5.1.6
+  languageName: unknown
+  linkType: soft
+
+"@ssamssam/react-ui@workspace:^, @ssamssam/react-ui@workspace:packages/react-ui":
+  version: 0.0.0-use.local
+  resolution: "@ssamssam/react-ui@workspace:packages/react-ui"
+  dependencies:
+    "@rollup/plugin-alias": ^5.0.0
+    "@rollup/plugin-commonjs": ^25.0.4
+    "@rollup/plugin-node-resolve": ^15.2.1
+    "@rollup/plugin-terser": ^0.4.3
+    "@rollup/plugin-typescript": ^11.1.2
+    "@types/lodash": ^4
+    "@types/node": ^20.5.0
+    "@types/react": 18.2.20
+    autoprefixer: ^10.4.15
+    classnames: ^2.3.2
+    lodash: ^4.17.21
+    postcss: ^8.4.28
+    react: ^18.2.0
+    rollup: ^3.28.1
+    rollup-plugin-analyzer: ^4.0.0
+    rollup-plugin-peer-deps-external: ^2.2.4
+    rollup-plugin-postcss: ^4.0.2
+    sass: ^1.66.1
+    tslib: ^2.6.2
+    typescript: ^5.1.6
+  peerDependencies:
+    react: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
+"@ssamssam/workspace@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@ssamssam/workspace@workspace:."
+  dependencies:
+    "@typescript-eslint/eslint-plugin": ^5.32.0
+    "@typescript-eslint/parser": ^5.32.0
+    eslint: ^8.21.0
+    eslint-config-airbnb: ^19.0.4
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-jsx-a11y: ^6.6.1
+    eslint-plugin-prettier: ^4.2.1
+    eslint-plugin-react: ^7.30.1
+    eslint-plugin-react-hooks: ^4.6.0
+    prettier: ^2.7.1
+    typescript: ^5.1.6
+  languageName: unknown
+  linkType: soft
+
 "@swc/helpers@npm:0.5.1":
   version: 0.5.1
   resolution: "@swc/helpers@npm:0.5.1"
@@ -2325,9 +2324,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^20.5.0":
-  version: 20.5.3
-  resolution: "@types/node@npm:20.5.3"
-  checksum: fe67a0fd7402218bdf91523a2b1c2e41d619f7294b1a471e0a778b8bc7bb3fcf291aed12041bcbe9622d50a3d1295a9adea0e7e19bb9386a246bf66071404721
+  version: 20.5.4
+  resolution: "@types/node@npm:20.5.4"
+  checksum: 18de76c990e1c298183661cfc7cf16c9384531538c8090cc27bc3cab801e7c46b9f6943591ab0433955dd57961601684cc0fb19ba2deee9609e137c91afd2e25
   languageName: node
   linkType: hard
 
@@ -3588,9 +3587,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.477":
-  version: 1.4.499
-  resolution: "electron-to-chromium@npm:1.4.499"
-  checksum: 9002f3bcd9018f38b3496c2ced5393c6144d3a09bc5e1ea9866541045f6364841a6d11afe8c5977838835bc70f50f8caee63ba928a910e68ac1eed45afd18120
+  version: 1.4.500
+  resolution: "electron-to-chromium@npm:1.4.500"
+  checksum: fdd56b7f27ccc0aba837614ba80741f20aaaf558dc4eceb1e9525bf5e6ca9010d02d5a9554adeed43506facc60602c1b162b66fbee93d52db3d279a4e1a135db
   languageName: node
   linkType: hard
 
