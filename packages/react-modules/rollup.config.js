@@ -5,10 +5,12 @@ import typescript from '@rollup/plugin-typescript';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import analyze from 'rollup-plugin-analyzer';
 import commonjs from '@rollup/plugin-commonjs';
+import postCSS from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser';
+import autoprefixer from 'autoprefixer';
 
-const banner = `"use client";`;
-const entry = './src/index.ts';
+const banner = `"use client";import "./index.css";`;
+const entry = process.env.ENTRY_POINT ?? './src/index.ts';
 
 const plugins = [
   typescript({
@@ -20,6 +22,14 @@ const plugins = [
   resolve(),
   peerDepsExternal(),
   commonjs(),
+  postCSS({
+    extract: true,
+    modules: true,
+    minimize: true,
+    to: path.resolve(__dirname, `build`),
+    use: ['sass'],
+    plugins: [autoprefixer()],
+  }),
   terser({
     compress: false,
   }),
