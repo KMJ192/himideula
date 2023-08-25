@@ -39,6 +39,10 @@ export { default as Tab } from './components/Tab/Tab';
 export type { TabProps } from './components/Tab/Tab';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
+export { default as Header } from './components/Header/Header';
+export type { HeaderProps } from './components/Header/Header';
+export { default as Footer } from './components/Footer/Footer';
+export type { FooterProps } from './components/Footer/Footer';
 
 export { SideNav, SideNavTemplate } from './components/SideNav';
 export type {

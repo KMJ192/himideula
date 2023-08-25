@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import PageTemplate from '@src/PageTemplate/PageTemplate';
 
 export const metadata: Metadata = {
   title: 'ssamssam Documents',
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ko'>
-      <body>{children}</body>
+      <body>
+        <PageTemplate>{children}</PageTemplate>
+      </body>
     </html>
   );
 }

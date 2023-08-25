@@ -2182,23 +2182,13 @@ __metadata:
     next: 13.4.13
     react: 18.2.0
     react-dom: 18.2.0
+    sass: ^1.66.1
     styled-components: ^6.0.7
     typescript: 5.1.6
   languageName: unknown
   linkType: soft
 
-"@ssamssam/react-modules@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@ssamssam/react-modules@npm:0.0.1"
-  dependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-router-dom: ^6.14.2
-  checksum: 3ad29dd3789d53165842d5097acd7641ad0c245b05002c56c5f4de5735d3c185a63f4b425125fb1fd18e28586eb4b6092e58a2126fb6ff93473c1a451f4e2d17
-  languageName: node
-  linkType: hard
-
-"@ssamssam/react-modules@workspace:packages/react-modules":
+"@ssamssam/react-modules@^0.0.11, @ssamssam/react-modules@workspace:packages/react-modules":
   version: 0.0.0-use.local
   resolution: "@ssamssam/react-modules@workspace:packages/react-modules"
   dependencies:
@@ -2236,7 +2226,7 @@ __metadata:
     "@rollup/plugin-node-resolve": ^15.2.1
     "@rollup/plugin-terser": ^0.4.3
     "@rollup/plugin-typescript": ^11.1.2
-    "@ssamssam/react-modules": ^0.0.1
+    "@ssamssam/react-modules": ^0.0.11
     "@types/lodash": ^4
     "@types/node": ^20.5.0
     "@types/react": 18.2.20

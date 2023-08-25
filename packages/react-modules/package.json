@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "rm -rf build && rollup -c --bundleConfigAsCjs",
-    "pub": "npm publish"
+    "pub": "yarn build && yarn npm publish"
   },
   "dependencies": {
     "react": "^18.2.0",

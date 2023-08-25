@@ -1,11 +1,32 @@
 import React from 'react';
 
-type Props = {
-  children: React.ReactNode;
+import type { COMBINE_ELEMENT_PROPS } from '@src/types/types';
+
+import SideNav from './SideNav/SideNav';
+
+import classNames from 'classnames/bind';
+import style from './style.module.scss';
+const cx = classNames.bind(style);
+
+type BaseProps = {
+  children?: React.ReactNode;
 };
 
-function PageTemplate({ children }: Props) {
-  // return ;
+const ELEMENT = 'div';
+
+type Props<T extends React.ElementType> = COMBINE_ELEMENT_PROPS<T, BaseProps>;
+
+function PageTemplate<T extends React.ElementType = typeof ELEMENT>(
+  { children, className, ...props }: Props<T>,
+  ref: React.Ref<any>,
+) {
+  return (
+    <ELEMENT {...props} ref={ref} className={cx('page-template', className)}>
+      <SideNav />
+      {children}
+    </ELEMENT>
+  );
 }
 
-export default PageTemplate;
+export type PageTemplateProps = Props<typeof ELEMENT>;
+export default React.forwardRef(PageTemplate) as typeof PageTemplate;

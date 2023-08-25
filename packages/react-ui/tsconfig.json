@@ -5,6 +5,7 @@
     "paths": {
       "@src/*": ["src/*"],
     },
+    "outDir": "build",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "noEmit": true,
