@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect } from 'react';
-import { Direction, Offset, Option, Size } from '../types';
+import { Direction, Offset, TabOption, Size } from '../types';
 
 type Props = {
   selected: number;
-  options: Array<Option>;
+  options: Array<TabOption>;
   direction: Direction;
 };
 
