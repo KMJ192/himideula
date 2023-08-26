@@ -37,6 +37,11 @@ export { default as Spinner } from './components/Spinner/Spinner';
 export type { SpinnerProps } from './components/Spinner/Spinner';
 export { default as Tab } from './components/Tab/Tab';
 export type { TabProps } from './components/Tab/Tab';
+export type {
+  TabOptionKey,
+  TabOption,
+  TabDirection,
+} from './components/Tab/types';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
 export { default as Header } from './components/Header/Header';
