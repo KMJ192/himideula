@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
+import PageTemplate from '@src/components/PageTemplate/PageTemplate';
+
 import './globals.css';
-import PageTemplate from '@src/PageTemplate/PageTemplate';
 
 export const metadata: Metadata = {
-  title: 'ssamssam Documents',
-  description: 'ssamssam Documents',
+  title: 'SsamSsam',
+  description: 'SsamSsam Documents Page',
 };
 
 export default function RootLayout({
