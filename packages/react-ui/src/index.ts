@@ -48,6 +48,17 @@ export { default as Header } from './components/Header/Header';
 export type { HeaderProps } from './components/Header/Header';
 export { default as Footer } from './components/Footer/Footer';
 export type { FooterProps } from './components/Footer/Footer';
+export { Table } from './components/Table';
+export type {
+  TableProps,
+  TheadProps,
+  TbodyProps,
+  TfootProps,
+  TrProps,
+  ThProps,
+  TdProps,
+  CaptionProps,
+} from './components/Table';
 
 export { SideNav, SideNavTemplate } from './components/SideNav';
 export type {

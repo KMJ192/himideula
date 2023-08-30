@@ -1,0 +1,124 @@
+@import './variable/color.module.scss';
+@import './variable/size.module.scss';
+
+@mixin color-set {
+  border: 1px solid $tableBorder;
+  background: $tableBackground;
+  color: $tableText;
+  .table {
+    .thead > .tr {
+      .th,
+      .td {
+        background: $tableHeaderBackground;
+      }
+    }
+    .tbody {
+      .tr {
+        border-top: 1px solid $tableBodyBackground;
+        border-bottom: 1px solid $tableBodyBackground;
+        &:hover {
+          background: $tableBodyBackgroundHover;
+        }
+      }
+    }
+    .tfoot > .tr {
+      .td,
+      .th {
+        background: $tableFooterBackground;
+      }
+    }
+  }
+  .pagination > .index {
+    color: $tablePaginationIndexText;
+    &.selected {
+      outline: 2px solid $tablePaginationIndexBorder;
+    }
+  }
+  .pagination {
+    .left,
+    .right {
+      fill: $tablePaginationArrow;
+    }
+  }
+}
+
+.table-container {
+  width: inherit;
+  border-radius: 8px;
+  white-space: nowrap;
+  padding: 8px 24px;
+  @include color-set;
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    .caption {
+      padding: 16px;
+      text-align: start;
+    }
+    .thead,
+    .tfoot {
+      .tr {
+        .th,
+        .td {
+          padding: 16px;
+          text-align: start;
+        }
+      }
+    }
+    .thead {
+      .tr {
+        .th,
+        .td {
+          &:first-child {
+            border-top-left-radius: 8px;
+          }
+          &:last-child {
+            border-top-right-radius: 8px;
+          }
+        }
+      }
+    }
+    .tbody {
+      .tr {
+        .td,
+        .th {
+          padding: 16px;
+        }
+      }
+    }
+    .tfoot {
+      .tr {
+        .td,
+        .th {
+          &:first-child {
+            border-bottom-left-radius: 4px;
+          }
+          &:last-child {
+            border-bottom-right-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    width: 100%;
+    padding: 16px 0;
+    column-gap: 8px;
+    .index {
+      width: 32px;
+      height: 24px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .left,
+    .right {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+    .right {
+      transform: rotate(180deg);
+    }
+  }
+}
