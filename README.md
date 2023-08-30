@@ -3,20 +3,43 @@
 - UI Documents 페이지
 - React 패키지
 
+
+
 ### Getting start
 
 - UI
-  - yarn add @ssamssam/react-ui
-- Module
-  - yarn add @  - yarn add @ssam/react-ui
-/react-utils
+```
+yarn add @ssamssam/react-ui
+```
+- Modules
+```
+yarn add @ssam/react-modules
+```
+
+### Library Package build
+- UI
+```
+yarn workspace @ssamssam/react-ui build
+```
+- Modules
+```
+yarn workspace @ssamssam/react-modules build
+```
+
+### App start
+- Documents
+```
+yarn workspace @ssamssam/documents start
+```
 
 ### dev
+- Yarn Workspace
 - React
+- NextJS(13)
 - Typescript
-- @emotion/react, @emotion/styled
 - Rollup
-- tsup
+- sass
+- Yarn berry (zero install)
 
 ##### git commit message
 - 액션(프로젝트): 커밋 내용 
@@ -31,10 +54,4 @@ docs: 코드 외 문서의 추가, 삭제, 변경
 test: 테스트 코드 추가, 삭제, 변경
 build: 빌드 옵션 변경
 etc: 위 해당 사항이 없는 모든 변경 사항
-```
-- 프로젝트
-```
-workspace
-react-ui
-react-utils
 ```
