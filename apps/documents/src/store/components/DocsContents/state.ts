@@ -9,7 +9,10 @@ type Documents = {
 };
 
 type APIs = {
-  // ...
+  name: string;
+  type: string;
+  defaultValue: string;
+  description: string;
 };
 type CSSVars = {
   // ...

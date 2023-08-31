@@ -18,6 +18,7 @@ import Playground from './Playground/Playground';
 
 import {
   type Documents as DocType,
+  type APIs as APIsType,
   useDocsContentsState,
 } from '@src/store/components/DocsContents/state';
 
@@ -29,6 +30,7 @@ type Props = {
   title: string;
   description: string;
   documents: Array<DocType>;
+  apis: Array<APIsType>;
 };
 
 const options: Array<TabOption> = [
@@ -68,7 +70,7 @@ const options: Array<TabOption> = [
 
 const components = [<Documents />, <APIs />, <CSSVariables />, <Playground />];
 
-function DocsContents({ title, description, documents }: Props) {
+function DocsContents({ title, description, documents, apis }: Props) {
   const [selected, setSelected] = useState(0);
   const { viewComponent } = useDocsContentsState();
 
@@ -82,7 +84,7 @@ function DocsContents({ title, description, documents }: Props) {
     viewComponent({
       title,
       documents,
-      apis: [],
+      apis,
       cssVars: [],
       playground: [],
     });
