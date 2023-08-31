@@ -20,7 +20,7 @@ function Documents() {
                 <Text typo='h3'>{title}</Text>
                 <Text typo='title2'>{description}</Text>
                 <div className={cx('view')}>{view}</div>
-                <div className={cx('guide')}>{componentString}</div>
+                <div className={cx('code-guide')}>{componentString}</div>
               </Flex>
               <Spacing direction='vertical' spacing={48} />
             </Fragment>
