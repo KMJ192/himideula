@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn wk:rmo build && yarn wk:rui build && yarn wk:docs build
+# yarn wk:rmo build && yarn wk:rui build && yarn wk:docs build
