@@ -569,7 +569,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ssamssam/documents", "workspace:apps/documents"],\
             ["@ssamssam/react-modules", "npm:0.0.1"],\
-            ["@ssamssam/react-ui", "virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:0.0.15"],\
+            ["@ssamssam/react-ui", "virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:0.0.17"],\
             ["@types/node", "npm:20.4.9"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
@@ -626,17 +626,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ssamssam/react-ui", [\
-        ["npm:0.0.15", {\
-          "packageLocation": "./.yarn/cache/@ssamssam-react-ui-npm-0.0.15-4cf9976da2-1040c531b6.zip/node_modules/@ssamssam/react-ui/",\
+        ["npm:0.0.17", {\
+          "packageLocation": "./.yarn/cache/@ssamssam-react-ui-npm-0.0.17-d6071bb4e5-40f646e060.zip/node_modules/@ssamssam/react-ui/",\
           "packageDependencies": [\
-            ["@ssamssam/react-ui", "npm:0.0.15"]\
+            ["@ssamssam/react-ui", "npm:0.0.17"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:0.0.15", {\
-          "packageLocation": "./.yarn/__virtual__/@ssamssam-react-ui-virtual-4efe37c374/0/cache/@ssamssam-react-ui-npm-0.0.15-4cf9976da2-1040c531b6.zip/node_modules/@ssamssam/react-ui/",\
+        ["virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:0.0.17", {\
+          "packageLocation": "./.yarn/__virtual__/@ssamssam-react-ui-virtual-f9cbc2f98a/0/cache/@ssamssam-react-ui-npm-0.0.17-d6071bb4e5-40f646e060.zip/node_modules/@ssamssam/react-ui/",\
           "packageDependencies": [\
-            ["@ssamssam/react-ui", "virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:0.0.15"],\
+            ["@ssamssam/react-ui", "virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:0.0.17"],\
             ["@ssamssam/react-modules", "npm:0.0.1"],\
             ["@types/react", "npm:18.2.20"],\
             ["lodash", "npm:4.17.21"],\

@@ -437,15 +437,15 @@ __metadata:
   linkType: soft
 
 "@ssamssam/react-ui@npm:latest":
-  version: 0.0.15
-  resolution: "@ssamssam/react-ui@npm:0.0.15"
+  version: 0.0.17
+  resolution: "@ssamssam/react-ui@npm:0.0.17"
   dependencies:
     "@ssamssam/react-modules": latest
     lodash: ^4.17.21
     react: ^18.2.0
   peerDependencies:
     react: ^18.2.0
-  checksum: 1040c531b696ae17716885a5100c886a57341e607bee97f7028d9d08c8c0752ba30bf4dc73efd7c12c030007f7334e45d1ebd83b0b4e63f70480681d35e6b464
+  checksum: 40f646e0605f3042fd7b8d45832fae1328a2b34fdacc5d17002fc6e0ffb9312f06e33eb69806c96de9c72c5a2b2c93aa2fdf6078a4178c4faea43aa4f231d83e
   languageName: node
   linkType: hard
 
