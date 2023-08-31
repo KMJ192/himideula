@@ -9,6 +9,7 @@ import {
   Header,
   HamburgerMenu,
   type SideNavItem,
+  Spacing,
 } from '@ssamssam/react-ui';
 
 import classNames from 'classnames/bind';
@@ -99,7 +100,8 @@ function PageTemplate({ children }: Props) {
         <Header className={cx('header')}>
           <HamburgerMenu onClick={onClickActive} />
         </Header>
-        <section className={cx('page')}>{children}</section>
+        <Spacing direction='vertical' spacing={72} />
+        <main className={cx('page')}>{children}</main>
       </div>
     </Flex>
   );
