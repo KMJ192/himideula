@@ -1,4 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn wk:rmo build && yarn wk:rui build && yarn wk:docs build
+echo "왜 안되냐고!!"
+
+yarn wk:rmo tsc && yarn wk:rui tsc && yarn wk:docs tsc
