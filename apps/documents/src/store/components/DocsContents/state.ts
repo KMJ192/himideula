@@ -1,10 +1,10 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import { create } from 'zustand';
 
 type Documents = {
   title: string;
   description: string;
-  view: React.ReactNode;
+  view: ReactNode;
   componentString: string;
 };
 

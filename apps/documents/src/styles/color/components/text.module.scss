@@ -1,0 +1,9 @@
+@import '../color.module.scss';
+
+@mixin text-light {
+  --ss-c-text: #{$light-primary900};
+}
+
+@mixin text-dark {
+  --ss-c-text: #{$dark-primary900};
+}

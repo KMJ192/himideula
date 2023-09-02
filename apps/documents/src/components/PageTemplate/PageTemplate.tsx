@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import useCustomRouter from '@src/hooks/useCustomRouter';
+import { useTheme } from '@src/store/theme/themeState';
 
 import {
   Flex,
@@ -10,10 +11,13 @@ import {
   HamburgerMenu,
   type SideNavItem,
   Spacing,
+  Float,
+  Button,
 } from '@ssamssam/react-ui';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+
 const cx = classNames.bind(style);
 
 type Props = {
@@ -22,6 +26,7 @@ type Props = {
 
 function PageTemplate({ children }: Props) {
   const { router } = useCustomRouter();
+  const { theme, switchTheme } = useTheme();
   const [active, setActive] = useState(false);
 
   const navItem = useRef<Array<SideNavItem>>([
@@ -88,8 +93,23 @@ function PageTemplate({ children }: Props) {
     setActive(!active);
   };
 
+  const onClickTheme = () => {
+    switchTheme({
+      theme: theme === 'light' ? 'dark' : 'light',
+    });
+  };
+
   return (
     <Flex className={cx('page-template', active && 'hide')}>
+      <Float className={cx('theme')} startDirection='rb'>
+        <Button
+          shape='circle'
+          className={cx('theme-btn')}
+          onClick={onClickTheme}
+        >
+          {theme}
+        </Button>
+      </Float>
       <SideNavTemplate
         className={cx('gnb')}
         navItem={navItem.current}
