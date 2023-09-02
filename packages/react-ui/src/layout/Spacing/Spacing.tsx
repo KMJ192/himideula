@@ -28,7 +28,6 @@ function Spacing<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
 ) {
   const ELEMENT = as || DEFAULT_ELEMENT;
   const isSpacing = typeof spacing === 'number';
-  // eslint-disable-next-line no-nested-ternary
   const _style = isSpacing
     ? direction === 'vertical'
       ? { ...style, height: spacing }

@@ -1,0 +1,23 @@
+@import './variable/color.module.scss';
+
+.badge {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 8px;
+  border-radius: 16px;
+  min-height: 12px;
+  &.primary {
+    color: $ss-c-badge-color;
+    background: $ss-c-badge-bg;
+  }
+  &.white {
+  }
+  &.black {
+  }
+  &.red {
+  }
+  &.green {
+  }
+  &.blue {
+  }
+}
