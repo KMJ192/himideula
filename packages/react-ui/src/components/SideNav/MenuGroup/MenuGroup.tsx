@@ -45,7 +45,7 @@ function MenuGroup<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
       ...style,
       marginLeft: `${depth * depthGap}px`,
     });
-  }, [depth, style, show]);
+  }, [depth, style, show, depthGap]);
 
   return (
     <ELEMENT
@@ -54,9 +54,8 @@ function MenuGroup<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
       className={cx('nav-group', { show }, className)}
       style={_style}
     >
-      <div className={cx('children', show ? 'show' : 'collapse')}>
-        {children}
-      </div>
+      {children}
+      <div className={cx('gap')}></div>
     </ELEMENT>
   );
 }
