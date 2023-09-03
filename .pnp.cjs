@@ -570,10 +570,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ssamssam/documents", "workspace:apps/documents"],\
             ["@ssamssam/react-modules", "npm:0.0.1"],\
             ["@ssamssam/react-ui", "virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#workspace:packages/react-ui"],\
+            ["@types/lodash", "npm:4.14.197"],\
             ["@types/node", "npm:20.4.9"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["classnames", "npm:2.3.2"],\
+            ["lodash", "npm:4.17.21"],\
             ["next", "virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:13.4.13"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:a693341f4d9bf0ce1edd64e757887a9351ad23e34b4111c3df8a5bf51d90198235c04e049f815e7ec9caf16894a82d42b868e2bb876b2c8c343212d37e926c48#npm:18.2.0"],\
