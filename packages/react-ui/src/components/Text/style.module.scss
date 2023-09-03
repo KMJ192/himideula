@@ -50,7 +50,7 @@
 
 .typo {
   color: $ss-c-text;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   &.h1,
   &.header1 {
     @include header1;
