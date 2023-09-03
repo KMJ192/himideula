@@ -382,7 +382,7 @@ __metadata:
   resolution: "@ssamssam/documents@workspace:apps/documents"
   dependencies:
     "@ssamssam/react-modules": latest
-    "@ssamssam/react-ui": latest
+    "@ssamssam/react-ui": ^0.0.18
     "@types/node": 20.4.9
     "@types/react": 18.2.20
     "@types/react-dom": 18.2.7
@@ -436,20 +436,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ssamssam/react-ui@npm:latest":
-  version: 0.0.17
-  resolution: "@ssamssam/react-ui@npm:0.0.17"
-  dependencies:
-    "@ssamssam/react-modules": latest
-    lodash: ^4.17.21
-    react: ^18.2.0
-  peerDependencies:
-    react: ^18.2.0
-  checksum: 40f646e0605f3042fd7b8d45832fae1328a2b34fdacc5d17002fc6e0ffb9312f06e33eb69806c96de9c72c5a2b2c93aa2fdf6078a4178c4faea43aa4f231d83e
-  languageName: node
-  linkType: hard
-
-"@ssamssam/react-ui@workspace:packages/react-ui":
+"@ssamssam/react-ui@^0.0.18, @ssamssam/react-ui@workspace:packages/react-ui":
   version: 0.0.0-use.local
   resolution: "@ssamssam/react-ui@workspace:packages/react-ui"
   dependencies:
