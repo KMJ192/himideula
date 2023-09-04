@@ -27,7 +27,7 @@
     "pub": "yarn build && yarn npm publish"
   },
   "dependencies": {
-    "@ssamssam/react-modules": "latest",
+    "@ssamssam/react-modules": "^0.0.12",
     "lodash": "^4.17.21",
     "react": "^18.2.0"
   },
