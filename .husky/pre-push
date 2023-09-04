@@ -21,7 +21,7 @@ documents="documents"
 
 echo "Last commit: [ $commit_msg ]"
 
-if [[ $commit_msg == *"fp" ]]; then
+if [[ $commit_msg == *"(fp)" ]]; then
   echo "FORCE PUSH"
 else
   if [[ $commit_msg == *"$commit_action_feat"* ]]; then
