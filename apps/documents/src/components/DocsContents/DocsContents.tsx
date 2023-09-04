@@ -13,12 +13,13 @@ import Line from '../Line/Line';
 
 import Documents from './Documents/Documents';
 import APIs from './APIs/APIs';
-import CSSVariables from './CSSVariables/CSSVariables';
+import CSSVariable from './CSSVariable/CSSVariable';
 import Playground from './Playground/Playground';
 
 import {
   type Documents as DocType,
   type APIs as APIsType,
+  type CSSVar,
   useDocsContentsState,
 } from '@src/store/components/DocsContents/state';
 
@@ -31,6 +32,7 @@ type Props = {
   description: string;
   documents: Array<DocType>;
   apis: Array<APIsType>;
+  cssVar: Array<CSSVar>;
 };
 
 const options: Array<TabOption> = [
@@ -68,9 +70,9 @@ const options: Array<TabOption> = [
   },
 ];
 
-const components = [<Documents />, <APIs />, <CSSVariables />, <Playground />];
+const components = [<Documents />, <APIs />, <CSSVariable />, <Playground />];
 
-function DocsContents({ title, description, documents, apis }: Props) {
+function DocsContents({ title, description, documents, apis, cssVar }: Props) {
   const [selected, setSelected] = useState(0);
   const { viewComponent } = useDocsContentsState();
 
@@ -85,7 +87,7 @@ function DocsContents({ title, description, documents, apis }: Props) {
       title,
       documents,
       apis,
-      cssVars: [],
+      cssVar,
       playground: [],
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps

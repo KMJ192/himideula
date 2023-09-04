@@ -14,8 +14,11 @@ type APIs = {
   defaultValue: string;
   description: string;
 };
-type CSSVars = {
-  // ...
+type CSSVar = {
+  name: string;
+  type: string;
+  defaultValue: string;
+  description: string;
 };
 type Playground = {
   // ...
@@ -25,7 +28,7 @@ type State = {
   title: string;
   documents: Array<Documents>;
   apis: Array<APIs>;
-  cssVars: Array<CSSVars>;
+  cssVar: Array<CSSVar>;
   playground: Array<Playground>;
 };
 
@@ -37,10 +40,10 @@ const useDocsContentsState = create<State & Action>((set) => ({
   title: '',
   documents: [],
   apis: [],
-  cssVars: [],
+  cssVar: [],
   playground: [],
   viewComponent: (newState: State) => set(newState),
 }));
 
-export type { Documents, APIs, CSSVars, Playground };
+export type { Documents, APIs, CSSVar, Playground };
 export { useDocsContentsState };

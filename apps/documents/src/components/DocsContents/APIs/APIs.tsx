@@ -1,21 +1,14 @@
-import React from 'react';
 import { Table, Text } from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
-import { useTheme } from '@src/store/theme/themeState';
-
-import classNames from 'classnames/bind';
-import style from './style.module.scss';
-const cx = classNames.bind(style);
 
 function APIs() {
   const { title, apis } = useDocsContentsState();
-  const { theme } = useTheme();
 
   return (
-    <Table className={cx('table', theme)}>
+    <Table>
       <Table.Caption>
-        <Text typo='t2'>{title} 컴포넌트 Props 목록</Text>
+        <Text typo='t2'>{title} 컴포넌트 Props</Text>
       </Table.Caption>
       <Table.Thead>
         <Table.Tr>
