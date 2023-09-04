@@ -116,7 +116,7 @@ function GNB() {
       <SideNav.MenuGroup show={show[urls.components]} depth={1}>
         {componentGroup.map(({ url, contents }) => {
           return (
-            <Link href={url}>
+            <Link href={url} key={url}>
               <SideNav.Menu data-key={url} selected={selected[url]}>
                 {contents}
               </SideNav.Menu>
@@ -130,7 +130,7 @@ function GNB() {
       <SideNav.MenuGroup show={show[urls.hooks]} depth={1}>
         {hooksGroup.map(({ url, contents }) => {
           return (
-            <Link href={url}>
+            <Link href={url} key={url}>
               <SideNav.Menu data-key={url} selected={selected[url]}>
                 {contents}
               </SideNav.Menu>
