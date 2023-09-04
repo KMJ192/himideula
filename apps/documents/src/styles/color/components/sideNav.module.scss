@@ -15,7 +15,7 @@
   --ss-c-side-nav-menu-text-hover: #{$light-text};
   --ss-c-side-nav-menu-text-disabled: #{$light-gray100};
 
-  --ss-c-side-nav-menu-box-shadow-selected: 0px 3px 6px rgba(64, 64, 64, 0.2);
+  --ss-c-side-nav-menu-box-shadow-selected: 0px 1px 3px rgba(8, 104, 99, 0.2);
 }
 
 @mixin sideNav-dark {
@@ -25,9 +25,9 @@
   --ss-c-side-nav-menu-bg-selected: #{$dark-primary100};
   --ss-c-side-nav-menu-bg-disabled: #{$dark-primary300};
 
-  --ss-c-side-nav-menu-text: #{$dark-primary900};
-  --ss-c-side-nav-menu-text-selected: #{$dark-primary800};
-  --ss-c-side-nav-menu-text-hover: #{$dark-blue500};
+  --ss-c-side-nav-menu-text: #{$dark-text};
+  --ss-c-side-nav-menu-text-selected: #{$dark-primary700};
+  --ss-c-side-nav-menu-text-hover: #{dark-text};
   --ss-c-side-nav-menu-text-disabled: #{$dark-primary500};
 
   --ss-c-side-nav-menu-box-shadow-selected: 0px 3px 6px rgba(0, 0, 0, 0.2);

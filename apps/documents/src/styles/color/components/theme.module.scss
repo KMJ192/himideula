@@ -1,3 +1,5 @@
+@import '../color.module.scss';
+
 @import './sideNav.module.scss';
 @import './header.module.scss';
 @import './footer.module.scss';
@@ -5,7 +7,6 @@
 @import './hamburgerMenu.module.scss';
 @import './tab.module.scss';
 @import './spinner.module.scss';
-@import './text.module.scss';
 @import './popup.module.scss';
 @import './checkbox.mould.scss';
 @import './radio.module.scss';
@@ -18,19 +19,18 @@
 
 @mixin theme {
   &.light {
-    // @include button-light;
+    @include sideNav-light;
+    @include header-light;
+    @include tab-light;
+    @include button-light;
     // @include h-menu-light;
-    // @include tab-light;
     // @include spinner-light;
-    // @include text-light;
     // @include popup-light;
     // @include checkbox-light;
     // @include radio-light;
     // @include input-light;
     // @include switch-light;
     // @include progressbar-light;
-    @include sideNav-light;
-    // @include header-light;
     // @include footer-light;
     // @include row-light;
     // @include table-light;
@@ -39,19 +39,18 @@
     color: $light-text;
   }
   &.dark {
-    // @include button-dark;
+    @include sideNav-dark;
+    @include header-dark;
+    @include tab-dark;
+    @include button-dark;
     // @include h-menu-dark;
-    // @include tab-dark;
     // @include spinner-dark;
-    // @include text-dark;
     // @include popup-dark;
     // @include checkbox-dark;
     // @include radio-dark;
     // @include input-dark;
     // @include switch-dark;
     // @include progressbar-dark;
-    // @include sideNav-dark;
-    // @include header-dark;
     // @include footer-dark;
     // @include row-dark;
     // @include table-dark;

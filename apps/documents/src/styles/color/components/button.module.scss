@@ -2,19 +2,19 @@
 
 @mixin button-light {
   --ss-c-button-bg: #{$light-primary000};
-  --ss-c-button-bg-hover: #{$light-blue000};
-  --ss-c-button-bg-disabled: #{$light-primary200};
-  --ss-c-button-bg-active: #{$light-primary000};
+  --ss-c-button-bg-hover: #{$light-primary200};
+  --ss-c-button-bg-disabled: #{$light-gray100};
+  --ss-c-button-bg-active: #{$light-primary500};
 
-  --ss-c-button-bg-ripple: rgba(255, 255, 255, 0.6);
+  --ss-c-button-bg-ripple: #{$light-primary300};
 
-  --ss-c-button-text: #{$light-primary900};
-  --ss-c-button-text-hover: #{$light-primary900};
-  --ss-c-button-text-disabled: #{$light-primary500};
-  --ss-c-button-text-active: #{$light-primary700};
+  --ss-c-button-text: #{$light-text};
+  --ss-c-button-text-hover: #{$light-text};
+  --ss-c-button-text-disabled: #{$white};
+  --ss-c-button-text-active: #{$black};
 
-  --ss-c-button-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  --ss-c-button-outline: #{$light-blue200};
+  --ss-c-button-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --ss-c-button-outline: #{$light-primary600};
 }
 
 @mixin button-dark {
@@ -25,11 +25,11 @@
 
   --ss-c-button-bg-ripple: rgba(50, 50, 70, 0.6);
 
-  --ss-c-button-text: #{$dark-primary900};
-  --ss-c-button-text-hover: #{$dark-primary900};
+  --ss-c-button-text: #{$dark-text};
+  --ss-c-button-text-hover: #{$dark-text};
   --ss-c-button-text-disabled: #{$dark-primary300};
   --ss-c-button-text-active: #{$dark-primary700};
 
-  --ss-c-button-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+  --ss-c-button-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
   --ss-c-button-outline: #{$dark-primary100};
 }
