@@ -11,22 +11,48 @@ import classNames from 'classnames/bind';
 import style from '../style.module.scss';
 const cx = classNames.bind(style);
 
-const pathDictionary = new Set([
-  '/components',
-  '/components/button',
-  '/modules',
-  '/modules/use-trie',
-]);
-
-const initSelectedList = {
-  '/components': false,
-  '/components/button': false,
-  '/modules': false,
-  '/modules/use-trie': false,
+const urls = {
+  components: '/components',
+  button: '/components/button',
+  hooks: '/hooks',
+  useTrie: '/hooks/use-trie',
 };
 
-const validNavGroup = (dataKey: string): '/components' | '/modules' | null => {
-  if (dataKey === '/components' || dataKey === '/modules') {
+const pathDictionary = new Set([
+  urls.components,
+  urls.button,
+  urls.hooks,
+  urls.useTrie,
+]);
+
+const initSelectedList: { [key: string]: boolean } = {
+  [urls.components]: false,
+  [urls.button]: false,
+  [urls.hooks]: false,
+  [urls.useTrie]: false,
+};
+
+type NavGroup = {
+  url: string;
+  contents: string;
+};
+
+const componentGroup: Array<NavGroup> = [
+  {
+    url: urls.button,
+    contents: 'button',
+  },
+];
+
+const hooksGroup: Array<NavGroup> = [
+  {
+    url: urls.useTrie,
+    contents: 'useTrie',
+  },
+];
+
+const validNavGroup = (dataKey: string): string | null => {
+  if (dataKey === urls.components || dataKey === urls.hooks) {
     return dataKey;
   }
   return null;
@@ -35,9 +61,9 @@ const validNavGroup = (dataKey: string): '/components' | '/modules' | null => {
 function GNB() {
   const pathname = usePathname();
   const [selected, setSelected] = useState(cloneDeep(initSelectedList));
-  const [show, setShow] = useState({
-    '/components': false,
-    '/modules': false,
+  const [show, setShow] = useState<{ [key: string]: boolean }>({
+    [urls.components]: false,
+    [urls.hooks]: false,
   });
 
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -63,7 +89,7 @@ function GNB() {
     const group = pathname.split('/');
     if (
       group.length > 1 &&
-      (group[1] === 'components' || group[1] === 'modules')
+      (group[1] === 'components' || group[1] === 'hooks')
     ) {
       setShow({
         ...show,
@@ -81,29 +107,36 @@ function GNB() {
 
   return (
     <SideNav depthGap={12} className={cx('gnb')} onClick={onClick}>
-      <SideNav.Menu data-key='/components' selected={selected['/components']}>
+      <SideNav.Menu
+        data-key={urls.components}
+        selected={selected[urls.components]}
+      >
         Components
       </SideNav.Menu>
-      <SideNav.MenuGroup show={show['/components']} depth={1}>
-        <Link href='/components/button'>
-          <SideNav.Menu
-            data-key='/components/button'
-            selected={selected['/components/button']}
-          >
-            Button
-          </SideNav.Menu>
-        </Link>
+      <SideNav.MenuGroup show={show[urls.components]} depth={1}>
+        {componentGroup.map(({ url, contents }) => {
+          return (
+            <Link href={url}>
+              <SideNav.Menu data-key={url} selected={selected[url]}>
+                {contents}
+              </SideNav.Menu>
+            </Link>
+          );
+        })}
       </SideNav.MenuGroup>
-      <SideNav.Menu data-key='/modules' selected={selected['/modules']}>
-        Modules
+      <SideNav.Menu data-key={urls.hooks} selected={selected[urls.hooks]}>
+        Hooks
       </SideNav.Menu>
-      <SideNav.MenuGroup show={show['/modules']} depth={1}>
-        <SideNav.Menu
-          data-key='/modules/use-trie'
-          selected={selected['/modules/use-trie']}
-        >
-          useTrie
-        </SideNav.Menu>
+      <SideNav.MenuGroup show={show[urls.hooks]} depth={1}>
+        {hooksGroup.map(({ url, contents }) => {
+          return (
+            <Link href={url}>
+              <SideNav.Menu data-key={url} selected={selected[url]}>
+                {contents}
+              </SideNav.Menu>
+            </Link>
+          );
+        })}
       </SideNav.MenuGroup>
     </SideNav>
   );
