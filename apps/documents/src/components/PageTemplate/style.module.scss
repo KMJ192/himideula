@@ -33,9 +33,6 @@ $header-height: 72px;
     z-index: 1;
     width: $sideNav-width;
     transition: transform 0.5s ease;
-    * {
-      text-decoration: none;
-    }
   }
   .contents {
     margin-left: calc($sideNav-width + $sideNav-padding);

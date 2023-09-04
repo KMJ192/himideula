@@ -2,20 +2,20 @@
 
 @mixin sideNav-light {
   --ss-c-side-nav-bg: linear-gradient(
-    #{$light-primary100},
-    #{$light-background}
+    #{$light-primary200},
+    #{$light-primary000}
   );
 
   --ss-c-side-nav-box-shadow: 0px 3px 6px rgba(64, 64, 64, 0.3);
   --ss-c-side-nav-menu-bg-selected: #{$light-primary000};
-  --ss-c-side-nav-menu-bg-disabled: #{$light-primary300};
+  --ss-c-side-nav-menu-bg-disabled: #{$light-gray300};
 
-  --ss-c-side-nav-menu-text: #{$light-primary900};
-  --ss-c-side-nav-menu-text-selected: #{$light-primary900};
-  --ss-c-side-nav-menu-text-hover: #{$light-blue700};
-  --ss-c-side-nav-menu-text-disabled: #{$light-primary500};
+  --ss-c-side-nav-menu-text: #{$light-text};
+  --ss-c-side-nav-menu-text-selected: #{$light-text};
+  --ss-c-side-nav-menu-text-hover: #{$light-text};
+  --ss-c-side-nav-menu-text-disabled: #{$light-gray100};
 
-  --ss-c-side-nav-menu-box-shadow-selected: 0px 3px 6px rgba(64, 64, 64, 0.1);
+  --ss-c-side-nav-menu-box-shadow-selected: 0px 3px 6px rgba(64, 64, 64, 0.2);
 }
 
 @mixin sideNav-dark {

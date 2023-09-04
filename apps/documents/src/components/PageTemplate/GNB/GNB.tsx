@@ -1,35 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import cloneDeep from 'lodash/cloneDeep';
 
 import { SideNav } from '@ssamssam/react-ui';
 
+import { URL } from '@src/utils/url';
+
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';
 const cx = classNames.bind(style);
 
-const urls = {
-  components: '/components',
-  button: '/components/button',
-  hooks: '/hooks',
-  useTrie: '/hooks/use-trie',
-};
-
-const pathDictionary = new Set([
-  urls.components,
-  urls.button,
-  urls.hooks,
-  urls.useTrie,
+const urlDictionary = new Set([
+  URL.components,
+  URL.button,
+  URL.hooks,
+  URL.useTrie,
 ]);
 
 const initSelectedList: { [key: string]: boolean } = {
-  [urls.components]: false,
-  [urls.button]: false,
-  [urls.hooks]: false,
-  [urls.useTrie]: false,
+  [URL.components]: false,
+  [URL.button]: false,
+  [URL.hooks]: false,
+  [URL.useTrie]: false,
 };
 
 type NavGroup = {
@@ -39,40 +34,46 @@ type NavGroup = {
 
 const componentGroup: Array<NavGroup> = [
   {
-    url: urls.button,
-    contents: 'button',
+    url: URL.button,
+    contents: 'Button',
   },
 ];
 
 const hooksGroup: Array<NavGroup> = [
   {
-    url: urls.useTrie,
+    url: URL.useTrie,
     contents: 'useTrie',
   },
 ];
 
 const validNavGroup = (dataKey: string): string | null => {
-  if (dataKey === urls.components || dataKey === urls.hooks) {
+  if (dataKey === URL.components || dataKey === URL.hooks) {
     return dataKey;
   }
   return null;
 };
 
+const isURL = (url: string) => {
+  return urlDictionary.has(url);
+};
+
 function GNB() {
+  const router = useRouter();
   const pathname = usePathname();
   const [selected, setSelected] = useState(cloneDeep(initSelectedList));
   const [show, setShow] = useState<{ [key: string]: boolean }>({
-    [urls.components]: false,
-    [urls.hooks]: false,
+    [URL.components]: false,
+    [URL.hooks]: false,
   });
 
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     const element = e.target as HTMLElement;
     const dataKey = element.dataset.key;
-    if (dataKey) {
+    if (dataKey && isURL(dataKey)) {
+      router.push(dataKey);
       setSelected({
         ...initSelectedList,
-        [String(dataKey)]: true,
+        [dataKey]: true,
       });
 
       const groupName = validNavGroup(dataKey);
@@ -95,7 +96,7 @@ function GNB() {
         ...show,
         [`/${group[1]}`]: true,
       });
-      if (pathDictionary.has(pathname)) {
+      if (urlDictionary.has(pathname)) {
         setSelected({
           ...initSelectedList,
           [pathname]: true,
@@ -108,33 +109,29 @@ function GNB() {
   return (
     <SideNav depthGap={12} className={cx('gnb')} onClick={onClick}>
       <SideNav.Menu
-        data-key={urls.components}
-        selected={selected[urls.components]}
+        data-key={URL.components}
+        selected={selected[URL.components]}
       >
         Components
       </SideNav.Menu>
-      <SideNav.MenuGroup show={show[urls.components]} depth={1}>
+      <SideNav.MenuGroup show={show[URL.components]} depth={1}>
         {componentGroup.map(({ url, contents }) => {
           return (
-            <Link href={url} key={url}>
-              <SideNav.Menu data-key={url} selected={selected[url]}>
-                {contents}
-              </SideNav.Menu>
-            </Link>
+            <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+              {contents}
+            </SideNav.Menu>
           );
         })}
       </SideNav.MenuGroup>
-      <SideNav.Menu data-key={urls.hooks} selected={selected[urls.hooks]}>
+      <SideNav.Menu data-key={URL.hooks} selected={selected[URL.hooks]}>
         Hooks
       </SideNav.Menu>
-      <SideNav.MenuGroup show={show[urls.hooks]} depth={1}>
+      <SideNav.MenuGroup show={show[URL.hooks]} depth={1}>
         {hooksGroup.map(({ url, contents }) => {
           return (
-            <Link href={url} key={url}>
-              <SideNav.Menu data-key={url} selected={selected[url]}>
-                {contents}
-              </SideNav.Menu>
-            </Link>
+            <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+              {contents}
+            </SideNav.Menu>
           );
         })}
       </SideNav.MenuGroup>
