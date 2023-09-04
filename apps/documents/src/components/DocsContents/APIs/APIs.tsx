@@ -19,13 +19,13 @@ function APIs() {
         </Table.Tr>
       </Table.Thead>
       <Table.Tbody>
-        {apis.map(({ name, type, description, defaultValue }) => {
+        {apis.map(({ name, type, description, defaultValue }, index) => {
           return (
-            <Table.Tr>
+            <Table.Tr key={`${index}-${name}`}>
               <Table.Td>{name}</Table.Td>
               <Table.Td>{type}</Table.Td>
-              <Table.Td>{description}</Table.Td>
               <Table.Td>{defaultValue}</Table.Td>
+              <Table.Td>{description}</Table.Td>
             </Table.Tr>
           );
         })}

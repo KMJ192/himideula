@@ -40,7 +40,7 @@ const apis: Array<APIs> = [
   {
     name: 'variant',
     type: `"primary" | "outlined" | "clear"`,
-    defaultValue: `"primary"`,
+    defaultValue: `primary`,
     description: 'Button 컴포넌트 변환 타입',
   },
   {
