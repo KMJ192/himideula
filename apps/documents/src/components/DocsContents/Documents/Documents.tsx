@@ -12,24 +12,20 @@ function Documents() {
   const { documents } = useDocsContentsState();
   const { theme } = useTheme();
 
-  return (
-    <div>
-      {documents.map(
-        ({ title, description, view, componentString }, index: number) => {
-          return (
-            <Fragment key={index}>
-              <Flex className={cx('container')}>
-                <Text typo='h3'>{title}</Text>
-                <Text typo='title2'>{description}</Text>
-                <div className={cx('view')}>{view}</div>
-                <pre className={cx('code-guide', theme)}>{componentString}</pre>
-              </Flex>
-              <Spacing direction='vertical' spacing={48} />
-            </Fragment>
-          );
-        },
-      )}
-    </div>
+  return documents.map(
+    ({ title, description, view, componentString }, index: number) => {
+      return (
+        <Fragment key={index}>
+          <Flex className={cx('container')}>
+            <Text typo='h3'>{title}</Text>
+            <Text typo='title2'>{description}</Text>
+            <div className={cx('view')}>{view}</div>
+            <pre className={cx('code-guide', theme)}>{componentString}</pre>
+          </Flex>
+          <Spacing direction='vertical' spacing={48} />
+        </Fragment>
+      );
+    },
   );
 }
 

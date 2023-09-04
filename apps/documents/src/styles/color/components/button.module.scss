@@ -10,11 +10,12 @@
 
   --ss-c-button-text: #{$light-text};
   --ss-c-button-text-hover: #{$light-text};
-  --ss-c-button-text-disabled: #{$white};
+  --ss-c-button-text-disabled: #{$light-gray200};
   --ss-c-button-text-active: #{$black};
 
   --ss-c-button-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   --ss-c-button-outline: #{$light-primary300};
+  --ss-c-button-outline-disabled: #{$light-gray300};
 }
 
 @mixin button-dark {
@@ -27,9 +28,10 @@
 
   --ss-c-button-text: #{$dark-text};
   --ss-c-button-text-hover: #{$dark-text};
-  --ss-c-button-text-disabled: #{$dark-primary300};
+  --ss-c-button-text-disabled: #{$dark-gray000};
   --ss-c-button-text-active: #{$dark-primary700};
 
   --ss-c-button-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
   --ss-c-button-outline: #{$dark-primary100};
+  --ss-c-button-outline-disabled: #{$dark-gray000};
 }

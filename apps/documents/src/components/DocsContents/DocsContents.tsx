@@ -20,6 +20,7 @@ import {
   type Documents as DocType,
   type APIs as APIsType,
   type CSSVar,
+  type Playground as Pg,
   useDocsContentsState,
 } from '@src/store/components/DocsContents/state';
 
@@ -33,6 +34,7 @@ type Props = {
   documents: Array<DocType>;
   apis: Array<APIsType>;
   cssVar: Array<CSSVar>;
+  playground: Array<Pg>;
 };
 
 const options: Array<TabOption> = [
@@ -72,7 +74,14 @@ const options: Array<TabOption> = [
 
 const components = [<Documents />, <APIs />, <CSSVariable />, <Playground />];
 
-function DocsContents({ title, description, documents, apis, cssVar }: Props) {
+function DocsContents({
+  title,
+  description,
+  documents,
+  apis,
+  cssVar,
+  playground,
+}: Props) {
   const [selected, setSelected] = useState(0);
   const { viewComponent } = useDocsContentsState();
 
@@ -88,7 +97,7 @@ function DocsContents({ title, description, documents, apis, cssVar }: Props) {
       documents,
       apis,
       cssVar,
-      playground: [],
+      playground,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [title, documents]);
