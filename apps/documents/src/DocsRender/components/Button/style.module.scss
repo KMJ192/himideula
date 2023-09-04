@@ -1,0 +1,10 @@
+.variant {
+  column-gap: 24px;
+}
+.shape {
+  column-gap: 24px;
+  .rect {
+    width: 72px;
+    height: 48px;
+  }
+}

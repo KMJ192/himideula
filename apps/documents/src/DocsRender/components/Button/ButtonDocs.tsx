@@ -2,11 +2,12 @@ import DocsContents from '@src/components/DocsContents/DocsContents';
 import type { APIs, Documents } from '@src/store/components/DocsContents/state';
 
 import Variant from './Variant/Variant';
+import Shape from './Shape/Shape';
 
 const documents: Array<Documents> = [
   {
     title: 'Variant',
-    description: '버튼 변형 형태',
+    description: '변형 형태',
     view: <Variant />,
     componentString: `
       <Button variant='primary'>default</Button>
@@ -14,6 +15,18 @@ const documents: Array<Documents> = [
       <Button variant='outlined'>outlined</Button>
       
       <Button variant='clear'>clear</Button>
+    `,
+  },
+  {
+    title: 'Shape',
+    description: '',
+    view: <Shape />,
+    componentString: `
+      <Button shape='rect'>rect</Button>
+
+      <Button shape='square'>square</Button>
+      
+      <Button shape='circle'>circle</Button>
     `,
   },
 ];
