@@ -8,3 +8,14 @@
     height: 48px;
   }
 }
+.icon {
+  column-gap: 24px;
+  .left-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .right-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

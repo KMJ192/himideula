@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '@src/store/theme/themeState';
 
 import {
@@ -31,10 +31,27 @@ function PageTemplate({ children }: Props) {
   };
 
   const onClickTheme = () => {
+    const currentTheme = theme === 'light' ? 'dark' : 'light';
     switchTheme({
-      theme: theme === 'light' ? 'dark' : 'light',
+      theme: currentTheme,
     });
+    window.localStorage.setItem('theme', currentTheme);
   };
+
+  useEffect(() => {
+    const theme = window.localStorage.getItem('theme');
+    if (!theme) {
+      window.localStorage.setItem('theme', 'light');
+      switchTheme({
+        theme: 'light',
+      });
+    } else {
+      switchTheme({
+        theme,
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Flex as='main' className={cx('page-template', active && 'hide', theme)}>

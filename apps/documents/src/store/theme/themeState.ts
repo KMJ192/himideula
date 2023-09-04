@@ -1,9 +1,7 @@
 import { create } from 'zustand';
 
-type Theme = 'light' | 'dark';
-
 type State = {
-  theme: Theme;
+  theme: string;
 };
 
 type Action = {
@@ -15,5 +13,4 @@ const useTheme = create<State & Action>((set) => ({
   switchTheme: (newTheme: State) => set(newTheme),
 }));
 
-export type { Theme };
 export { useTheme };
