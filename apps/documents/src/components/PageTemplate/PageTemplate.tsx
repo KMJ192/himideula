@@ -37,7 +37,7 @@ function PageTemplate({ children }: Props) {
   };
 
   return (
-    <Flex className={cx('page-template', active && 'hide', theme)}>
+    <Flex as='main' className={cx('page-template', active && 'hide', theme)}>
       <Float className={cx('theme')} startDirection='rb'>
         <Button
           shape='circle'
@@ -53,7 +53,7 @@ function PageTemplate({ children }: Props) {
           <HamburgerMenu onClick={onClickActive} />
         </Header>
         <Spacing direction='vertical' spacing={72} />
-        <main className={cx('page')}>{children}</main>
+        <section className={cx('page', theme)}>{children}</section>
       </div>
     </Flex>
   );

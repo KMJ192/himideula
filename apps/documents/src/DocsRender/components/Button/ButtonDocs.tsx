@@ -1,31 +1,19 @@
-import { Button } from '@ssamssam/react-ui';
-
 import DocsContents from '@src/components/DocsContents/DocsContents';
 import type { APIs, Documents } from '@src/store/components/DocsContents/state';
 
+import Variant from './Variant/Variant';
+
 const documents: Array<Documents> = [
   {
-    title: 'Basic',
-    description: '기본 버튼 컴포넌트 입니다.',
-    view: <Button>Button</Button>,
+    title: 'Variant',
+    description: '버튼 변형 형태',
+    view: <Variant />,
     componentString: `
-      <Button>Button</Button>
-    `,
-  },
-  {
-    title: 'Clear',
-    description: '경계선이 없는 버튼 컴포넌트 입니다.',
-    view: <Button variant='clear'>Button</Button>,
-    componentString: `
-      <Button variant='clear'>Button</Button>
-    `,
-  },
-  {
-    title: 'Outlined',
-    description: '경계선으로 이루어진 버튼 컴포넌트 입니다.',
-    view: <Button variant='outlined'>Button</Button>,
-    componentString: `
-      <Button variant='outlined'>Button</Button>
+      <Button variant='primary'>default</Button>
+
+      <Button variant='outlined'>outlined</Button>
+      
+      <Button variant='clear'>clear</Button>
     `,
   },
 ];
@@ -75,7 +63,7 @@ const apis: Array<APIs> = [
   },
 ];
 
-function Render() {
+function ButtonDocs() {
   return (
     <DocsContents
       title='Button'
@@ -86,4 +74,4 @@ function Render() {
   );
 }
 
-export default Render;
+export default ButtonDocs;

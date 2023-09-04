@@ -1,5 +1,5 @@
 function Components() {
-  return <div>Components</div>;
+  return <div>React UI 컴포넌트</div>;
 }
 
 export default Components;

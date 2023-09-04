@@ -1,7 +1,7 @@
-import Render from './Render';
+import ButtonDocs from '@src/DocsRender/components/Button/ButtonDocs';
 
 function Page() {
-  return <Render />;
+  return <ButtonDocs />;
 }
 
 export default Page;
