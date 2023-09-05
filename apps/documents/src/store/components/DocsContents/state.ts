@@ -1,8 +1,6 @@
 import type { ReactNode } from 'react';
 import { create } from 'zustand';
 
-import type { RadioProps } from '@ssamssam/react-ui';
-
 type Documents = {
   title: string;
   description: string;
@@ -23,12 +21,7 @@ type CSSVar = {
   description: string;
 };
 type Playground = {
-  subject: string;
-  options: Array<
-    Pick<RadioProps, 'children' | 'disabled' | 'size' | 'pupilSize'>
-  >;
-  componentString: ReactNode;
-  description: string;
+  component: ReactNode;
 };
 
 type State = {
@@ -36,7 +29,7 @@ type State = {
   documents: Array<Documents>;
   apis: Array<APIs>;
   cssVar: Array<CSSVar>;
-  playground: Array<Playground>;
+  playground?: Playground;
 };
 
 type Action = {
@@ -48,15 +41,8 @@ const useDocsContentsState = create<State & Action>((set) => ({
   documents: [],
   apis: [],
   cssVar: [],
-  playground: [],
   viewComponent: (newState: State) => set(newState),
 }));
-
-type PlaygroundState = {
-  // ...
-};
-
-const usePlaygroundState = create((set) => ({}));
 
 export type { Documents, APIs, CSSVar, Playground };
 export { useDocsContentsState };

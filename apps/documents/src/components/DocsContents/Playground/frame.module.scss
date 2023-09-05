@@ -1,6 +1,6 @@
-.container {
+.contents {
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 24px;
   .view {
     border: 1px solid rgba(149, 149, 149, .4);
     border-radius: 8px;
@@ -10,7 +10,7 @@
     background-color: #353535;
     border-radius: 8px;
     color: #fff;
-    padding: 8px 24px;
+    padding: 24px;
     overflow: auto;
     user-select: none;
     &.dark {

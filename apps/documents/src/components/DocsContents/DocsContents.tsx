@@ -34,7 +34,7 @@ type Props = {
   documents: Array<DocType>;
   apis: Array<APIsType>;
   cssVar: Array<CSSVar>;
-  playground: Array<Pg>;
+  playground: Pg;
 };
 
 const options: Array<TabOption> = [
