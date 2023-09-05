@@ -1,53 +1,130 @@
 'use client';
 
+import { useState } from 'react';
+
 import {
+  Center,
   Flex,
   Text,
   Button,
   RadioGroup,
-  type RadioGroupOption,
+  Spacing,
 } from '@ssamssam/react-ui';
+import type {
+  Variant,
+  Shape,
+} from '@ssamssam/react-ui/build/components/Button/types';
+import Line from '@src/components/Line/Line';
 
 import { useTheme } from '@src/store/theme/themeState';
 
+import { OPTIONS } from './options';
+
 import classNames from 'classnames/bind';
 import style from '@src/components/DocsContents/Playground/frame.module.scss';
-import { useState } from 'react';
-import Line from '@src/components/Line/Line';
 const cx = classNames.bind(style);
 
-const options: Array<RadioGroupOption> = [
-  {
-    key: 0,
-    children: 'false',
-  },
-  {
-    key: 1,
-    children: 'true',
-  },
-];
-
 function ButtonLoading() {
-  const [loadingSelected, setLoadingSelected] = useState(0);
+  const [selected, setSelected] = useState({
+    disabled: 0,
+    loading: 0,
+    variant: 0,
+    shape: 0,
+  });
+
   const { theme } = useTheme();
 
   return (
     <Flex className={cx('contents')}>
-      <Text typo='t1'>Loading</Text>
+      <Spacing direction='vertical' spacing={8} />
+      <Text typo='t1'>Disabled</Text>
       <RadioGroup
-        options={options}
-        selected={loadingSelected}
+        options={OPTIONS.TOGGLE}
+        selected={selected.disabled}
         onSelect={(idx: number) => {
-          setLoadingSelected(idx);
+          setSelected({
+            ...selected,
+            disabled: idx,
+          });
         }}
       />
-      <div className={cx('view')}>
-        <Button loading={loadingSelected === 1}>Loading</Button>
-      </div>
+      <Center className={cx('view')} horizontal={false}>
+        <Button disabled={selected.disabled === 1}>Loading</Button>
+      </Center>
       <pre className={cx('code-guide', theme)}>
-        {`<Button loading={${loadingSelected === 1}}>Loading</Button>`}
+        {`<Button disabled={${selected.disabled === 1}}>Loading</Button>`}
       </pre>
       <Line></Line>
+      <Spacing direction='vertical' spacing={8} />
+      <Text typo='t1'>Loading</Text>
+      <RadioGroup
+        options={OPTIONS.TOGGLE}
+        selected={selected.loading}
+        onSelect={(idx: number) => {
+          setSelected({
+            ...selected,
+            loading: idx,
+          });
+        }}
+      />
+      <Center className={cx('view')} horizontal={false}>
+        <Button loading={selected.loading === 1}>Loading</Button>
+      </Center>
+      <pre className={cx('code-guide', theme)}>
+        {`<Button loading={${selected.loading === 1}}>Loading</Button>`}
+      </pre>
+      <Line></Line>
+      <Spacing direction='vertical' spacing={8} />
+      <Text typo='t1'>Variant</Text>
+      <RadioGroup
+        options={OPTIONS.VARIANT}
+        selected={selected.variant}
+        onSelect={(idx: number) => {
+          setSelected({
+            ...selected,
+            variant: idx,
+          });
+        }}
+      />
+      <Center className={cx('view')} horizontal={false}>
+        <Button variant={OPTIONS.VARIANT[selected.variant].children as Variant}>
+          {OPTIONS.VARIANT[selected.variant].children}
+        </Button>
+      </Center>
+      <pre className={cx('code-guide', theme)}>
+        {`<Button variant={${OPTIONS.VARIANT[selected.variant].children}}>${
+          OPTIONS.VARIANT[selected.variant].children
+        }</Button>`}
+      </pre>
+      <Line></Line>
+      <Spacing direction='vertical' spacing={8} />
+      <Text typo='t1'>Shape</Text>
+      <RadioGroup
+        options={OPTIONS.SHAPE}
+        selected={selected.shape}
+        onSelect={(idx: number) => {
+          setSelected({
+            ...selected,
+            shape: idx,
+          });
+        }}
+      />
+      <Center
+        className={cx('view')}
+        horizontal={false}
+        style={{
+          minHeight: '88px',
+        }}
+      >
+        <Button shape={OPTIONS.SHAPE[selected.shape].children as Shape}>
+          {OPTIONS.SHAPE[selected.shape].children}
+        </Button>
+      </Center>
+      <pre className={cx('code-guide', theme)}>
+        {`<Button shape={${OPTIONS.SHAPE[selected.shape].children}}>${
+          OPTIONS.SHAPE[selected.shape].children
+        }</Button>`}
+      </pre>
     </Flex>
   );
 }

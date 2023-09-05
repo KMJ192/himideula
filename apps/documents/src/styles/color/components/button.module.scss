@@ -3,7 +3,7 @@
 @mixin button-light {
   --ss-c-button-bg: #{$light-primary000};
   --ss-c-button-bg-hover: #{$light-primary100};
-  --ss-c-button-bg-disabled: #{$light-gray100};
+  --ss-c-button-bg-disabled: #{$light-gray000};
   --ss-c-button-bg-active: #{$light-primary300};
 
   --ss-c-button-bg-ripple: #{$light-primary200};
