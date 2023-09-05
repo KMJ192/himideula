@@ -1,13 +1,17 @@
 import colorModule from './color.module.scss';
 
 type COLOR_SCHEME =
-  | 'primary' // 연하늘색 계열
+  | 'primary'
   | 'secondary'
   | 'red'
   | 'green'
   | 'blue'
   | 'purple'
-  | 'solid';
+  | 'gray'
+  | 'success'
+  | 'info'
+  | 'warning'
+  | 'danger';
 
 type ColorMap = {
   LIGHT: { [key: string]: any };
@@ -84,10 +88,10 @@ const COLOR: ColorMap = {
       '600': colorModule.light_purple600,
       '700': colorModule.light_purple700,
     },
-    danger: colorModule.light_danger,
-    warning: colorModule.light_warning,
     success: colorModule.light_success,
     info: colorModule.light_info,
+    warning: colorModule.light_warning,
+    danger: colorModule.light_danger,
     background: colorModule.light_background,
     text: colorModule.light_text,
   },
