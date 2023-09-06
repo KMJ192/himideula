@@ -19,8 +19,12 @@ function CodeGuide({ header = '', code = '' }: Props) {
     if (code.length > 0) {
       navigator.clipboard
         .writeText(code)
-        .then(() => {})
-        .catch(() => {});
+        .then(() => {
+          // !todo 성공 toast
+        })
+        .catch(() => {
+          // !todo 실패 toast
+        });
     }
   };
 
