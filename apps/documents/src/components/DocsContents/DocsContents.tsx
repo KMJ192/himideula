@@ -88,6 +88,12 @@ function DocsContents({
   const onSelect = (_: TabOptionKey, idx: number) => {
     if (selected !== idx) {
       setSelected(idx);
+      // const body = document.querySelector('body');
+      // if (body) {
+      //   body.scrollTo({
+      //     top: 0,
+      //   });
+      // }
     }
   };
 
@@ -103,7 +109,7 @@ function DocsContents({
   }, [title, documents]);
 
   return (
-    <section className={cx('container')}>
+    <div className={cx('container')}>
       <Text typo='h2'>{title}</Text>
       <Spacing direction='vertical' spacing={8} />
       <Text>{description}</Text>
@@ -112,8 +118,8 @@ function DocsContents({
       <Spacing direction='vertical' spacing={24} />
       <Tab options={options} selected={selected} onSelect={onSelect} />
       <Spacing direction='vertical' spacing={56} />
-      <section>{components[selected]}</section>
-    </section>
+      <div>{components[selected]}</div>
+    </div>
   );
 }
 

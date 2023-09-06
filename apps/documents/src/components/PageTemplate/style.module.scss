@@ -51,14 +51,7 @@ $header-height: 72px;
     }
     .page {
       padding: 32px;
-      &.light {
-        background: $light-background;
-        color: $light-text;
-      }
-      &.dark {
-        background: $dark-background;
-        color: $dark-text;
-      }
+      
     }
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import TrieRender from '@src/DocsRender/hooks/Trie/TrieDocs';
+import TrieRender from '@src/pageContents/hooks/Trie/TrieDocs';
 
 function TrieHook() {
   return <TrieRender />;

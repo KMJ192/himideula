@@ -3,7 +3,7 @@ import DocsContents from '@src/components/DocsContents/DocsContents';
 import { documents } from './documents/documents';
 import { apis } from './apis/apis';
 import { cssVar } from './cssVar/cssVar';
-import Playground from './playground/Playground';
+import Playground from './Playground/Playground';
 
 function ButtonDocs() {
   return (

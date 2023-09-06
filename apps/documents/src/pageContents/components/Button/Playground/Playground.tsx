@@ -15,8 +15,7 @@ import type {
   Shape,
 } from '@ssamssam/react-ui/build/components/Button/types';
 import Line from '@src/components/Line/Line';
-
-import { useTheme } from '@src/store/theme/themeState';
+import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import { OPTIONS } from './options';
 
@@ -31,8 +30,6 @@ function ButtonLoading() {
     variant: 0,
     shape: 0,
   });
-
-  const { theme } = useTheme();
 
   return (
     <Flex className={cx('contents')}>
@@ -51,9 +48,9 @@ function ButtonLoading() {
       <Center className={cx('view')} horizontal={false}>
         <Button disabled={selected.disabled === 1}>Loading</Button>
       </Center>
-      <pre className={cx('code-guide', theme)}>
+      <CodeGuide>
         {`<Button disabled={${selected.disabled === 1}}>Loading</Button>`}
-      </pre>
+      </CodeGuide>
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
       <Text typo='t1'>Loading</Text>
@@ -70,9 +67,9 @@ function ButtonLoading() {
       <Center className={cx('view')} horizontal={false}>
         <Button loading={selected.loading === 1}>Loading</Button>
       </Center>
-      <pre className={cx('code-guide', theme)}>
+      <CodeGuide>
         {`<Button loading={${selected.loading === 1}}>Loading</Button>`}
-      </pre>
+      </CodeGuide>
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
       <Text typo='t1'>Variant</Text>
@@ -91,11 +88,11 @@ function ButtonLoading() {
           {OPTIONS.VARIANT[selected.variant].children}
         </Button>
       </Center>
-      <pre className={cx('code-guide', theme)}>
+      <CodeGuide>
         {`<Button variant={${OPTIONS.VARIANT[selected.variant].children}}>${
           OPTIONS.VARIANT[selected.variant].children
         }</Button>`}
-      </pre>
+      </CodeGuide>
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
       <Text typo='t1'>Shape</Text>
@@ -120,11 +117,11 @@ function ButtonLoading() {
           {OPTIONS.SHAPE[selected.shape].children}
         </Button>
       </Center>
-      <pre className={cx('code-guide', theme)}>
+      <CodeGuide>
         {`<Button shape={${OPTIONS.SHAPE[selected.shape].children}}>${
           OPTIONS.SHAPE[selected.shape].children
         }</Button>`}
-      </pre>
+      </CodeGuide>
     </Flex>
   );
 }
