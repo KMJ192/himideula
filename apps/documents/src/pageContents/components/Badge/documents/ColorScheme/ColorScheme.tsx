@@ -4,7 +4,7 @@ import style from '../style.module.scss';
 
 function ColorScheme() {
   return (
-    <Flex className={style.container}>
+    <Flex className={style.color}>
       <Badge colorSchema='primary'>primary</Badge>
       <Badge colorSchema='success'>success</Badge>
       <Badge colorSchema='info'>info</Badge>

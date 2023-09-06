@@ -9,7 +9,7 @@ function BadgeDocs() {
   return (
     <DocsContents
       title='Badge'
-      description='Badge 컴포넌트'
+      description='Badge 컴포넌트 가이드'
       documents={documents}
       apis={apis}
       cssVar={cssVar}
