@@ -1,4 +1,4 @@
-import DocsContents from '@src/components/DocsContents/DocsContents';
+import DocsContents from '@src/components/ComponentsDocsContents/DocsContents';
 
 import { documents } from './documents/documents';
 import { apis } from './apis/apis';

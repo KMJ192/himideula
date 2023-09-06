@@ -19,7 +19,7 @@ function Documents() {
             <Text typo='h3'>{title}</Text>
             <Text typo='title2'>{description}</Text>
             <div className={cx('view')}>{view}</div>
-            <CodeGuide>{componentString}</CodeGuide>
+            <CodeGuide header='javascript' code={componentString}></CodeGuide>
           </Flex>
           <Spacing direction='vertical' spacing={48} />
         </Fragment>

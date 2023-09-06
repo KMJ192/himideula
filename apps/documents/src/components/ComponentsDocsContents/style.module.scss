@@ -1,0 +1,15 @@
+@import 'src/styles/color/color.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-text {
+  letter-spacing: 0.05em;
+}
+
+.apis-table {
+  --ss-c-badge-color: #{$dark-text};
+  --ss-c-badge-bg: #{$dark-info};
+}

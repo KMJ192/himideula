@@ -1,11 +1,33 @@
-.code-view {
+@import 'src/styles/color/color.module.scss';
+
+.container {
+  flex-direction: column;
+  .header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 8px;
+    justify-content: space-between;
+    background-color: #cbcbcb;
+    color: $light-text;
+    &.dark { 
+      background-color: #444444;
+      color: $dark-text;
+    }
+    .copy {
+      cursor: pointer;
+    }
+  }
+  .code-view {
     background-color: #353535;
-    border-radius: 8px;
     color: #fff;
-    padding: 8px 24px;
+    padding: 24px;
     overflow: auto;
     user-select: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     &.dark {
       background-color: #0f0d0d;
     }
+  }
 }
+

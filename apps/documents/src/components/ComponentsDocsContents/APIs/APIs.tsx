@@ -1,12 +1,18 @@
 import { Badge, Table, Text } from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
+import { useTheme } from '@src/store/theme/themeState';
+
+import classNames from 'classnames/bind';
+import style from '../style.module.scss';
+const cx = classNames.bind(style);
 
 function APIs() {
+  const { theme } = useTheme();
   const { title, apis } = useDocsContentsState();
 
   return (
-    <Table>
+    <Table className={cx('apis-table')}>
       <Table.Caption>
         <Text typo='t2'>{title} 컴포넌트 Props</Text>
       </Table.Caption>
@@ -37,7 +43,7 @@ function APIs() {
                 <Text typo='s2'>{type}</Text>
               </Table.Td>
               <Table.Td>
-                <Badge colorSchema='info'>
+                <Badge colorSchema={theme === 'dark' ? 'custom' : 'info'}>
                   <Text typo='c1'>{defaultValue}</Text>
                 </Badge>
               </Table.Td>
