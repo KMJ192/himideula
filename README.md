@@ -15,17 +15,19 @@ yarn add @ssam/react-modules
 ```
 
 ### Library Package build
-- UI
-```
-yarn workspace @ssamssam/react-ui build
-```
 - Modules
 ```
 yarn workspace @ssamssam/react-modules build
 ```
+- UI
+```
+yarn workspace @ssamssam/react-ui build
+```
+
 
 ### App start
 - Documents
+  - @ssamssam/react-modules와 @ssamssam/react-ui를 순서대로 빌드해주세요.
 ```
 yarn workspace @ssamssam/documents start
 ```
