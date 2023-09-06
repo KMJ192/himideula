@@ -6,7 +6,7 @@ const documents: Array<Documents> = [
     title: 'Color Scheme',
     description: '색상',
     view: <ColorScheme />,
-    componentString: ``,
+    componentString: [],
   },
 ];
 

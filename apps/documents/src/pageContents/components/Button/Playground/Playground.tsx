@@ -50,7 +50,9 @@ function ButtonLoading() {
       </Center>
       <CodeGuide
         header='javascript'
-        code={`<Button disabled={${selected.disabled === 1}}>Loading</Button>`}
+        code={[
+          `<Button disabled={${selected.disabled === 1}}>Loading</Button>`,
+        ]}
       ></CodeGuide>
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
@@ -70,7 +72,7 @@ function ButtonLoading() {
       </Center>
       <CodeGuide
         header='javascript'
-        code={`<Button loading={${selected.loading === 1}}>Loading</Button>`}
+        code={[`<Button loading={${selected.loading === 1}}>Loading</Button>`]}
       />
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
@@ -92,9 +94,11 @@ function ButtonLoading() {
       </Center>
       <CodeGuide
         header='javascript'
-        code={`<Button variant={${
-          OPTIONS.VARIANT[selected.variant].children
-        }}>${OPTIONS.VARIANT[selected.variant].children}</Button>`}
+        code={[
+          `<Button variant={${OPTIONS.VARIANT[selected.variant].children}}>${
+            OPTIONS.VARIANT[selected.variant].children
+          }</Button>`,
+        ]}
       ></CodeGuide>
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
@@ -122,9 +126,11 @@ function ButtonLoading() {
       </Center>
       <CodeGuide
         header='javascript'
-        code={`<Button shape={${OPTIONS.SHAPE[selected.shape].children}}>${
-          OPTIONS.SHAPE[selected.shape].children
-        }</Button>`}
+        code={[
+          `<Button shape={${OPTIONS.SHAPE[selected.shape].children}}>${
+            OPTIONS.SHAPE[selected.shape].children
+          }</Button>`,
+        ]}
       ></CodeGuide>
     </Flex>
   );

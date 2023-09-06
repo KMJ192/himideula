@@ -8,17 +8,17 @@ import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 type Props = {
-  code?: string;
+  code?: Array<string>;
   header?: string;
 };
 
-function CodeGuide({ header = '', code = '' }: Props) {
+function CodeGuide({ header = '', code = [] }: Props) {
   const { theme } = useTheme();
 
   const onClickCopy = () => {
     if (code.length > 0) {
       navigator.clipboard
-        .writeText(code)
+        .writeText(code.join(''))
         .then(() => {
           // !todo 성공 toast
         })
@@ -36,7 +36,11 @@ function CodeGuide({ header = '', code = '' }: Props) {
           copy
         </Text>
       </Flex>
-      <pre className={cx('code-view', theme)}>{code}</pre>
+      <Flex className={cx('code-view', theme)}>
+        {code.map((c, idx) => {
+          return <span key={idx}>{c}</span>;
+        })}
+      </Flex>
     </Flex>
   );
 }

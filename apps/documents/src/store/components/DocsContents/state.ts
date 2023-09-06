@@ -5,7 +5,7 @@ type Documents = {
   title: string;
   description: string;
   view: ReactNode;
-  componentString: string;
+  componentString: Array<string>;
 };
 
 type APIs = {

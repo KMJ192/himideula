@@ -26,7 +26,7 @@ function Components() {
       <Text typo='t1'>Getting Start</Text>
       <Spacing direction='vertical' spacing={24} />
       <div className={cx('code-view')}>
-        <CodeGuide code='yarn add @ssamssam/react-ui' />
+        <CodeGuide code={['yarn add @ssamssam/react-ui']} />
       </div>
       <Spacing direction='vertical' spacing={36} />
       <Link href={URL.button}>
