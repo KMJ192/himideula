@@ -1,0 +1,13 @@
+.container {
+  flex-direction: column;
+  .header {
+    font-size: 52px;
+    font-weight: 900;
+  }
+  .description {
+    padding: 0 108px;
+  }
+  .goto {
+    padding: 16px;
+  }
+}

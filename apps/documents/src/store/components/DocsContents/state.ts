@@ -1,10 +1,10 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import { create } from 'zustand';
 
 type Documents = {
   title: string;
   description: string;
-  view: React.ReactNode;
+  view: ReactNode;
   componentString: string;
 };
 
@@ -14,19 +14,22 @@ type APIs = {
   defaultValue: string;
   description: string;
 };
-type CSSVars = {
-  // ...
+type CSSVar = {
+  name: string;
+  type: string;
+  defaultValue: string;
+  description: string;
 };
 type Playground = {
-  // ...
+  component: ReactNode;
 };
 
 type State = {
   title: string;
   documents: Array<Documents>;
   apis: Array<APIs>;
-  cssVars: Array<CSSVars>;
-  playground: Array<Playground>;
+  cssVar: Array<CSSVar>;
+  playground?: Playground;
 };
 
 type Action = {
@@ -37,10 +40,9 @@ const useDocsContentsState = create<State & Action>((set) => ({
   title: '',
   documents: [],
   apis: [],
-  cssVars: [],
-  playground: [],
+  cssVar: [],
   viewComponent: (newState: State) => set(newState),
 }));
 
-export type { Documents, APIs, CSSVars, Playground };
+export type { Documents, APIs, CSSVar, Playground };
 export { useDocsContentsState };

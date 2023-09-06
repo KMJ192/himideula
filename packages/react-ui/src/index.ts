@@ -15,6 +15,8 @@ export { default as Stack } from './layout/Stack/Stack';
 export type { StackProps } from './layout/Stack/Stack';
 
 // components
+export { default as Badge } from './components/Badge/Badge';
+export type { BadgeProps } from './components/Badge/Badge';
 export { default as Button } from './components/Button/Button';
 export type { ButtonProps } from './components/Button/Button';
 export { default as Card } from './components/Card/Card';
@@ -31,6 +33,11 @@ export { default as ProgressBar } from './components/ProgressBar/ProgressBar';
 export type { ProgressBarProps } from './components/ProgressBar/ProgressBar';
 export { default as Radio } from './components/Radio/Radio';
 export type { RadioProps } from './components/Radio/Radio';
+export { default as RadioGroup } from './components/RadioGroup/RadioGroup';
+export type {
+  RadioGroupProps,
+  RadioGroupOption,
+} from './components/RadioGroup/RadioGroup';
 export { default as Switch } from './components/Switch/Switch';
 export type { SwitchProps } from './components/Switch/Switch';
 export { default as Spinner } from './components/Spinner/Spinner';

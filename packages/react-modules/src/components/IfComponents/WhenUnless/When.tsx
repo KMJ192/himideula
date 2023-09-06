@@ -1,18 +1,13 @@
-import type { FC } from 'react';
-import { getConditionResult } from '../getConditionResults';
-import { render } from '../render';
-import type { ComponentWithConditionPropsWithFunctionChildren } from '../types';
-
-/**
- * <When condition={condition}>rendering condtion true</When>
- */
-const When: FC<ComponentWithConditionPropsWithFunctionChildren> = ({
-  condition,
-  children = null,
-}) => {
-  const conditionResult = Boolean(getConditionResult(condition));
-
-  return conditionResult && children ? render({ children }) : null;
+type Props = {
+  condition: boolean;
+  children: React.ReactNode;
 };
+
+function When({ condition, children }: Props) {
+  if (condition === true) {
+    return children;
+  }
+  return null;
+}
 
 export default When;

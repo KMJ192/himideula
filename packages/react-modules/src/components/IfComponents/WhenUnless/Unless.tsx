@@ -1,18 +1,13 @@
-import type { FC } from 'react';
-import { getConditionResult } from '../getConditionResults';
-import { render } from '../render';
-import type { ComponentWithConditionPropsWithFunctionChildren } from '../types';
-
-/**
- * <Unless condition={condition}>rendering condtion false</Unless>
- */
-const Unless: FC<ComponentWithConditionPropsWithFunctionChildren> = ({
-  condition,
-  children = null,
-}) => {
-  const conditionResult = Boolean(getConditionResult(condition));
-
-  return !conditionResult && children ? render({ children }) : null;
+type Props = {
+  condition: boolean;
+  children: React.ReactNode;
 };
+
+function Unless({ condition, children }: Props) {
+  if (condition === false) {
+    return children;
+  }
+  return null;
+}
 
 export default Unless;
