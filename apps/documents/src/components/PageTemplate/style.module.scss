@@ -5,12 +5,14 @@ $sideNav-padding: 16px;
 $header-height: 72px;
 
 @mixin hide {
-  .gnb {
-    transform: translate(-$sideNav-width - $sideNav-padding);
-  }
-  .contents {
-    margin-left: 0 !important;
-  }
+    .gnb {
+      transform: translate(-$sideNav-width - $sideNav-padding);
+    }
+    .contents {
+      margin-left: 0 !important;
+      width: 100%;
+    }
+  
 }
 
 .page-template {
@@ -63,5 +65,8 @@ $header-height: 72px;
 }
 
 @media screen and (max-width: 864px) {
-  @include hide;
+  .page-template {
+
+    @include hide;
+  }
 }
