@@ -15,6 +15,7 @@ const cx = classNames.bind(style);
 
 const urlDictionary = new Set([
   URL.components,
+  URL.badge,
   URL.button,
   URL.hooks,
   URL.useTrie,
@@ -22,6 +23,7 @@ const urlDictionary = new Set([
 
 const initSelectedList: { [key: string]: boolean } = {
   [URL.components]: false,
+  [URL.badge]: false,
   [URL.button]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
@@ -36,6 +38,10 @@ const componentGroup: Array<NavGroup> = [
   {
     url: URL.button,
     contents: 'Button',
+  },
+  {
+    url: URL.badge,
+    contents: 'Badge',
   },
 ];
 
