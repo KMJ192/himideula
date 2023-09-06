@@ -3,8 +3,6 @@
 - UI Documents 페이지
 - React 패키지
 
-
-
 ### Getting start
 
 - UI
@@ -43,6 +41,14 @@ yarn workspace @ssamssam/documents start
 
 ##### git commit message
 - 액션(프로젝트): 커밋 내용 
+
+- 프로젝트
+```
+workspace
+react-ui
+react-modules
+documents
+```
 
 - 액션
 ```

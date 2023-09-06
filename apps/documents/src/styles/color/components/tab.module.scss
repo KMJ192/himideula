@@ -1,0 +1,25 @@
+@import '../color.module.scss';
+
+@mixin tab-light {
+  --ss-c-tab-bg: #{$light-primary000};
+  --ss-c-tab-bg-hover: #{$light-primary200};
+  --ss-c-tab-bg-disabled: #{$light-gray100};
+
+  --ss-c-tab-select-line: #{$light-blue300};
+
+  --ss-c-tab-text: #{$light-text};
+  --ss-c-tab-text-hover: #{$light-text};
+  --ss-c-tab-text-disabled: #{$white};
+}
+
+@mixin tab-dark {
+  --ss-c-tab-bg: #{$dark-primary200};
+  --ss-c-tab-bg-hover: #{$dark-primary300};
+  --ss-c-tab-bg-disabled: #{$dark-primary100};
+
+  --ss-c-tab-select-line: #{$dark-blue300};
+
+  --ss-c-tab-text: #{$dark-text};
+  --ss-c-tab-text-hover: #{$dark-primary700};
+  --ss-c-tab-text-disabled: #{$dark-primary300};
+}

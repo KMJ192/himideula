@@ -1,3 +1,5 @@
+@import 'src/styles/color/components/theme.module.scss';
+
 $sideNav-width: 164px;
 $sideNav-padding: 16px;
 $header-height: 72px;
@@ -14,14 +16,25 @@ $header-height: 72px;
 .page-template {
   height: 100%;
   width: 100%;
+  @include theme;
   &.hide {
     @include hide;
+  }
+  .theme {
+    z-index: 999;
+    --ss-layout-float-bottom: 16px;
+    --ss-layout-float-right: 16px;
+    .theme-btn {
+      padding: 8px;
+    }
   }
   .gnb {
     position: fixed;
     z-index: 1;
     width: $sideNav-width;
     transition: transform 0.5s ease;
+    z-index: 999;
+    height: 100%;
   }
   .contents {
     margin-left: calc($sideNav-width + $sideNav-padding);
@@ -33,11 +46,12 @@ $header-height: 72px;
       top: 0;
       width: calc(100% - 16px);
       height: 72px;
-      z-index: 999;
+      z-index: 998;
       padding-left: 16px;
     }
     .page {
       padding: 32px;
+      
     }
   }
 }

@@ -1,0 +1,11 @@
+.code-view {
+    background-color: #353535;
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px 24px;
+    overflow: auto;
+    user-select: none;
+    &.dark {
+      background-color: #0f0d0d;
+    }
+}

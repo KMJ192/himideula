@@ -1,0 +1,21 @@
+.variant {
+  column-gap: 24px;
+}
+.shape {
+  column-gap: 24px;
+  .rect {
+    width: 72px;
+    height: 48px;
+  }
+}
+.icon {
+  column-gap: 24px;
+  .left-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .right-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

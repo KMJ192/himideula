@@ -2,7 +2,9 @@ import React from 'react';
 
 import Flex from '@src/layout/Flex/Flex';
 
-import type { COMBINE_ELEMENT_PROPS } from '@src/types/types';
+import type { OVER_RIDABLE_PROPS } from '@src/types/types';
+
+import { getStyle } from './calcStyle';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -17,12 +19,13 @@ type BaseProps = {
   bulletSize?: number;
 };
 
-const ELEMENT = 'div';
+const DEFAULT_ELEMENT = 'div';
 
-type Props<T extends React.ElementType> = COMBINE_ELEMENT_PROPS<T, BaseProps>;
+type Props<T extends React.ElementType> = OVER_RIDABLE_PROPS<T, BaseProps>;
 
-function Switch<T extends React.ElementType = typeof ELEMENT>(
+function Switch<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
   {
+    as,
     children,
     checked = false,
     disabled = false,
@@ -35,46 +38,32 @@ function Switch<T extends React.ElementType = typeof ELEMENT>(
   }: Props<T>,
   ref: React.Ref<any>,
 ) {
-  const isSwitchSize = typeof width === 'number' || typeof height === 'number';
-  const isBulletSize = typeof bulletSize === 'number';
+  const ELEMENT = as || DEFAULT_ELEMENT;
 
-  const switchSize = isSwitchSize
-    ? {
-        width,
-        height,
-      }
-    : undefined;
-  const bulletSz = isBulletSize
-    ? {
-        width: bulletSize,
-        height: bulletSize,
-      }
-    : undefined;
-  const fontSize =
-    isSwitchSize && typeof height === 'number'
-      ? {
-          fontSize: height > 8 ? height - 8 : height,
-        }
-      : undefined;
+  const { switchStyle, bulletStyle, fontStyle } = getStyle({
+    width,
+    height,
+    bulletSize,
+  });
 
   return (
     <Flex
       {...props}
-      as={ELEMENT}
+      as={ELEMENT as any}
       ref={ref}
       className={cx('switch', size, { checked }, { disabled }, className)}
     >
       <div
         className={cx('switch-body', { checked }, { disabled })}
-        style={switchSize}
+        style={switchStyle}
       ></div>
       <div
         className={cx('switch-bullet', { checked }, { disabled })}
-        style={bulletSz}
+        style={bulletStyle}
       ></div>
       <span
         className={cx('children', { checked }, { disabled })}
-        style={fontSize}
+        style={fontStyle}
       >
         {children}
       </span>
@@ -82,5 +71,5 @@ function Switch<T extends React.ElementType = typeof ELEMENT>(
   );
 }
 
-export type SwitchProps = Props<typeof ELEMENT>;
+export type SwitchProps = Props<typeof DEFAULT_ELEMENT>;
 export default React.forwardRef(Switch) as typeof Switch;

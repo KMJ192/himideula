@@ -1,0 +1,41 @@
+@import '../color.module.scss';
+
+@mixin radio-light {
+  --ss-c-radio-border: #{$light-primary300};
+  --ss-c-radio-border-checked: #{$light-blue300};
+  --ss-c-radio-border-disabled: #{$light-primary300};
+  --ss-c-radio-border-checked-disabled: #{$light-gray100};
+  --ss-c-radio-border-hover: #{$light-blue400};
+  --ss-c-radio-border-checked-hover: #{$light-blue500};
+
+  --ss-c-radio-bg-disabled: #{$light-gray000};
+  --ss-c-radio-bg-checked-disabled: #{$light-gray000};
+
+  --ss-c-radio-text: #{$light-text};
+  --ss-c-radio-text-disabled: #{$light-gray200};
+  --ss-c-radio-text-hover: #{$light-text};
+
+  --ss-c-radio-pupil: #{$light-blue300};
+  --ss-c-radio-pupil-disabled: #{$light-gray100};
+  --ss-c-radio-pupil-hover: #{$light-blue500};
+}
+
+@mixin radio-dark {
+  --ss-c-radio-border: #{$dark-primary300};
+  --ss-c-radio-border-checked: #{$dark-blue300};
+  --ss-c-radio-border-disabled: #{$dark-primary600};
+  --ss-c-radio-border-checked-disabled: #{$dark-primary400};
+  --ss-c-radio-border-hover: #{$dark-blue200};
+  --ss-c-radio-border-checked-hover: #{$dark-blue200};
+
+  --ss-c-radio-bg-disabled: #{$dark-primary300};
+  --ss-c-radio-bg-checked-disabled: #{$dark-primary400};
+
+  --ss-c-radio-text: #{$dark-text};
+  --ss-c-radio-text-hover: #{$dark-text};
+  --ss-c-radio-text-disabled: #{$dark-primary600};
+
+  --ss-c-radio-pupil: #{$dark-blue300};
+  --ss-c-radio-pupil-disabled: #{$dark-primary600};
+  --ss-c-radio-pupil-hover: #{$dark-blue100};
+}

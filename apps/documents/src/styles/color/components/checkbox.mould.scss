@@ -1,0 +1,45 @@
+@import '../color.module.scss';
+
+@mixin checkbox-light {
+  --ss-c-checkbox-border: #{$light-primary300};
+  --ss-c-checkbox-border-checked: #{$light-blue400};
+  --ss-c-checkbox-border-checked-disabled: #{$light-primary400};
+  --ss-c-checkbox-border-checked-hover: #{$light-blue500};
+  --ss-c-checkbox-border-disabled: #{$light-primary300};
+  --ss-c-checkbox-border-hover: #{$light-blue500};
+
+  --ss-c-checkbox-bg-checked: #{$light-blue400};
+  --ss-c-checkbox-bg-checked-disabled: #{$light-primary400};
+  --ss-c-checkbox-bg-checked-hover: #{$light-blue500};
+  --ss-c-checkbox-bg-disabled: #{$light-primary200};
+
+  --ss-c-checkbox-text: #{$light-primary900};
+  --ss-c-checkbox-text-hover: #{$light-blue500};
+  --ss-c-checkbox-text-disabled: #{$light-primary300};
+
+  --ss-c-checkbox-mark-checked: #{$light-primary000};
+  --ss-c-checkbox-mark-checked-disabled: #{$light-primary200};
+  --ss-c-checkbox-mark-checked-hover: #{$light-primary000};
+}
+
+@mixin checkbox-dark {
+  --ss-c-checkbox-border: #{$dark-primary300};
+  --ss-c-checkbox-border-checked: #{$dark-blue200};
+  --ss-c-checkbox-border-checked-disabled: #{$dark-primary400};
+  --ss-c-checkbox-border-checked-hover: #{$dark-blue100};
+  --ss-c-checkbox-border-disabled: #{$dark-primary600};
+  --ss-c-checkbox-border-hover: #{$dark-blue100};
+
+  --ss-c-checkbox-bg-checked: #{$dark-blue200};
+  --ss-c-checkbox-bg-checked-disabled: #{$dark-primary400};
+  --ss-c-checkbox-bg-checked-hover: #{$dark-blue100};
+  --ss-c-checkbox-bg-disabled: #{$dark-primary200};
+
+  --ss-c-checkbox-text: #{$dark-primary900};
+  --ss-c-checkbox-text-hover: #{$dark-blue200};
+  --ss-c-checkbox-text-disabled: #{$dark-primary200};
+
+  --ss-c-checkbox-mark-checked: #{$dark-primary800};
+  --ss-c-checkbox-mark-checked-disabled: #{$dark-primary600};
+  --ss-c-checkbox-mark-checked-hover: #{$dark-primary800};
+}
