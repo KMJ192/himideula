@@ -51,7 +51,14 @@ function Switch<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
       {...props}
       as={ELEMENT as any}
       ref={ref}
-      className={cx('switch', size, { checked }, { disabled }, className)}
+      className={cx(
+        'switch',
+        size,
+        { checked },
+        { disabled },
+        children !== undefined && 'is-children',
+        className,
+      )}
     >
       <div
         className={cx('switch-body', { checked }, { disabled })}
