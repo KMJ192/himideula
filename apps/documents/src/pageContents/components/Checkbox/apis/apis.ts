@@ -25,12 +25,6 @@ const apis: Array<APIs> = [
     defaultValue: 'false',
     description: '비활성화 여부',
   },
-  {
-    name: 'size',
-    type: 'number',
-    defaultValue: 'undefined',
-    description: '박스 크기',
-  },
 ];
 
 export { apis };
