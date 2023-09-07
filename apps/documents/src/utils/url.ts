@@ -4,6 +4,7 @@ const URL = {
   button: '/components/button',
   input: '/components/input',
   checkbox: '/components/checkbox',
+  popup: '/components/popup',
   hooks: '/hooks',
   useTrie: '/hooks/use-trie',
 };
