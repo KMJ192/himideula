@@ -47,7 +47,6 @@ function Checkbox<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
       as={ELEMENT as any}
       {...props}
       ref={ref}
-      horizontal={false}
       className={cx(
         'checkbox',
         { disabled },
