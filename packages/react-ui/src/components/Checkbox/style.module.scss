@@ -44,6 +44,7 @@
     background: $ss-c-checkbox-bg;
   }
   .box.disabled > .mark > svg {
+    visibility: visible;
     background: $ss-c-checkbox-bg-disabled;
     color: $ss-c-checkbox-bg-disabled;
   }
@@ -78,7 +79,9 @@
 
 @mixin default {
   cursor: pointer;
-  column-gap: 8px;
+  &.is-children {
+    column-gap: 8px;
+  }
   &.disabled {
     cursor: not-allowed;
   }
@@ -87,9 +90,9 @@
 .checkbox {
   @include default;
   @include center-vertical;
-  @include color-set;
   .box {
     @include box;
     @include mark;
   }
+  @include color-set;
 }
