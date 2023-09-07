@@ -1,7 +1,11 @@
-import { Table, Text, Flex } from '@ssamssam/react-ui';
+import { Table, Text } from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
 import { useTheme } from '@src/store/theme/themeState';
+
+import classNames from 'classnames/bind';
+import style from '../style.module.scss';
+const cx = classNames.bind(style);
 
 function CSSVariable() {
   const { title, cssVar } = useDocsContentsState();
@@ -38,26 +42,20 @@ function CSSVariable() {
               <Table.Td>
                 <Text typo='s2'>{type}</Text>
               </Table.Td>
-              <Table.Td>
-                <Flex
+              <Table.Td className={cx('color-view')}>
+                <div
                   style={{
-                    columnGap: '8px',
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '4px',
+                    background: defaultValue,
+                    boxShadow:
+                      theme === 'light'
+                        ? '0px 3px 6px rgba(0, 0, 0, .2)'
+                        : '0px 3px 6px rgba(0, 0, 0, 0.7)',
                   }}
-                >
-                  <div
-                    style={{
-                      width: '16px',
-                      height: '16px',
-                      background: defaultValue,
-                      borderRadius: '4px',
-                      boxShadow:
-                        theme === 'light'
-                          ? '0px 3px 6px rgba(0, 0, 0, .2)'
-                          : '0px 3px 6px rgba(0, 0, 0, 0.7)',
-                    }}
-                  ></div>
-                  <Text typo='c1'>{defaultValue}</Text>
-                </Flex>
+                ></div>
+                <Text typo='s2'>{defaultValue}</Text>
               </Table.Td>
               <Table.Td>
                 <Text typo='s2'>{description}</Text>

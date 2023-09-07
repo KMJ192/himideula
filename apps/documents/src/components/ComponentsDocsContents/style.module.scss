@@ -12,13 +12,22 @@
 .apis-table {
   --ss-c-badge-color: #{$dark-text};
   --ss-c-badge-bg: #{$dark-info};
-  .caption {
-    display: flex;
+  .caption > .flex {
     flex-direction: column;
     row-gap: 4px;
-    .bold {
+    .emphasis {
       font-size: 16px;
       font-weight: bolder;
     }
   }
+}
+
+.color-view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  column-gap: 8px;
 }

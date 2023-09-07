@@ -1,4 +1,4 @@
-import { Badge, Table, Text } from '@ssamssam/react-ui';
+import { Badge, Table, Text, Flex } from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
 import { useTheme } from '@src/store/theme/themeState';
@@ -14,11 +14,14 @@ function APIs() {
   return (
     <Table className={cx('apis-table')}>
       <Table.Caption className={cx('caption')}>
-        <Text typo='t2'>{title} 컴포넌트 Props</Text>
-        <Text typo='c1'>
-          기본 태그는 <strong className={cx('bold')}>[{defaultTag}]</strong>
-          이며, 해당 태그의 Props를 사용할 수 있습니다.
-        </Text>
+        <Flex className={cx('flex')}>
+          <Text typo='t2'>{title} 컴포넌트 Props</Text>
+          <Text typo='c1'>
+            기본 태그는{' '}
+            <strong className={cx('emphasis')}>[{defaultTag}]</strong>
+            이며, 해당 태그의 Props를 사용할 수 있습니다.
+          </Text>
+        </Flex>
       </Table.Caption>
       <Table.Thead>
         <Table.Tr>
