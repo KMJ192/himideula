@@ -1,9 +1,11 @@
 import { Table, Text, Flex } from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
+import { useTheme } from '@src/store/theme/themeState';
 
 function CSSVariable() {
   const { title, cssVar } = useDocsContentsState();
+  const { theme } = useTheme();
 
   return (
     <Table>
@@ -48,7 +50,10 @@ function CSSVariable() {
                       height: '16px',
                       background: defaultValue,
                       borderRadius: '4px',
-                      boxShadow: '0px 3px 6px rgba(0, 0, 0, .2)',
+                      boxShadow:
+                        theme === 'light'
+                          ? '0px 3px 6px rgba(0, 0, 0, .2)'
+                          : '0px 3px 6px rgba(0, 0, 0, 0.7)',
                     }}
                   ></div>
                   <Text typo='c1'>{defaultValue}</Text>
