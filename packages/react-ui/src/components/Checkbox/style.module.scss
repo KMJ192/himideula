@@ -26,7 +26,7 @@
     color: $ss-c-checkbox-text-disabled;
   }
   .box {
-    border: 2px solid $ss-c-checkbox-border;
+    border-color: $ss-c-checkbox-border;
   }
   .box.checked {
     border-color: $ss-c-checkbox-border-checked;
@@ -44,7 +44,6 @@
     background: $ss-c-checkbox-bg;
   }
   .box.disabled > .mark > svg {
-    visibility: visible;
     background: $ss-c-checkbox-bg-disabled;
     color: $ss-c-checkbox-bg-disabled;
   }
@@ -73,6 +72,8 @@
   width: $ss-size-checkbox;
   height: $ss-size-checkbox;
   aspect-ratio: 1;
+  border-width: 2px;
+  border-style: solid;
 }
 
 @mixin default {
@@ -85,7 +86,7 @@
 
 .checkbox {
   @include default;
-  @include vertical;
+  @include center-vertical;
   @include color-set;
   .box {
     @include box;
