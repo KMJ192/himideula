@@ -19,7 +19,7 @@ function APIs() {
           <Text typo='c1'>
             기본 태그는{' '}
             <strong className={cx('emphasis')}>[{defaultTag}]</strong>
-            이며, 해당 태그의 Props를 사용할 수 있습니다.
+            이며, 해당 태그의 속성을 사용할 수 있습니다.
           </Text>
         </Flex>
       </Table.Caption>
