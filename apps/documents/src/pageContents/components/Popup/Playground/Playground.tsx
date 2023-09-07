@@ -29,7 +29,7 @@ function ButtonLoading() {
   return (
     <Flex className={cx('contents')}>
       <Spacing direction='vertical' spacing={8} />
-      <Text typo='t1'>Animation</Text>
+      <Text typo='t1'>Popup Controller</Text>
       <Flex className={pgStyle['select-group']}>
         <Text>visible</Text>
         <RadioGroup
