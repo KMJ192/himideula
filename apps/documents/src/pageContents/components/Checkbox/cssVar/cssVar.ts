@@ -98,5 +98,11 @@ const cssVar: Array<CSSVar> = [
     defaultValue: COLOR.LIGHT.gray000,
     description: '마킹 색상 - 비활성화',
   },
+  {
+    name: '--ss-size-checkbox',
+    type: 'Size',
+    defaultValue: '16px',
+    description: 'Checkbox 크기',
+  },
 ];
 export { cssVar };
