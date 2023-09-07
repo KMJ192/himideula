@@ -54,7 +54,7 @@ else
     yarn wk:rmo tsc && yarn wk:rmo build
   elif [[ $commit_msg == *"$documents"* ]]; then
     # yarn wk:docs tsc && yarn wk:docs build
-    ecop "Documents 작업"
+    echo "Documents 작업"
   else 
     echo "커밋 메시지(프로젝트)를 다시 확인하세요."
     exit 1
