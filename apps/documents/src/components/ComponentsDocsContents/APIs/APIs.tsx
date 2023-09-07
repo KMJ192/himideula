@@ -9,12 +9,16 @@ const cx = classNames.bind(style);
 
 function APIs() {
   const { theme } = useTheme();
-  const { title, apis } = useDocsContentsState();
+  const { title, apis, defaultTag } = useDocsContentsState();
 
   return (
     <Table className={cx('apis-table')}>
-      <Table.Caption>
+      <Table.Caption className={cx('caption')}>
         <Text typo='t2'>{title} 컴포넌트 Props</Text>
+        <Text typo='c1'>
+          기본 태그는 <strong className={cx('bold')}>[{defaultTag}]</strong>
+          이며, 해당 태그의 Props를 사용할 수 있습니다.
+        </Text>
       </Table.Caption>
       <Table.Thead>
         <Table.Tr>

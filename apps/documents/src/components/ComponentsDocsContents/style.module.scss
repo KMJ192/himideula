@@ -12,4 +12,13 @@
 .apis-table {
   --ss-c-badge-color: #{$dark-text};
   --ss-c-badge-bg: #{$dark-info};
+  .caption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    .bold {
+      font-size: 16px;
+      font-weight: bolder;
+    }
+  }
 }

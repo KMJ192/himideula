@@ -9,6 +9,7 @@ function BadgeDocs() {
   return (
     <DocsContents
       title='Badge'
+      defaultTag='span'
       description='Badge 컴포넌트 가이드'
       documents={documents}
       apis={apis}

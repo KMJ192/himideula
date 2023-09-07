@@ -9,6 +9,7 @@ function ButtonDocs() {
   return (
     <DocsContents
       title='Button'
+      defaultTag='button'
       description='Button 컴포넌트 가이드'
       documents={documents}
       apis={apis}
