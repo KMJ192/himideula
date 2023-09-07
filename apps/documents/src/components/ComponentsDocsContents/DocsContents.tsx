@@ -88,12 +88,7 @@ function DocsContents({
   const onSelect = (_: TabOptionKey, idx: number) => {
     if (selected !== idx) {
       setSelected(idx);
-      // const body = document.querySelector('body');
-      // if (body) {
-      //   body.scrollTo({
-      //     top: 0,
-      //   });
-      // }
+      // scroll 이벤트
     }
   };
 

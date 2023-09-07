@@ -46,12 +46,12 @@ function ButtonLoading() {
         }}
       />
       <Center className={cx('view')} horizontal={false}>
-        <Button disabled={selected.disabled === 1}>Loading</Button>
+        <Button disabled={selected.disabled === 1}>Disabled</Button>
       </Center>
       <CodeGuide
         header='javascript'
         code={[
-          `<Button disabled={${selected.disabled === 1}}>Loading</Button>`,
+          `<Button disabled={${selected.disabled === 1}}>Disabled</Button>`,
         ]}
       ></CodeGuide>
       <Line></Line>
