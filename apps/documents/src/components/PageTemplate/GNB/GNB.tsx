@@ -25,6 +25,7 @@ const urlDictionary = new Set([
   URL.radioGroup,
   URL.spinner,
   URL.switch,
+  URL.tab,
   URL.hooks,
   URL.useTrie,
 ]);
@@ -40,6 +41,7 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.radio]: false,
   [URL.spinner]: false,
   [URL.switch]: false,
+  [URL.tab]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
 };
@@ -89,6 +91,10 @@ const componentGroup: Array<NavGroup> = [
   {
     url: URL.switch,
     contents: 'Switch',
+  },
+  {
+    url: URL.tab,
+    contents: 'Tab',
   },
 ];
 
