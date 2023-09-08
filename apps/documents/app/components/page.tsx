@@ -1,4 +1,4 @@
-import { Button, Center, Spacing, Text } from '@ssamssam/react-ui';
+import { Button, Center, Spacing, Text, Flex } from '@ssamssam/react-ui';
 
 import Link from 'next/link';
 import { URL } from '@src/utils/url';
@@ -25,17 +25,11 @@ function Components() {
       <Spacing direction='vertical' spacing={56} />
       <Text typo='t1'>시작하기</Text>
       <Spacing direction='vertical' spacing={24} />
-      <div className={cx('code-view')}>
-        <CodeGuide
-          code={[
-            '// use npm',
-            'npm install @ssamssam/react-ui',
-            '',
-            '// use yarn',
-            'yarn add @ssamssam/react-ui',
-          ]}
-        />
-      </div>
+      <Flex className={cx('use-guide')}>
+        <CodeGuide header='use npm' code={['npm install @ssamssam/react-ui']} />
+        <Spacing direction='vertical' spacing={24} />
+        <CodeGuide header='use yarn' code={['yarn add @ssamssam/react-ui']} />
+      </Flex>
       <Spacing direction='vertical' spacing={36} />
       <Link href={URL.button}>
         <Button className={cx('goto')}>
