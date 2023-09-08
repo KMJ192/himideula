@@ -58,7 +58,7 @@ function ButtonLoading() {
       </Flex>
       <Center className={cx('view')} horizontal={false}>
         <Popup
-          visible={selected.visible === 1 && true}
+          visible={selected.visible === 1}
           animation={selected.animation === 0 ? 'none' : 'fade'}
           className={pgStyle.popup}
         >
@@ -68,7 +68,7 @@ function ButtonLoading() {
       <CodeGuide
         header='javascript'
         code={[
-          `<Popup visible={${selected.visible === 1 && true}} animation={${
+          `<Popup visible={${selected.visible === 1}} animation={${
             selected.animation === 0 ? 'none' : 'fade'
           }}>Popup 컴포넌트</Popup>`,
         ]}

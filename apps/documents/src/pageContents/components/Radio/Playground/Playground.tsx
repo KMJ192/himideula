@@ -56,8 +56,8 @@ function ButtonLoading() {
       </Flex>
       <Center className={cx('view')} horizontal={false}>
         <Radio
-          disabled={selected.disabled === 1 && true}
-          checked={selected.checked === 1 && true}
+          disabled={selected.disabled === 1}
+          checked={selected.checked === 1}
         >
           Radio
         </Radio>
@@ -65,8 +65,8 @@ function ButtonLoading() {
       <CodeGuide
         header='javascript'
         code={[
-          `<Radio disabled={${selected.disabled === 1 && true}} checked={${
-            selected.checked === 1 && true
+          `<Radio disabled={${selected.disabled === 1}} checked={${
+            selected.checked === 1
           }}>Radio</Radio>`,
         ]}
       ></CodeGuide>

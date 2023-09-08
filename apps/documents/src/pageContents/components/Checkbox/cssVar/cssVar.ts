@@ -13,7 +13,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-checkbox-border-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.blue300,
-    description: '경계선 색상 - Hover',
+    description: '경계선 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-checkbox-border-disabled',
@@ -31,7 +31,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-checkbox-border-checked-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.blue500,
-    description: '경계선 색상 - 선택, Hover',
+    description: '경계선 색상 - 선택, 마우스 호버',
   },
   {
     name: '--ss-c-checkbox-border-checked-disabled',
@@ -49,7 +49,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-checkbox-bg-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.blue500,
-    description: '박스 배경 색상 - Hover',
+    description: '박스 배경 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-checkbox-bg-disabled',
@@ -73,7 +73,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-checkbox-text-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.text,
-    description: '글자 색상 - Hover',
+    description: '글자 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-checkbox-text-disabled',
@@ -91,7 +91,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-checkbox-mark-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.primary000,
-    description: '마킹 색상 - Hover',
+    description: '마킹 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-checkbox-mark-disabled',
@@ -103,7 +103,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-size-checkbox',
     type: CSS_VAR_TYPE.SIZE,
     defaultValue: '16px',
-    description: 'Checkbox 크기',
+    description: '크기',
   },
 ];
 export { cssVar };

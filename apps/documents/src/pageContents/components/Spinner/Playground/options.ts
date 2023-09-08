@@ -1,18 +1,18 @@
 import type { RadioGroupOption } from '@ssamssam/react-ui';
 
-const DIRECTION: Array<RadioGroupOption> = [
+const TYPE: Array<RadioGroupOption> = [
   {
     key: 0,
-    children: 'horizontal',
+    children: 'type-1',
   },
   {
     key: 1,
-    children: 'vertical',
+    children: 'type-2',
   },
 ];
 
 const OPTIONS = {
-  DIRECTION,
+  TYPE,
 };
 
 export { OPTIONS };

@@ -58,16 +58,13 @@ function ButtonLoading() {
         <Input value={percent} onChange={onChange} />
       </Flex>
       <Center className={cx('view')} horizontal={false}>
-        <ProgressBar
-          pending={selected.pending === 0 && true}
-          percent={percent}
-        />
+        <ProgressBar pending={selected.pending === 0} percent={percent} />
       </Center>
       <CodeGuide
         header='javascript'
         code={[
           `<ProgressBar pending={${
-            selected.pending === 0 && true
+            selected.pending === 0
           }} percent={${percent}} />`,
         ]}
       ></CodeGuide>

@@ -13,7 +13,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-button-bg-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.primary100,
-    description: '배경 색상 - Hover',
+    description: '배경 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-button-bg-disabled',
@@ -43,7 +43,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-button-text-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.text,
-    description: '글자 색상 - Hover',
+    description: '글자 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-button-text-disabled',

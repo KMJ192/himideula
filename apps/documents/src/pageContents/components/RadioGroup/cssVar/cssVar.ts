@@ -31,13 +31,13 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-radio-border-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.blue400,
-    description: '경계선 색상 - Hover',
+    description: '경계선 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-radio-border-checked-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.blue500,
-    description: '경계선 색상 - 선택, Hover',
+    description: '경계선 색상 - 선택, 마우스 호버',
   },
   {
     name: '--ss-c-radio-bg-disabled',
@@ -67,7 +67,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-radio-text-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.text,
-    description: '글자 색상 - Hover',
+    description: '글자 색상 - 마우스 호버',
   },
   {
     name: '--ss-c-radio-pupil',
@@ -85,7 +85,7 @@ const cssVar: Array<CSSVar> = [
     name: '--ss-c-radio-pupil-hover',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.blue500,
-    description: '마크 색상 - Hover',
+    description: '마크 색상 - 마우스 호버',
   },
   {
     name: '--ss-size-radio',
