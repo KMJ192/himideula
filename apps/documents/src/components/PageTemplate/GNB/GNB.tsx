@@ -15,14 +15,31 @@ const cx = classNames.bind(style);
 
 const urlDictionary = new Set([
   URL.components,
+  URL.badge,
   URL.button,
+  URL.checkbox,
+  URL.input,
+  URL.popup,
+  URL.progressBar,
+  URL.radio,
+  URL.radioGroup,
+  URL.spinner,
+  URL.switch,
   URL.hooks,
   URL.useTrie,
 ]);
 
 const initSelectedList: { [key: string]: boolean } = {
   [URL.components]: false,
+  [URL.badge]: false,
   [URL.button]: false,
+  [URL.checkbox]: false,
+  [URL.input]: false,
+  [URL.popup]: false,
+  [URL.progressBar]: false,
+  [URL.radio]: false,
+  [URL.spinner]: false,
+  [URL.switch]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
 };
@@ -37,14 +54,50 @@ const componentGroup: Array<NavGroup> = [
     url: URL.button,
     contents: 'Button',
   },
-];
-
-const hooksGroup: Array<NavGroup> = [
   {
-    url: URL.useTrie,
-    contents: 'useTrie',
+    url: URL.badge,
+    contents: 'Badge',
+  },
+  {
+    url: URL.checkbox,
+    contents: 'Checkbox',
+  },
+  {
+    url: URL.input,
+    contents: 'Input',
+  },
+  {
+    url: URL.popup,
+    contents: 'Popup',
+  },
+  {
+    url: URL.progressBar,
+    contents: 'ProgressBar',
+  },
+  {
+    url: URL.radio,
+    contents: 'Radio',
+  },
+  {
+    url: URL.radioGroup,
+    contents: 'RadioGroup',
+  },
+  {
+    url: URL.spinner,
+    contents: 'Spinner',
+  },
+  {
+    url: URL.switch,
+    contents: 'Switch',
   },
 ];
+
+// const hooksGroup: Array<NavGroup> = [
+//   {
+//     url: URL.useTrie,
+//     contents: 'useTrie',
+//   },
+// ];
 
 const validNavGroup = (dataKey: string): string | null => {
   if (dataKey === URL.components || dataKey === URL.hooks) {
@@ -123,7 +176,7 @@ function GNB() {
           );
         })}
       </SideNav.MenuGroup>
-      <SideNav.Menu data-key={URL.hooks} selected={selected[URL.hooks]}>
+      {/* <SideNav.Menu data-key={URL.hooks} selected={selected[URL.hooks]}>
         Hooks
       </SideNav.Menu>
       <SideNav.MenuGroup show={show[URL.hooks]} depth={1}>
@@ -134,7 +187,7 @@ function GNB() {
             </SideNav.Menu>
           );
         })}
-      </SideNav.MenuGroup>
+      </SideNav.MenuGroup> */}
     </SideNav>
   );
 }

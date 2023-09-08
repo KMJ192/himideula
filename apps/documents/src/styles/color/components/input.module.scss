@@ -1,34 +1,34 @@
 @import '../color.module.scss';
 
 @mixin input-light {
-  --ss-c-input-border: #{$light-primary400};
+  --ss-c-input-border: #{$light-primary600};
   --ss-c-input-border-focus: #{$light-blue500};
-  --ss-c-input-border-error: #{$light-red900};
-  --ss-c-input-border-disabled: #{$light-primary300};
+  --ss-c-input-border-error: #{$light-danger};
+  --ss-c-input-border-disabled: #{$light-gray100};
 
   --ss-c-input-bg: #{$light-primary000};
-  --ss-c-input-bg-disabled: #{$light-primary100};
+  --ss-c-input-bg-disabled: #{$light-gray000};
 
-  --ss-c-input-text: #{$light-primary900};
-  --ss-c-input-text-disabled: #{$light-primary400};
+  --ss-c-input-text: #{$light-text};
+  --ss-c-input-text-disabled: #{$light-gray200};
 
-  --ss-c-input-placeholder: #{$light-primary400};
-  --ss-c-input-placeholder-disabled: #{$light-primary300};
+  --ss-c-input-placeholder: #{$light-gray100};
+  --ss-c-input-placeholder-disabled: #{$light-gray100};
 
   --ss-c-input-box-shadow: 0px 3px 6px rgba(62, 62, 62, 0.1);
 }
 
 @mixin input-dark {
   --ss-c-input-border: #{$dark-primary300};
-  --ss-c-input-border-focus: #{$dark-blue500};
-  --ss-c-input-border-error: #{$dark-red000};
+  --ss-c-input-border-focus: #{$dark-blue300};
+  --ss-c-input-border-error: #{$dark-danger};
   --ss-c-input-border-disabled: #{$dark-primary100};
 
   --ss-c-input-bg: #{$dark-primary100};
   --ss-c-input-bg-disabled: #{$dark-primary200};
 
-  --ss-c-input-text: #{$dark-primary800};
-  --ss-c-input-text-disabled: #{$dark-primary000};
+  --ss-c-input-text: #{$dark-text};
+  --ss-c-input-text-disabled: #{$dark-primary100};
 
   --ss-c-input-placeholder: #{$dark-primary300};
   --ss-c-input-placeholder-disabled: #{$dark-primary100};

@@ -1,20 +1,48 @@
 'use client';
 
+import { Flex, Text } from '@ssamssam/react-ui';
 import { useTheme } from '@src/store/theme/themeState';
-import type { ReactNode } from 'react';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 type Props = {
-  children: ReactNode;
+  code?: Array<string>;
+  header?: string;
 };
 
-function CodeGuide({ children }: Props) {
+function CodeGuide({ header = '', code = [] }: Props) {
   const { theme } = useTheme();
 
-  return <pre className={cx('code-view', theme)}>{children}</pre>;
+  const onClickCopy = () => {
+    if (code.length > 0) {
+      navigator.clipboard
+        .writeText(code.join(''))
+        .then(() => {
+          // !todo 성공 toast
+        })
+        .catch(() => {
+          // !todo 실패 toast
+        });
+    }
+  };
+
+  return (
+    <Flex className={cx('container')}>
+      <Flex className={cx('header', theme)}>
+        <Text typo='c1'>{header}</Text>
+        <Text typo='c1' className={cx('copy')} onClick={onClickCopy}>
+          copy
+        </Text>
+      </Flex>
+      <Flex className={cx('code-view', theme)}>
+        {code.map((c, idx) => {
+          return <span key={idx}>{c}</span>;
+        })}
+      </Flex>
+    </Flex>
+  );
 }
 
 export default CodeGuide;

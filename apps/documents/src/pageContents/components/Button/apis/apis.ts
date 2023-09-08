@@ -20,6 +20,12 @@ const apis: Array<APIs> = [
     description: 'Button 컴포넌트 모양',
   },
   {
+    name: 'disabled',
+    type: 'boolean',
+    defaultValue: 'false',
+    description: '비활성화 여부',
+  },
+  {
     name: 'loading',
     type: 'boolean',
     defaultValue: 'false',

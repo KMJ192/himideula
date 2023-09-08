@@ -5,12 +5,14 @@ $sideNav-padding: 16px;
 $header-height: 72px;
 
 @mixin hide {
-  .gnb {
-    transform: translate(-$sideNav-width - $sideNav-padding);
-  }
-  .contents {
-    margin-left: 0 !important;
-  }
+    .gnb {
+      transform: translate(-$sideNav-width - $sideNav-padding);
+    }
+    .contents {
+      margin-left: 0 !important;
+      width: 100%;
+    }
+  
 }
 
 .page-template {
@@ -37,8 +39,9 @@ $header-height: 72px;
     height: 100%;
   }
   .contents {
-    margin-left: calc($sideNav-width + $sideNav-padding);
-    width: 100%;
+    $margin-left: calc($sideNav-width + $sideNav-padding); 
+    margin-left: $margin-left;
+    width: calc(100% - $margin-left);
     height: 100%;
     transition: margin-left 0.5s ease;
     .header {
@@ -51,11 +54,19 @@ $header-height: 72px;
     }
     .page {
       padding: 32px;
-      
+      background: $light-background;
+      color: $light-text;
+      &.dark {
+        background: $dark-background;
+        color: $dark-text;
+      }
     }
   }
 }
 
 @media screen and (max-width: 864px) {
-  @include hide;
+  .page-template {
+
+    @include hide;
+  }
 }

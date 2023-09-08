@@ -20,7 +20,7 @@ import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 import { OPTIONS } from './options';
 
 import classNames from 'classnames/bind';
-import style from '@src/components/DocsContents/Playground/frame.module.scss';
+import style from '@src/components/ComponentsDocsContents/Playground/frame.module.scss';
 const cx = classNames.bind(style);
 
 function ButtonLoading() {
@@ -46,11 +46,14 @@ function ButtonLoading() {
         }}
       />
       <Center className={cx('view')} horizontal={false}>
-        <Button disabled={selected.disabled === 1}>Loading</Button>
+        <Button disabled={selected.disabled === 1}>Disabled</Button>
       </Center>
-      <CodeGuide>
-        {`<Button disabled={${selected.disabled === 1}}>Loading</Button>`}
-      </CodeGuide>
+      <CodeGuide
+        header='javascript'
+        code={[
+          `<Button disabled={${selected.disabled === 1}}>Disabled</Button>`,
+        ]}
+      ></CodeGuide>
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
       <Text typo='t1'>Loading</Text>
@@ -67,9 +70,10 @@ function ButtonLoading() {
       <Center className={cx('view')} horizontal={false}>
         <Button loading={selected.loading === 1}>Loading</Button>
       </Center>
-      <CodeGuide>
-        {`<Button loading={${selected.loading === 1}}>Loading</Button>`}
-      </CodeGuide>
+      <CodeGuide
+        header='javascript'
+        code={[`<Button loading={${selected.loading === 1}}>Loading</Button>`]}
+      />
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
       <Text typo='t1'>Variant</Text>
@@ -88,11 +92,14 @@ function ButtonLoading() {
           {OPTIONS.VARIANT[selected.variant].children}
         </Button>
       </Center>
-      <CodeGuide>
-        {`<Button variant={${OPTIONS.VARIANT[selected.variant].children}}>${
-          OPTIONS.VARIANT[selected.variant].children
-        }</Button>`}
-      </CodeGuide>
+      <CodeGuide
+        header='javascript'
+        code={[
+          `<Button variant={${OPTIONS.VARIANT[selected.variant].children}}>${
+            OPTIONS.VARIANT[selected.variant].children
+          }</Button>`,
+        ]}
+      ></CodeGuide>
       <Line></Line>
       <Spacing direction='vertical' spacing={8} />
       <Text typo='t1'>Shape</Text>
@@ -117,11 +124,14 @@ function ButtonLoading() {
           {OPTIONS.SHAPE[selected.shape].children}
         </Button>
       </Center>
-      <CodeGuide>
-        {`<Button shape={${OPTIONS.SHAPE[selected.shape].children}}>${
-          OPTIONS.SHAPE[selected.shape].children
-        }</Button>`}
-      </CodeGuide>
+      <CodeGuide
+        header='javascript'
+        code={[
+          `<Button shape={${OPTIONS.SHAPE[selected.shape].children}}>${
+            OPTIONS.SHAPE[selected.shape].children
+          }</Button>`,
+        ]}
+      ></CodeGuide>
     </Flex>
   );
 }

@@ -1,15 +1,16 @@
-import DocsContents from '@src/components/DocsContents/DocsContents';
+import DocsContents from '@src/components/ComponentsDocsContents/DocsContents';
 
+import Playground from './Playground/Playground';
 import { documents } from './documents/documents';
 import { apis } from './apis/apis';
 import { cssVar } from './cssVar/cssVar';
-import Playground from './Playground/Playground';
 
 function ButtonDocs() {
   return (
     <DocsContents
       title='Button'
-      description='Button 컴포넌트'
+      defaultTag='button'
+      description='Button 컴포넌트 가이드'
       documents={documents}
       apis={apis}
       cssVar={cssVar}
