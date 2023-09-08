@@ -23,8 +23,8 @@
 @mixin radio-dark {
   --ss-c-radio-border: #{$dark-primary300};
   --ss-c-radio-border-checked: #{$dark-blue200};
-  --ss-c-radio-border-disabled: #{$dark-primary600};
-  --ss-c-radio-border-checked-disabled: #{$dark-primary400};
+  --ss-c-radio-border-disabled: #{$dark-primary500};
+  --ss-c-radio-border-checked-disabled: #{$dark-primary500};
   --ss-c-radio-border-hover: #{$dark-blue100};
   --ss-c-radio-border-checked-hover: #{$dark-blue100};
 
