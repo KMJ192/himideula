@@ -57,9 +57,9 @@ function ButtonLoading() {
       <CodeGuide
         header='javascript'
         code={[
-          `<RadioGroup selected={${selected}} direction={${
+          `<RadioGroup selected={${selected}} direction="${
             direction === 0 ? 'horizontal' : 'vertical'
-          }} onSelect={(idx: number) => { setSelected(${selected}); }} />`,
+          }" onSelect={(idx: number) => { setSelected(${selected}); }} />`,
         ]}
       ></CodeGuide>
     </Flex>
