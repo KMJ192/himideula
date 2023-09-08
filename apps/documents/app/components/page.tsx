@@ -23,15 +23,23 @@ function Components() {
       <Spacing direction='vertical' spacing={24} />
       <Line />
       <Spacing direction='vertical' spacing={56} />
-      <Text typo='t1'>Getting Start</Text>
+      <Text typo='t1'>시작하기</Text>
       <Spacing direction='vertical' spacing={24} />
       <div className={cx('code-view')}>
-        <CodeGuide code={['yarn add @ssamssam/react-ui']} />
+        <CodeGuide
+          code={[
+            '// use npm',
+            'npm install @ssamssam/react-ui',
+            '',
+            '// use yarn',
+            'yarn add @ssamssam/react-ui',
+          ]}
+        />
       </div>
       <Spacing direction='vertical' spacing={36} />
       <Link href={URL.button}>
         <Button className={cx('goto')}>
-          <Text typo='t2'>Go to Documents</Text>
+          <Text typo='t2'>문서 보러 가기 (0.0.1v)</Text>
         </Button>
       </Link>
     </Center>
