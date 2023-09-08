@@ -3,8 +3,8 @@ import RadioView from './RadioView/RadioView';
 
 const documents: Array<Documents> = [
   {
-    title: 'ProgressBar',
-    description: 'ProgressBar 컴포넌트',
+    title: 'Radio',
+    description: '선택 유형 별 출력 타입',
     view: <RadioView />,
     componentString: [
       '<Radio>None</Radio>',
