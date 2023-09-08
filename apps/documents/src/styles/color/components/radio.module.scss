@@ -3,7 +3,7 @@
 @mixin radio-light {
   --ss-c-radio-border: #{$light-primary300};
   --ss-c-radio-border-checked: #{$light-blue300};
-  --ss-c-radio-border-disabled: #{$light-primary300};
+  --ss-c-radio-border-disabled: #{$light-gray100};
   --ss-c-radio-border-checked-disabled: #{$light-gray100};
   --ss-c-radio-border-hover: #{$light-blue400};
   --ss-c-radio-border-checked-hover: #{$light-blue500};

@@ -21,6 +21,7 @@ const urlDictionary = new Set([
   URL.input,
   URL.popup,
   URL.progress_bar,
+  URL.radio,
   URL.hooks,
   URL.useTrie,
 ]);
@@ -33,6 +34,7 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.input]: false,
   [URL.popup]: false,
   [URL.progress_bar]: false,
+  [URL.radio]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
 };
@@ -66,6 +68,10 @@ const componentGroup: Array<NavGroup> = [
   {
     url: URL.progress_bar,
     contents: 'ProgressBar',
+  },
+  {
+    url: URL.radio,
+    contents: 'Radio',
   },
 ];
 

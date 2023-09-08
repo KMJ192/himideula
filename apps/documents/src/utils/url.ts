@@ -6,6 +6,7 @@ const URL = {
   checkbox: '/components/checkbox',
   popup: '/components/popup',
   progress_bar: '/components/progress-bar',
+  radio: '/components/radio',
   hooks: '/hooks',
   useTrie: '/hooks/use-trie',
 };
