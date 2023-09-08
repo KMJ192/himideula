@@ -47,12 +47,12 @@ function APIs() {
                 <Text typo='s1'>{name}</Text>
               </Table.Td>
               <Table.Td>
-                <Text typo='s2'>{type}</Text>
+                <Badge colorSchema={theme === 'dark' ? 'custom' : 'info'}>
+                  <Text typo='s2'>{type}</Text>
+                </Badge>
               </Table.Td>
               <Table.Td>
-                <Badge colorSchema={theme === 'dark' ? 'custom' : 'info'}>
-                  <Text typo='c1'>{defaultValue}</Text>
-                </Badge>
+                <Text typo='c1'>{defaultValue}</Text>
               </Table.Td>
               <Table.Td>
                 <Text typo='s2'>{description}</Text>
