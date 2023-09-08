@@ -23,6 +23,7 @@ const urlDictionary = new Set([
   URL.progressBar,
   URL.radio,
   URL.radioGroup,
+  URL.spinner,
   URL.hooks,
   URL.useTrie,
 ]);
@@ -36,6 +37,7 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.popup]: false,
   [URL.progressBar]: false,
   [URL.radio]: false,
+  [URL.spinner]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
 };
@@ -78,14 +80,18 @@ const componentGroup: Array<NavGroup> = [
     url: URL.radioGroup,
     contents: 'RadioGroup',
   },
-];
-
-const hooksGroup: Array<NavGroup> = [
   {
-    url: URL.useTrie,
-    contents: 'useTrie',
+    url: URL.spinner,
+    contents: 'Spinner',
   },
 ];
+
+// const hooksGroup: Array<NavGroup> = [
+//   {
+//     url: URL.useTrie,
+//     contents: 'useTrie',
+//   },
+// ];
 
 const validNavGroup = (dataKey: string): string | null => {
   if (dataKey === URL.components || dataKey === URL.hooks) {
@@ -164,7 +170,7 @@ function GNB() {
           );
         })}
       </SideNav.MenuGroup>
-      <SideNav.Menu data-key={URL.hooks} selected={selected[URL.hooks]}>
+      {/* <SideNav.Menu data-key={URL.hooks} selected={selected[URL.hooks]}>
         Hooks
       </SideNav.Menu>
       <SideNav.MenuGroup show={show[URL.hooks]} depth={1}>
@@ -175,7 +181,7 @@ function GNB() {
             </SideNav.Menu>
           );
         })}
-      </SideNav.MenuGroup>
+      </SideNav.MenuGroup> */}
     </SideNav>
   );
 }

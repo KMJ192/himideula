@@ -8,6 +8,7 @@ const URL = {
   progressBar: '/components/progress-bar',
   radio: '/components/radio',
   radioGroup: '/components/radio-group',
+  spinner: '/components/spinner',
   hooks: '/hooks',
   useTrie: '/hooks/use-trie',
 };
