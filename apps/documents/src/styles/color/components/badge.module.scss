@@ -6,6 +6,6 @@
 }
 
 @mixin badge-dark {
-  --ss-c-badge-color: #{$dark-primary900};
+  --ss-c-badge-color: #{$dark-text};
   --ss-c-badge-bg: #{$dark-primary100};
 }

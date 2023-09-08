@@ -81,7 +81,6 @@
   width: $ss-size-radio;
   height: $ss-size-radio;
   border: 2px solid;
-  place-content: center;
   border-radius: 50%;
   transition: border-color 0.1s ease;
 }
@@ -89,8 +88,11 @@
 @mixin radio {
   align-items: center;
   -webkit-box-align: center;
-  column-gap: 8px;
   cursor: pointer;
+  width: fit-content;
+  &.is-children {
+    column-gap: 8px;
+  }
   &.disabled {
     cursor: not-allowed;
   }
@@ -98,7 +100,6 @@
 
 @mixin children {
   .children {
-    font-size: $ss-size-radio;
     transition: color 0.1s ease;
   }
 }

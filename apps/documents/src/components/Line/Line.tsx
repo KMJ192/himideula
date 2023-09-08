@@ -1,3 +1,5 @@
+'use client';
+
 import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';
