@@ -9,6 +9,7 @@ const URL = {
   radio: '/components/radio',
   radioGroup: '/components/radio-group',
   spinner: '/components/spinner',
+  switch: '/components/switch',
   hooks: '/hooks',
   useTrie: '/hooks/use-trie',
 };
