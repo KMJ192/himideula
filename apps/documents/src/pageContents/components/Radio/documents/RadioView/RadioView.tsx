@@ -5,7 +5,7 @@ import style from '../style.module.scss';
 function RadioView() {
   return (
     <Flex className={style['radio-view']}>
-      <Radio>None</Radio>
+      <Radio>UnChecked</Radio>
       <Radio checked>Checked</Radio>
       <Radio disabled>Checked</Radio>
       <Radio checked disabled>
