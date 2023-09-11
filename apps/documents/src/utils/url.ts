@@ -19,7 +19,7 @@ const URL = {
   spinner: '/components/spinner',
   switch: '/components/switch',
   tab: '/components/tab',
-  table: '/components/table',
+  dataTable: '/components/data-table',
   hooks: '/hooks',
   useTrie: '/hooks/use-trie',
 };

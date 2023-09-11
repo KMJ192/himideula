@@ -33,7 +33,7 @@ const urlDictionary = new Set([
   URL.spinner,
   URL.switch,
   URL.tab,
-  URL.table,
+  URL.dataTable,
   URL.hooks,
   URL.useTrie,
 ]);
@@ -57,7 +57,7 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.spinner]: false,
   [URL.switch]: false,
   [URL.tab]: false,
-  [URL.table]: false,
+  [URL.dataTable]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
 };
@@ -144,8 +144,8 @@ const componentGroup: Array<NavGroup> = [
     contents: 'Tab',
   },
   {
-    url: URL.table,
-    contents: 'Table',
+    url: URL.dataTable,
+    contents: 'DataTable',
   },
 ];
 

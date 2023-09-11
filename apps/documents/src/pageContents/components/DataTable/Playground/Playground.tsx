@@ -37,7 +37,7 @@ const options = [
   },
 ];
 
-function ButtonLoading() {
+function Playground() {
   const [selected, setSelected] = useState<TabOptionKey>(0);
   const [direction, setDirection] = useState(0);
 
@@ -58,4 +58,4 @@ function ButtonLoading() {
   );
 }
 
-export default ButtonLoading;
+export default Playground;

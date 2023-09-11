@@ -21,7 +21,7 @@ import classNames from 'classnames/bind';
 import style from '@src/components/ComponentsDocsContents/Playground/frame.module.scss';
 const cx = classNames.bind(style);
 
-function ButtonLoading() {
+function Playground() {
   const [selected, setSelected] = useState({
     pending: 0,
   });
@@ -72,4 +72,4 @@ function ButtonLoading() {
   );
 }
 
-export default ButtonLoading;
+export default Playground;

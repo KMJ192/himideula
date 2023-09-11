@@ -1,4 +1,4 @@
-import { Badge, Table, TableContainer, Text } from '@ssamssam/react-ui';
+import { Badge, DataTable, DataTableContainer, Text } from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
 import { useTheme } from '@src/store/theme/themeState';
@@ -14,35 +14,35 @@ function CSSVariable() {
   const { theme } = useTheme();
 
   return (
-    <TableContainer>
-      <Table className={cx('css-var-table')}>
-        <Table.Caption>
+    <DataTableContainer>
+      <DataTable className={cx('css-var-table')}>
+        <DataTable.Caption>
           <Text typo='t2'>{title} 컴포넌트 CSS 변수</Text>
-        </Table.Caption>
-        <Table.Thead>
-          <Table.Tr>
-            <Table.Th>
+        </DataTable.Caption>
+        <DataTable.Thead>
+          <DataTable.Tr>
+            <DataTable.Th>
               <Text typo='t2'>Name</Text>
-            </Table.Th>
-            <Table.Th>
+            </DataTable.Th>
+            <DataTable.Th>
               <Text typo='t2'>Type</Text>
-            </Table.Th>
-            <Table.Th>
+            </DataTable.Th>
+            <DataTable.Th>
               <Text typo='t2'>Default value</Text>
-            </Table.Th>
-            <Table.Th>
+            </DataTable.Th>
+            <DataTable.Th>
               <Text typo='t2'>Description</Text>
-            </Table.Th>
-          </Table.Tr>
-        </Table.Thead>
-        <Table.Tbody>
+            </DataTable.Th>
+          </DataTable.Tr>
+        </DataTable.Thead>
+        <DataTable.Tbody>
           {cssVar.map(({ name, type, defaultValue, description }, index) => {
             return (
-              <Table.Tr key={`${index}-${name}`}>
-                <Table.Td>
+              <DataTable.Tr key={`${index}-${name}`}>
+                <DataTable.Td>
                   <Text typo='s1'>{name}</Text>
-                </Table.Td>
-                <Table.Td>
+                </DataTable.Td>
+                <DataTable.Td>
                   <Badge
                     colorSchema={
                       type === CSS_VAR_TYPE.COLOR ? 'primary' : 'custom'
@@ -50,8 +50,8 @@ function CSSVariable() {
                   >
                     {type && <Text typo='s2'>{type}</Text>}
                   </Badge>
-                </Table.Td>
-                <Table.Td className={cx('color-view')}>
+                </DataTable.Td>
+                <DataTable.Td className={cx('color-view')}>
                   {type === CSS_VAR_TYPE.COLOR && (
                     <div
                       style={{
@@ -67,16 +67,16 @@ function CSSVariable() {
                     ></div>
                   )}
                   <Text typo='s2'>{defaultValue}</Text>
-                </Table.Td>
-                <Table.Td>
+                </DataTable.Td>
+                <DataTable.Td>
                   <Text typo='s2'>{description}</Text>
-                </Table.Td>
-              </Table.Tr>
+                </DataTable.Td>
+              </DataTable.Tr>
             );
           })}
-        </Table.Tbody>
-      </Table>
-    </TableContainer>
+        </DataTable.Tbody>
+      </DataTable>
+    </DataTableContainer>
   );
 }
 

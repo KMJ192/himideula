@@ -1,4 +1,10 @@
-import { Badge, Table, TableContainer, Text, Flex } from '@ssamssam/react-ui';
+import {
+  Badge,
+  DataTable,
+  DataTableContainer,
+  Text,
+  Flex,
+} from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
 import { useTheme } from '@src/store/theme/themeState';
@@ -25,36 +31,36 @@ function APIs() {
                 이며, 해당 태그의 속성을 사용할 수 있습니다.
               </Text>
             </Flex>
-            <TableContainer>
-              <Table>
-                <Table.Caption>
+            <DataTableContainer>
+              <DataTable>
+                <DataTable.Caption>
                   <Text typo='t2'>{title} 컴포넌트 Props</Text>
-                </Table.Caption>
-                <Table.Thead>
-                  <Table.Tr>
-                    <Table.Th>
+                </DataTable.Caption>
+                <DataTable.Thead>
+                  <DataTable.Tr>
+                    <DataTable.Th>
                       <Text typo='t2'>Name</Text>
-                    </Table.Th>
-                    <Table.Th>
+                    </DataTable.Th>
+                    <DataTable.Th>
                       <Text typo='t2'>Type</Text>
-                    </Table.Th>
-                    <Table.Th>
+                    </DataTable.Th>
+                    <DataTable.Th>
                       <Text typo='t2'>Default value</Text>
-                    </Table.Th>
-                    <Table.Th>
+                    </DataTable.Th>
+                    <DataTable.Th>
                       <Text typo='t2'>Description</Text>
-                    </Table.Th>
-                  </Table.Tr>
-                </Table.Thead>
-                <Table.Tbody>
+                    </DataTable.Th>
+                  </DataTable.Tr>
+                </DataTable.Thead>
+                <DataTable.Tbody>
                   {props.map(
                     ({ name, type, description, defaultValue }, index) => {
                       return (
-                        <Table.Tr key={`${index}-${name}`}>
-                          <Table.Td>
+                        <DataTable.Tr key={`${index}-${name}`}>
+                          <DataTable.Td>
                             <Text typo='s1'>{name}</Text>
-                          </Table.Td>
-                          <Table.Td>
+                          </DataTable.Td>
+                          <DataTable.Td>
                             {type && (
                               <Badge
                                 colorSchema={
@@ -64,20 +70,20 @@ function APIs() {
                                 <Text typo='s2'>{type}</Text>
                               </Badge>
                             )}
-                          </Table.Td>
-                          <Table.Td>
+                          </DataTable.Td>
+                          <DataTable.Td>
                             <Text typo='c1'>{defaultValue}</Text>
-                          </Table.Td>
-                          <Table.Td>
+                          </DataTable.Td>
+                          <DataTable.Td>
                             <Text typo='s2'>{description}</Text>
-                          </Table.Td>
-                        </Table.Tr>
+                          </DataTable.Td>
+                        </DataTable.Tr>
                       );
                     },
                   )}
-                </Table.Tbody>
-              </Table>
-            </TableContainer>
+                </DataTable.Tbody>
+              </DataTable>
+            </DataTableContainer>
           </Fragment>
         );
       })}
