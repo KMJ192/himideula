@@ -1,4 +1,7 @@
 export { default as Table } from './Table';
+export { default as TableContainer } from './TableContainer/TableContainer';
+export { default as useTablePage } from './hooks/useTablePage';
+export type { TableContainerProps } from './TableContainer/TableContainer';
 export type { TableProps } from './Table';
 export type { TheadProps } from './Thead/Thead';
 export type { TbodyProps } from './Tbody/Tbody';
@@ -7,3 +10,4 @@ export type { TrProps } from './Tr/Tr';
 export type { ThProps } from './Th/Th';
 export type { TdProps } from './Td/Td';
 export type { CaptionProps } from './Caption/Caption';
+export type { TablePaginationProps } from './Pagination/Pagination';

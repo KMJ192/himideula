@@ -55,8 +55,9 @@ export { default as Header } from './components/Header/Header';
 export type { HeaderProps } from './components/Header/Header';
 export { default as Footer } from './components/Footer/Footer';
 export type { FooterProps } from './components/Footer/Footer';
-export { Table } from './components/Table';
+export { Table, TableContainer, useTablePage } from './components/Table';
 export type {
+  TableContainerProps,
   TableProps,
   TheadProps,
   TbodyProps,
@@ -65,6 +66,7 @@ export type {
   ThProps,
   TdProps,
   CaptionProps,
+  TablePaginationProps,
 } from './components/Table';
 
 export { SideNav, SideNavTemplate } from './components/SideNav';
