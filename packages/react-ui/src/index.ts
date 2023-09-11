@@ -55,10 +55,14 @@ export { default as Header } from './components/Header/Header';
 export type { HeaderProps } from './components/Header/Header';
 export { default as Footer } from './components/Footer/Footer';
 export type { FooterProps } from './components/Footer/Footer';
-export { Table, TableContainer, useTablePage } from './components/Table';
+export {
+  DataTable,
+  DataTableContainer,
+  useDataTablePagination,
+} from './components/DataTable';
 export type {
-  TableContainerProps,
-  TableProps,
+  DataTableContainerProps,
+  DataTableProps,
   TheadProps,
   TbodyProps,
   TfootProps,
@@ -66,8 +70,8 @@ export type {
   ThProps,
   TdProps,
   CaptionProps,
-  TablePaginationProps,
-} from './components/Table';
+  DataTablePaginationProps,
+} from './components/DataTable';
 
 export { SideNav, SideNavTemplate } from './components/SideNav';
 export type {
