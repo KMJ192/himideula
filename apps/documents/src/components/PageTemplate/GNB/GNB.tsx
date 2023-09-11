@@ -14,6 +14,13 @@ import style from '../style.module.scss';
 const cx = classNames.bind(style);
 
 const urlDictionary = new Set([
+  URL.layout,
+  URL.center,
+  URL.flex,
+  URL.grid,
+  URL.float,
+  URL.spacing,
+  URL.stack,
   URL.components,
   URL.badge,
   URL.button,
@@ -26,11 +33,19 @@ const urlDictionary = new Set([
   URL.spinner,
   URL.switch,
   URL.tab,
+  URL.table,
   URL.hooks,
   URL.useTrie,
 ]);
 
 const initSelectedList: { [key: string]: boolean } = {
+  [URL.layout]: false,
+  [URL.center]: false,
+  [URL.flex]: false,
+  [URL.grid]: false,
+  [URL.float]: false,
+  [URL.spacing]: false,
+  [URL.stack]: false,
   [URL.components]: false,
   [URL.badge]: false,
   [URL.button]: false,
@@ -42,6 +57,7 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.spinner]: false,
   [URL.switch]: false,
   [URL.tab]: false,
+  [URL.table]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
 };
@@ -50,6 +66,37 @@ type NavGroup = {
   url: string;
   contents: string;
 };
+
+const layoutGroup: Array<NavGroup> = [
+  {
+    url: URL.center,
+    contents: 'Center',
+  },
+  {
+    url: URL.flex,
+    contents: 'Flex',
+  },
+  {
+    url: URL.grid,
+    contents: 'Grid',
+  },
+  {
+    url: URL.float,
+    contents: 'Float',
+  },
+  {
+    url: URL.row,
+    contents: 'Row',
+  },
+  {
+    url: URL.spacing,
+    contents: 'Spacing',
+  },
+  {
+    url: URL.stack,
+    contents: 'Stack',
+  },
+];
 
 const componentGroup: Array<NavGroup> = [
   {
@@ -96,6 +143,10 @@ const componentGroup: Array<NavGroup> = [
     url: URL.tab,
     contents: 'Tab',
   },
+  {
+    url: URL.table,
+    contents: 'Table',
+  },
 ];
 
 // const hooksGroup: Array<NavGroup> = [
@@ -106,7 +157,11 @@ const componentGroup: Array<NavGroup> = [
 // ];
 
 const validNavGroup = (dataKey: string): string | null => {
-  if (dataKey === URL.components || dataKey === URL.hooks) {
+  if (
+    dataKey === URL.layout ||
+    dataKey === URL.components ||
+    dataKey === URL.hooks
+  ) {
     return dataKey;
   }
   return null;
@@ -121,6 +176,7 @@ function GNB() {
   const pathname = usePathname();
   const [selected, setSelected] = useState(cloneDeep(initSelectedList));
   const [show, setShow] = useState<{ [key: string]: boolean }>({
+    [URL.layout]: false,
     [URL.components]: false,
     [URL.hooks]: false,
   });
@@ -167,6 +223,18 @@ function GNB() {
 
   return (
     <SideNav depthGap={12} className={cx('gnb')} onClick={onClick}>
+      <SideNav.Menu data-key={URL.layout} selected={selected[URL.layout]}>
+        Layout
+      </SideNav.Menu>
+      <SideNav.MenuGroup show={show[URL.layout]} depth={1}>
+        {layoutGroup.map(({ url, contents }) => {
+          return (
+            <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+              {contents}
+            </SideNav.Menu>
+          );
+        })}
+      </SideNav.MenuGroup>
       <SideNav.Menu
         data-key={URL.components}
         selected={selected[URL.components]}

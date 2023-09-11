@@ -9,10 +9,14 @@ type Documents = {
 };
 
 type APIs = {
-  name: string;
-  type: string;
-  defaultValue: string;
-  description: string;
+  title: string;
+  defaultTag: string;
+  props: Array<{
+    name: string;
+    type: string;
+    defaultValue: string;
+    description: string;
+  }>;
 };
 type CSSVar = {
   name: string;
@@ -25,8 +29,6 @@ type Playground = {
 };
 
 type State = {
-  title: string;
-  defaultTag: string;
   documents: Array<Documents>;
   apis: Array<APIs>;
   cssVar: Array<CSSVar>;
@@ -38,8 +40,8 @@ type Action = {
 };
 
 const useDocsContentsState = create<State & Action>((set) => ({
-  title: '',
-  defaultTag: '',
+  // title: '',
+  // defaultTag: '',
   documents: [],
   apis: [],
   cssVar: [],

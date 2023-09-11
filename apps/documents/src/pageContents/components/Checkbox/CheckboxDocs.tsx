@@ -9,7 +9,6 @@ function CheckboxDocs() {
   return (
     <DocsContents
       title='Checkbox'
-      defaultTag='div'
       description='Checkbox 컴포넌트 가이드'
       documents={documents}
       apis={apis}

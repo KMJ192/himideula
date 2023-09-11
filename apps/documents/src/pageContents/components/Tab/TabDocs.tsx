@@ -9,7 +9,6 @@ function TabDocs() {
   return (
     <DocsContents
       title='Tab'
-      defaultTag='div'
       description='Tab 컴포넌트 가이드'
       documents={documents}
       apis={apis}
