@@ -30,7 +30,6 @@ const cx = classNames.bind(style);
 
 type Props = {
   title: string;
-  // defaultTag: string;
   description: string;
   documents: Array<DocType>;
   apis: Array<APIsType>;
@@ -77,7 +76,6 @@ const components = [<Documents />, <APIs />, <CSSVariable />, <Playground />];
 
 function DocsContents({
   title,
-  // defaultTag,
   description,
   documents,
   apis,
@@ -96,15 +94,14 @@ function DocsContents({
 
   useEffect(() => {
     viewComponent({
-      // title,
-      // defaultTag,
+      title,
       documents,
       apis,
       cssVar,
       playground,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [documents, apis, cssVar, playground]);
+  }, [documents, apis, cssVar, playground, title]);
 
   return (
     <div className={cx('container')}>

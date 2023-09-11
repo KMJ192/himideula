@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import {
   Badge,
   DataTable,
@@ -11,7 +12,6 @@ import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';
-import { Fragment } from 'react';
 const cx = classNames.bind(style);
 
 function APIs() {
@@ -25,11 +25,13 @@ function APIs() {
           <Fragment key={`${idx}-${title}`}>
             <Flex className={cx('head')}>
               <Text typo='h3'>{title}</Text>
-              <Text typo='b2'>
-                기본 태그는{' '}
-                <strong className={cx('emphasis')}>[{defaultTag}]</strong>
-                이며, 해당 태그의 속성을 사용할 수 있습니다.
-              </Text>
+              {defaultTag && (
+                <Text typo='b2'>
+                  기본 태그는{' '}
+                  <strong className={cx('emphasis')}>[{defaultTag}]</strong>
+                  이며, 해당 태그의 속성을 사용할 수 있습니다.
+                </Text>
+              )}
             </Flex>
             <DataTableContainer>
               <DataTable>

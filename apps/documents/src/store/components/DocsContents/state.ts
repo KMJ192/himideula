@@ -29,6 +29,7 @@ type Playground = {
 };
 
 type State = {
+  title: string;
   documents: Array<Documents>;
   apis: Array<APIs>;
   cssVar: Array<CSSVar>;
@@ -40,8 +41,8 @@ type Action = {
 };
 
 const useDocsContentsState = create<State & Action>((set) => ({
-  // title: '',
-  // defaultTag: '',
+  title: '',
+  defaultTag: '',
   documents: [],
   apis: [],
   cssVar: [],
