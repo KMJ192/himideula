@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import {
   Text,
@@ -31,46 +31,11 @@ const cx = classNames.bind(style);
 type Props = {
   title: string;
   description: string;
-  documents: Array<DocType>;
-  apis: Array<APIsType>;
-  cssVar: Array<CSSVar>;
-  playground: Pg;
+  documents?: Array<DocType>;
+  apis?: Array<APIsType>;
+  cssVar?: Array<CSSVar>;
+  playground?: Pg;
 };
-
-const options: Array<TabOption> = [
-  {
-    key: 0,
-    contents: (
-      <Text typo='s1' className={cx('option-text')}>
-        Documents
-      </Text>
-    ),
-  },
-  {
-    key: 1,
-    contents: (
-      <Text typo='s1' className={cx('option-text')}>
-        APIs
-      </Text>
-    ),
-  },
-  {
-    key: 2,
-    contents: (
-      <Text typo='s1' className={cx('option-text')}>
-        CSS Variable
-      </Text>
-    ),
-  },
-  {
-    key: 3,
-    contents: (
-      <Text typo='s1' className={cx('option-text')}>
-        Playground
-      </Text>
-    ),
-  },
-];
 
 const components = [<Documents />, <APIs />, <CSSVariable />, <Playground />];
 
@@ -83,6 +48,44 @@ function DocsContents({
   playground,
 }: Props) {
   const [selected, setSelected] = useState(0);
+  const options = useRef<Array<TabOption>>([
+    {
+      key: 0,
+      contents: (
+        <Text typo='s1' className={cx('option-text')}>
+          Documents
+        </Text>
+      ),
+      disabled: !documents,
+    },
+    {
+      key: 1,
+      contents: (
+        <Text typo='s1' className={cx('option-text')}>
+          APIs
+        </Text>
+      ),
+      disabled: !apis,
+    },
+    {
+      key: 2,
+      contents: (
+        <Text typo='s1' className={cx('option-text')}>
+          CSS Variable
+        </Text>
+      ),
+      disabled: !cssVar,
+    },
+    {
+      key: 3,
+      contents: (
+        <Text typo='s1' className={cx('option-text')}>
+          Playground
+        </Text>
+      ),
+      disabled: !playground,
+    },
+  ]);
   const { viewComponent } = useDocsContentsState();
 
   const onSelect = (_: TabOptionKey, idx: number) => {
@@ -95,10 +98,10 @@ function DocsContents({
   useEffect(() => {
     viewComponent({
       title,
-      documents,
-      apis,
-      cssVar,
-      playground,
+      documents: documents ?? [],
+      apis: apis ?? [],
+      cssVar: cssVar ?? [],
+      playground: playground ?? { component: null },
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [documents, apis, cssVar, playground, title]);
@@ -111,7 +114,7 @@ function DocsContents({
       <Spacing direction='vertical' spacing={16} />
       <Line />
       <Spacing direction='vertical' spacing={24} />
-      <Tab options={options} selected={selected} onSelect={onSelect} />
+      <Tab options={options.current} selected={selected} onSelect={onSelect} />
       <Spacing direction='vertical' spacing={56} />
       <div>{components[selected]}</div>
     </div>
