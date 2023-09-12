@@ -7,7 +7,7 @@ import {
 } from '@ssamssam/react-ui';
 
 function DataTableView() {
-  const pagination = useDataTablePagination({ lastPage: 55 });
+  const pagination = useDataTablePagination({ lastPageIndex: 55 });
 
   return (
     <DataTableContainer>
@@ -31,7 +31,7 @@ function DataTableView() {
             <DataTable.Td>data2</DataTable.Td>
             <DataTable.Td>data3</DataTable.Td>
           </DataTable.Tr>
-          <DataTable.Tr>
+          <DataTable.Tr disabled>
             <DataTable.Td>data1</DataTable.Td>
             <DataTable.Td>data2</DataTable.Td>
             <DataTable.Td>data3</DataTable.Td>
@@ -50,7 +50,7 @@ function DataTableView() {
           </DataTable.Tr>
         </DataTable.Tfoot>
       </DataTable>
-      <DataTable.DataTablePagination {...pagination} />
+      <DataTable.Pagination {...pagination} />
     </DataTableContainer>
   );
 }

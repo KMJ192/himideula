@@ -1,6 +1,7 @@
+'use client';
+
 import DocsContents from '@src/components/ComponentsDocsContents/DocsContents';
 
-import Playground from './Playground/Playground';
 import { documents } from './documents/documents';
 import { apis } from './apis/apis';
 import { cssVar } from './cssVar/cssVar';
@@ -13,9 +14,6 @@ function TableDocs() {
       documents={documents}
       apis={apis}
       cssVar={cssVar}
-      playground={{
-        component: <Playground />,
-      }}
     />
   );
 }
