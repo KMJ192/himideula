@@ -7,7 +7,7 @@
     #{$light-background}
   );
 
-  --ss-c-footer-text: #{$light-primary900};
+  --ss-c-footer-text: #{$light-text};
 }
 
 @mixin footer-dark {
@@ -17,5 +17,5 @@
     #{$dark-primary100}
   );
 
-  --ss-c-footer-text: #{$dark-primary900};
+  --ss-c-footer-text: #{$dark-text};
 }

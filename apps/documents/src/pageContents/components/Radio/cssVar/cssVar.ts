@@ -40,10 +40,40 @@ const cssVar: Array<CSSVar> = [
     description: '경계선 색상 - 선택, 마우스 호버',
   },
   {
+    name: '--ss-c-radio-bg',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경색 - 기본',
+  },
+  {
+    name: '--ss-c-radio-bg-checked',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경색 - 선택',
+  },
+  {
+    name: '--ss-c-radio-bg-checked-hover',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경색 - 선택, 마우스 호버',
+  },
+  {
+    name: '--ss-c-radio-bg-checked-disabled',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경색 - 선택, 비활성화',
+  },
+  {
     name: '--ss-c-radio-bg-disabled',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.gray000,
     description: '배경색 - 비활성화',
+  },
+  {
+    name: '--ss-c-radio-bg-hover',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경색 - 마우스 호버',
   },
   {
     name: '--ss-c-radio-bg-checked-disabled',
