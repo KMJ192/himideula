@@ -14,7 +14,7 @@
 @import './switch.module.scss';
 @import './progressbar.module.scss';
 @import './row.module.scss';
-@import './table.module.scss';
+@import './dataTable.module.scss';
 @import './badge.module.scss';
 
 @mixin theme {
@@ -23,7 +23,7 @@
     @include header-light;
     @include tab-light;
     @include button-light;
-    @include table-light;
+    @include data-table-light;
     @include radio-light;
     @include badge-light;
     @include checkbox-light;
@@ -44,7 +44,7 @@
     @include header-dark;
     @include tab-dark;
     @include button-dark;
-    @include table-dark;
+    @include data-table-dark;
     @include radio-dark;
     @include badge-dark;
     @include checkbox-dark;

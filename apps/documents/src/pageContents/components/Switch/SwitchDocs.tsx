@@ -9,7 +9,6 @@ function SwitchDocs() {
   return (
     <DocsContents
       title='Switch'
-      defaultTag='div'
       description='Switch 컴포넌트 가이드'
       documents={documents}
       apis={apis}

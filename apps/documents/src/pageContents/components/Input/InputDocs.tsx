@@ -9,7 +9,6 @@ function InputDocs() {
   return (
     <DocsContents
       title='Input'
-      defaultTag='input'
       description='Input 컴포넌트 가이드'
       documents={documents}
       apis={apis}

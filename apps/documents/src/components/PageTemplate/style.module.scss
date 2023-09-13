@@ -1,27 +1,11 @@
 @import 'src/styles/color/components/theme.module.scss';
 
-$sideNav-width: 164px;
-$sideNav-padding: 16px;
-$header-height: 72px;
-
-@mixin hide {
-    .gnb {
-      transform: translate(-$sideNav-width - $sideNav-padding);
-    }
-    .contents {
-      margin-left: 0 !important;
-      width: 100%;
-    }
-  
-}
+$side-nav-width: 164px;
 
 .page-template {
   height: 100%;
   width: 100%;
   @include theme;
-  &.hide {
-    @include hide;
-  }
   .theme {
     z-index: 999;
     --ss-layout-float-bottom: 16px;
@@ -31,42 +15,35 @@ $header-height: 72px;
     }
   }
   .gnb {
+    --ss-size-side-nav-width: #{$side-nav-width};
     position: fixed;
-    z-index: 1;
-    width: $sideNav-width;
-    transition: transform 0.5s ease;
     z-index: 999;
-    height: 100%;
+    transition: transform 0.5s ease;
+    .category {
+      font-weight: 900;
+    }
+  }
+  .space {
+    --ss-layout-spacing-gap: 180px;
   }
   .contents {
-    $margin-left: calc($sideNav-width + $sideNav-padding); 
-    margin-left: $margin-left;
-    width: calc(100% - $margin-left);
     height: 100%;
-    transition: margin-left 0.5s ease;
+    width: 100%;
     .header {
       position: fixed;
       top: 0;
-      width: calc(100% - 16px);
-      height: 72px;
+      --ss-size-header-min-height: 72px;
+      --ss-size-header-max-height: 72px;
       z-index: 998;
-      padding-left: 16px;
     }
     .page {
-      padding: 32px;
       background: $light-background;
       color: $light-text;
+      padding: 32px;
       &.dark {
         background: $dark-background;
         color: $dark-text;
       }
     }
-  }
-}
-
-@media screen and (max-width: 864px) {
-  .page-template {
-
-    @include hide;
   }
 }

@@ -9,7 +9,6 @@ function RadioDocs() {
   return (
     <DocsContents
       title='Radio'
-      defaultTag='div'
       description='Radio 컴포넌트 가이드'
       documents={documents}
       apis={apis}

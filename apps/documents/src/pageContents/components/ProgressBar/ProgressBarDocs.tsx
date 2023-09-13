@@ -9,7 +9,6 @@ function ProgressBarDocs() {
   return (
     <DocsContents
       title='ProgressBar'
-      defaultTag='div'
       description='ProgressBar 컴포넌트 가이드'
       documents={documents}
       apis={apis}

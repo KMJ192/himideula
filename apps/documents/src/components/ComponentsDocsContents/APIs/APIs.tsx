@@ -1,4 +1,11 @@
-import { Badge, Table, Text, Flex } from '@ssamssam/react-ui';
+import { Fragment } from 'react';
+import {
+  Badge,
+  DataTable,
+  DataTableContainer,
+  Text,
+  Flex,
+} from '@ssamssam/react-ui';
 
 import { useDocsContentsState } from '@src/store/components/DocsContents/state';
 import { useTheme } from '@src/store/theme/themeState';
@@ -9,59 +16,80 @@ const cx = classNames.bind(style);
 
 function APIs() {
   const { theme } = useTheme();
-  const { title, apis, defaultTag } = useDocsContentsState();
+  const { apis } = useDocsContentsState();
 
   return (
-    <Table className={cx('apis-table')}>
-      <Table.Caption className={cx('caption')}>
-        <Flex className={cx('flex')}>
-          <Text typo='t2'>{title} 컴포넌트 Props</Text>
-          <Text typo='c1'>
-            기본 태그는{' '}
-            <strong className={cx('emphasis')}>[{defaultTag}]</strong>
-            이며, 해당 태그의 속성을 사용할 수 있습니다.
-          </Text>
-        </Flex>
-      </Table.Caption>
-      <Table.Thead>
-        <Table.Tr>
-          <Table.Th>
-            <Text typo='t2'>Name</Text>
-          </Table.Th>
-          <Table.Th>
-            <Text typo='t2'>Type</Text>
-          </Table.Th>
-          <Table.Th>
-            <Text typo='t2'>Default value</Text>
-          </Table.Th>
-          <Table.Th>
-            <Text typo='t2'>Description</Text>
-          </Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody>
-        {apis.map(({ name, type, description, defaultValue }, index) => {
-          return (
-            <Table.Tr key={`${index}-${name}`}>
-              <Table.Td>
-                <Text typo='s1'>{name}</Text>
-              </Table.Td>
-              <Table.Td>
-                <Badge colorSchema={theme === 'dark' ? 'custom' : 'info'}>
-                  <Text typo='s2'>{type}</Text>
-                </Badge>
-              </Table.Td>
-              <Table.Td>
-                <Text typo='c1'>{defaultValue}</Text>
-              </Table.Td>
-              <Table.Td>
-                <Text typo='s2'>{description}</Text>
-              </Table.Td>
-            </Table.Tr>
-          );
-        })}
-      </Table.Tbody>
-    </Table>
+    <Flex className={cx('apis-table')}>
+      {apis.map(({ title, defaultTag, props }, idx) => {
+        return (
+          <Fragment key={`${idx}-${title}`}>
+            <Flex className={cx('head')}>
+              <Text typo='h3'>{title}</Text>
+              {defaultTag && (
+                <Text typo='b2'>
+                  기본 태그는{' '}
+                  <strong className={cx('emphasis')}>[{defaultTag}]</strong>
+                  이며, 해당 태그의 속성을 사용할 수 있습니다.
+                </Text>
+              )}
+            </Flex>
+            <DataTableContainer>
+              <DataTable>
+                <DataTable.Caption>
+                  <Text typo='t2'>{title} 컴포넌트 Props</Text>
+                </DataTable.Caption>
+                <DataTable.Thead>
+                  <DataTable.Tr>
+                    <DataTable.Th>
+                      <Text typo='t2'>Name</Text>
+                    </DataTable.Th>
+                    <DataTable.Th>
+                      <Text typo='t2'>Type</Text>
+                    </DataTable.Th>
+                    <DataTable.Th>
+                      <Text typo='t2'>Default value</Text>
+                    </DataTable.Th>
+                    <DataTable.Th>
+                      <Text typo='t2'>Description</Text>
+                    </DataTable.Th>
+                  </DataTable.Tr>
+                </DataTable.Thead>
+                <DataTable.Tbody>
+                  {props.map(
+                    ({ name, type, description, defaultValue }, index) => {
+                      return (
+                        <DataTable.Tr key={`${index}-${name}`}>
+                          <DataTable.Td>
+                            <Text typo='s1'>{name}</Text>
+                          </DataTable.Td>
+                          <DataTable.Td>
+                            {type && (
+                              <Badge
+                                colorSchema={
+                                  theme === 'dark' ? 'custom' : 'info'
+                                }
+                              >
+                                <Text typo='s2'>{type}</Text>
+                              </Badge>
+                            )}
+                          </DataTable.Td>
+                          <DataTable.Td>
+                            <Text typo='c1'>{defaultValue}</Text>
+                          </DataTable.Td>
+                          <DataTable.Td>
+                            <Text typo='s2'>{description}</Text>
+                          </DataTable.Td>
+                        </DataTable.Tr>
+                      );
+                    },
+                  )}
+                </DataTable.Tbody>
+              </DataTable>
+            </DataTableContainer>
+          </Fragment>
+        );
+      })}
+    </Flex>
   );
 }
 
