@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import cloneDeep from 'lodash/cloneDeep';
 
-import { SideNav, Text } from '@ssamssam/react-ui';
+import { SideNav, Spacing, Text } from '@ssamssam/react-ui';
 
 import { URL } from '@src/utils/url';
 
@@ -305,6 +305,7 @@ function GNB() {
           </SideNav.Menu>
         </SideNav.MenuGroup>
       </SideNav.MenuGroup>
+      <Spacing direction='vertical' spacing={16} />
     </SideNav>
   );
 }
