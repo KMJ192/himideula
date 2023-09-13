@@ -38,7 +38,7 @@ function CodeGuide({ header = '', code = [] }: Props) {
       </Flex>
       <Flex className={cx('code-view', theme)}>
         {code.map((c, idx) => {
-          return <span key={idx}>{c}</span>;
+          return <pre key={idx}>{c}</pre>;
         })}
       </Flex>
     </Flex>

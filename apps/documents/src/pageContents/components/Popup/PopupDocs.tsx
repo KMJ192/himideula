@@ -9,7 +9,6 @@ function PopupDocs() {
   return (
     <DocsContents
       title='Popup'
-      defaultTag='div'
       description='Popup 컴포넌트 가이드'
       documents={documents}
       apis={apis}

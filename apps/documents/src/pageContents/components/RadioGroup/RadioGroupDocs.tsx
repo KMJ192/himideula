@@ -9,7 +9,6 @@ function RadioGroupDocs() {
   return (
     <DocsContents
       title='RadioGroup'
-      defaultTag='div'
       description='RadioGroup 컴포넌트 가이드'
       documents={documents}
       apis={apis}

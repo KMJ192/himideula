@@ -9,7 +9,6 @@ function SpinnerDocs() {
   return (
     <DocsContents
       title='Spinner'
-      defaultTag='div'
       description='Spinner 컴포넌트 가이드'
       documents={documents}
       apis={apis}

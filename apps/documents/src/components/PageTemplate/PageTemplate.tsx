@@ -1,16 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from '@src/store/theme/themeState';
 
-import {
-  Flex,
-  Header,
-  HamburgerMenu,
-  Spacing,
-  Float,
-  Button,
-} from '@ssamssam/react-ui';
+import { Flex, Header, Spacing, Float, Button } from '@ssamssam/react-ui';
 
 import GNB from './GNB/GNB';
 
@@ -24,11 +17,6 @@ type Props = {
 
 function PageTemplate({ children }: Props) {
   const { theme, switchTheme } = useTheme();
-  const [active, setActive] = useState(false);
-
-  const onClickActive = () => {
-    setActive(!active);
-  };
 
   const onClickTheme = () => {
     const currentTheme = theme === 'light' ? 'dark' : 'light';
@@ -54,7 +42,7 @@ function PageTemplate({ children }: Props) {
   }, []);
 
   return (
-    <Flex as='main' className={cx('page-template', active && 'hide', theme)}>
+    <Flex as='main' className={cx('page-template', theme)}>
       <Float className={cx('theme')} startDirection='rb'>
         <Button
           shape='circle'
@@ -65,10 +53,10 @@ function PageTemplate({ children }: Props) {
         </Button>
       </Float>
       <GNB />
+      <Spacing direction='horizontal' className={cx('space')} />
+      <div className={cx('space')}></div>
       <div className={cx('contents')}>
-        <Header className={cx('header')}>
-          <HamburgerMenu onClick={onClickActive} />
-        </Header>
+        <Header className={cx('header')}></Header>
         <Spacing direction='vertical' spacing={72} />
         <section className={cx('page', theme)}>{children}</section>
       </div>
