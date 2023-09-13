@@ -10,7 +10,7 @@ import classNames from 'classnames/bind';
 import style from './style.module.scss';
 const cx = classNames.bind(style);
 
-function Components() {
+function UIKit() {
   return (
     <Center className={cx('container')}>
       <Spacing direction='vertical' spacing={106} />
@@ -40,4 +40,4 @@ function Components() {
   );
 }
 
-export default Components;
+export default UIKit;

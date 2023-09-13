@@ -5,12 +5,13 @@ import { usePathname } from 'next/navigation';
 
 import cloneDeep from 'lodash/cloneDeep';
 
-import { SideNav } from '@ssamssam/react-ui';
+import { SideNav, Text } from '@ssamssam/react-ui';
 
 import { URL } from '@src/utils/url';
 
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';
+import Line from '@src/components/Line/Line';
 const cx = classNames.bind(style);
 
 const urlDictionary = new Set([
@@ -181,11 +182,36 @@ function GNB() {
     [URL.hooks]: false,
   });
 
+  const onClickUI = () => {
+    router.push(URL.uiKit);
+    setSelected({ ...initSelectedList });
+    setShow({
+      ...show,
+      [URL.hooks]: false,
+    });
+  };
+
+  const onClickModules = () => {
+    router.push(URL.modules);
+    setSelected({ ...initSelectedList });
+    setShow({
+      ...show,
+      [URL.layout]: false,
+      [URL.components]: false,
+    });
+  };
+
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     const element = e.target as HTMLElement;
     const dataKey = element.dataset.key;
     if (dataKey && isURL(dataKey)) {
-      router.push(dataKey);
+      if (
+        dataKey !== URL.components &&
+        dataKey !== URL.layout &&
+        dataKey !== URL.hooks
+      ) {
+        router.push(dataKey);
+      }
       setSelected({
         ...initSelectedList,
         [dataKey]: true,
@@ -202,66 +228,83 @@ function GNB() {
   };
 
   useEffect(() => {
-    const group = pathname.split('/');
-    if (
-      group.length > 1 &&
-      (group[1] === 'components' || group[1] === 'hooks')
-    ) {
-      setShow({
-        ...show,
-        [`/${group[1]}`]: true,
-      });
-      if (urlDictionary.has(pathname)) {
-        setSelected({
-          ...initSelectedList,
-          [pathname]: true,
-        });
-      }
-    }
+    // const group = pathname.split('/');
+    // if (
+    //   group.length > 1 &&
+    //   (group[1] === 'components' || group[1] === 'hooks')
+    // ) {
+    //   setShow({
+    //     ...show,
+    //     [`/${group[1]}`]: true,
+    //   });
+    //   if (urlDictionary.has(pathname)) {
+    //     setSelected({
+    //       ...initSelectedList,
+    //       [pathname]: true,
+    //     });
+    //   }
+    // }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (
-    <SideNav depthGap={12} className={cx('gnb')} onClick={onClick}>
-      <SideNav.Menu data-key={URL.layout} selected={selected[URL.layout]}>
-        Layout
+    <SideNav className={cx('gnb')} onClick={onClick} depthGap={0}>
+      <SideNav.Menu onClick={onClickUI}>
+        <Text typo='h3'>UI Kit</Text>
       </SideNav.Menu>
-      <SideNav.MenuGroup show={show[URL.layout]} depth={1}>
-        {layoutGroup.map(({ url, contents }) => {
-          return (
-            <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
-              {contents}
-            </SideNav.Menu>
-          );
-        })}
+      <SideNav.MenuGroup show>
+        <SideNav.Menu data-key={URL.layout} selected={selected[URL.layout]}>
+          <Text typo='t2' data-key={URL.layout} className={cx('category')}>
+            Layout
+          </Text>
+        </SideNav.Menu>
+        <SideNav.MenuGroup show={show[URL.layout]}>
+          {layoutGroup.map(({ url, contents }) => {
+            return (
+              <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+                <Text typo='b2' data-key={url}>
+                  {contents}
+                </Text>
+              </SideNav.Menu>
+            );
+          })}
+        </SideNav.MenuGroup>
+        <SideNav.Menu
+          data-key={URL.components}
+          selected={selected[URL.components]}
+        >
+          <Text typo='t2' data-key={URL.components} className={cx('category')}>
+            Components
+          </Text>
+        </SideNav.Menu>
+        <SideNav.MenuGroup show={show[URL.components]}>
+          {componentGroup.map(({ url, contents }) => {
+            return (
+              <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+                <Text typo='b2' data-key={url}>
+                  {contents}
+                </Text>
+              </SideNav.Menu>
+            );
+          })}
+        </SideNav.MenuGroup>
       </SideNav.MenuGroup>
-      <SideNav.Menu
-        data-key={URL.components}
-        selected={selected[URL.components]}
-      >
-        Components
+      <Line />
+      <SideNav.Menu onClick={onClickModules}>
+        <Text typo='h3'>Module</Text>
       </SideNav.Menu>
-      <SideNav.MenuGroup show={show[URL.components]} depth={1}>
-        {componentGroup.map(({ url, contents }) => {
-          return (
-            <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
-              {contents}
-            </SideNav.Menu>
-          );
-        })}
+      <SideNav.MenuGroup show>
+        <SideNav.Menu data-key={URL.hooks}>
+          <Text typo='t2' data-key={URL.hooks}>
+            Hooks
+          </Text>
+        </SideNav.Menu>
+        <SideNav.MenuGroup show={show[URL.hooks]}>
+          <SideNav.Menu>
+            <Text typo='b2'>useTrie</Text>
+          </SideNav.Menu>
+        </SideNav.MenuGroup>
       </SideNav.MenuGroup>
-      {/* <SideNav.Menu data-key={URL.hooks} selected={selected[URL.hooks]}>
-        Hooks
-      </SideNav.Menu>
-      <SideNav.MenuGroup show={show[URL.hooks]} depth={1}>
-        {hooksGroup.map(({ url, contents }) => {
-          return (
-            <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
-              {contents}
-            </SideNav.Menu>
-          );
-        })}
-      </SideNav.MenuGroup> */}
     </SideNav>
   );
 }
