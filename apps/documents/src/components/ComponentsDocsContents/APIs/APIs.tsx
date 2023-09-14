@@ -24,7 +24,7 @@ function APIs() {
         return (
           <Fragment key={`${idx}-${title}`}>
             <Flex className={cx('head')}>
-              <Text typo='h3'>{title}</Text>
+              <Text typo='h3'>{title} 컴포넌트</Text>
               {defaultTag && (
                 <Text typo='b2'>
                   기본 태그는{' '}

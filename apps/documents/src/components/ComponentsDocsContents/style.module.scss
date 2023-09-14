@@ -24,10 +24,13 @@
     }
   }
 }
-
-.css-var-table {
-  --ss-c-badge-color: #313131;
-  --ss-c-badge-bg: #a1ffba;
+.css-var {
+  flex-direction: column;
+  row-gap: 24px;
+  .css-var-table {
+    --ss-c-badge-color: #313131;
+    --ss-c-badge-bg: #a1ffba;
+  }
 }
 
 .color-view {

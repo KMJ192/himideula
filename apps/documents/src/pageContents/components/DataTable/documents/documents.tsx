@@ -13,7 +13,9 @@ const documents: Array<Documents> = [
     title: 'DataTableContainer 컴포넌트',
     description: '테이블을 감싸는 컨테이너 입니다.',
     view: <Container />,
-    componentString: [`<DataTableContainer></DataTableContainer>`],
+    componentString: [
+      `<DataTableContainer>Data Table Container</DataTableContainer>`,
+    ],
   },
   {
     title: 'DataTable Caption 컴포넌트',

@@ -12,7 +12,6 @@ function Playground() {
 
   return (
     <Flex className={cx('playground')}>
-      <Text typo='h3'>{title} 컴포넌트 UI</Text>
       <Text as='p' typo='s1'>
         {title} 컴포넌트를 테스트하는 Playground 입니다.
       </Text>
