@@ -1,4 +1,4 @@
-import ButtonDocs from '@src/pageContents/components/Button/ButtonDocs';
+import ButtonDocs from '@src/pageContents/uiKit/components/Button/ButtonDocs';
 
 function Page() {
   return <ButtonDocs />;

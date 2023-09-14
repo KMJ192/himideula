@@ -1,4 +1,4 @@
-import BadgeDocs from '@src/pageContents/components/Badge/BadgeDocs';
+import BadgeDocs from '@src/pageContents/uiKit/components/Badge/BadgeDocs';
 
 function Page() {
   return <BadgeDocs />;

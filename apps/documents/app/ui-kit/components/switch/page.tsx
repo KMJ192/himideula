@@ -1,4 +1,4 @@
-import SwitchDocs from '@src/pageContents/components/Switch/SwitchDocs';
+import SwitchDocs from '@src/pageContents/uiKit/components/Switch/SwitchDocs';
 import React from 'react';
 
 function Switch() {

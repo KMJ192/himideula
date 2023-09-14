@@ -1,4 +1,4 @@
-import CheckboxDocs from '@src/pageContents/components/Checkbox/CheckboxDocs';
+import CheckboxDocs from '@src/pageContents/uiKit/components/Checkbox/CheckboxDocs';
 
 function Checkbox() {
   return <CheckboxDocs />;

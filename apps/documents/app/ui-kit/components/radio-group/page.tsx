@@ -1,4 +1,4 @@
-import RadioGroupDocs from '@src/pageContents/components/RadioGroup/RadioGroupDocs';
+import RadioGroupDocs from '@src/pageContents/uiKit/components/RadioGroup/RadioGroupDocs';
 
 function RadioGroup() {
   return <RadioGroupDocs />;

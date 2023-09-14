@@ -1,4 +1,4 @@
-import SpinnerDocs from '@src/pageContents/components/Spinner/SpinnerDocs';
+import SpinnerDocs from '@src/pageContents/uiKit/components/Spinner/SpinnerDocs';
 
 function Spinner() {
   return <SpinnerDocs />;

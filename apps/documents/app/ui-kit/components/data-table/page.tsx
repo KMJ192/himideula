@@ -1,4 +1,4 @@
-import DataTableDocs from '@src/pageContents/components/DataTable/DataTableDocs';
+import DataTableDocs from '@src/pageContents/uiKit/components/DataTable/DataTableDocs';
 
 function Table() {
   return <DataTableDocs />;

@@ -1,4 +1,4 @@
-import PopupDocs from '@src/pageContents/components/Popup/PopupDocs';
+import PopupDocs from '@src/pageContents/uiKit/components/Popup/PopupDocs';
 
 function Popup() {
   return <PopupDocs />;
