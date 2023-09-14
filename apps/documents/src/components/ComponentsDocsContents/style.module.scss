@@ -10,8 +10,6 @@
 }
 
 .apis-table {
-  --ss-c-badge-color: #{$dark-text};
-  --ss-c-badge-bg: #{$dark-info};
   width: 100%;
   flex-direction: column;
   row-gap: 32px;
@@ -28,17 +26,29 @@
   flex-direction: column;
   row-gap: 24px;
   .css-var-table {
-    --ss-c-badge-color: #313131;
-    --ss-c-badge-bg: #a1ffba;
-  }
-}
+    .css-type {
+      .color {
+        --ss-c-badge-color: #{$black};
+        --ss-c-badge-bg: skyblue;
+      }
+      .size {
+        --ss-c-badge-color: #{$white};
+        --ss-c-badge-bg: magenta;
+      }
+      .layout {
+        --ss-c-badge-color: #{$black};
+        --ss-c-badge-bg: coral;
+      }
+    }
 
-.color-view {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  -webkit-box-align: center;
-  column-gap: 8px;
+    .color-view {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      -webkit-box-align: center;
+      column-gap: 8px;
+    }
+  }
 }

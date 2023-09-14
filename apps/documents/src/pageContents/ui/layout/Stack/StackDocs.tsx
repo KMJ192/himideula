@@ -1,17 +1,18 @@
 import DocsContents from '@src/components/ComponentsDocsContents/DocsContents';
-
 import { documents } from './documents/documents';
 import { apis } from './apis/apis';
+import { cssVar } from './cssVar/cssVar';
 
-function FlexDocs() {
+function StackDocs() {
   return (
     <DocsContents
-      title='Flex'
-      description='"display: flex;"가 지정된 컴포넌트'
+      title='Stack'
+      description=''
       documents={documents}
       apis={apis}
+      cssVar={cssVar}
     />
   );
 }
 
-export default FlexDocs;
+export default StackDocs;

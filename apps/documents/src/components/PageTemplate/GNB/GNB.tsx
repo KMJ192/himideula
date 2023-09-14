@@ -20,6 +20,7 @@ const urlDictionary = new Set([
   URL.flex,
   URL.grid,
   URL.float,
+  URL.row,
   URL.spacing,
   URL.stack,
   URL.components,
@@ -204,6 +205,7 @@ function GNB() {
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     const element = e.target as HTMLElement;
     const dataKey = element.dataset.key;
+
     if (dataKey && isURL(dataKey)) {
       if (
         dataKey !== URL.components &&

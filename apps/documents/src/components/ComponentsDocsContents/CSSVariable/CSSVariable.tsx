@@ -22,7 +22,7 @@ function CSSVariable() {
   return (
     <Flex className={cx('css-var')}>
       <Text typo='b1'>
-        색상 또는 크기를 지정할 수 있는 CSS변수를 제공합니다.
+        색상 또는 크기 등을 지정할 수 있는 CSS변수를 제공합니다.
       </Text>
       <DataTableContainer>
         <DataTable className={cx('css-var-table')}>
@@ -52,12 +52,8 @@ function CSSVariable() {
                   <DataTable.Td>
                     <Text typo='s1'>{name}</Text>
                   </DataTable.Td>
-                  <DataTable.Td>
-                    <Badge
-                      colorSchema={
-                        type === CSS_VAR_TYPE.COLOR ? 'primary' : 'custom'
-                      }
-                    >
+                  <DataTable.Td className={cx('css-type')}>
+                    <Badge className={cx(type)} colorSchema='custom'>
                       {type && <Text typo='s2'>{type}</Text>}
                     </Badge>
                   </DataTable.Td>

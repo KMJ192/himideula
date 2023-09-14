@@ -1,7 +1,8 @@
+import GridDocs from '@src/pageContents/ui/layout/Grid/GridDocs';
 import React from 'react';
 
 function Grid() {
-  return <div>Grid</div>;
+  return <GridDocs />;
 }
 
 export default Grid;

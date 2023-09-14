@@ -1,7 +1,7 @@
-import React from 'react';
+import SpacingDocs from '@src/pageContents/ui/layout/Spacing/SpacingDocs';
 
 function Spacing() {
-  return <div>Spacing</div>;
+  return <SpacingDocs />;
 }
 
 export default Spacing;

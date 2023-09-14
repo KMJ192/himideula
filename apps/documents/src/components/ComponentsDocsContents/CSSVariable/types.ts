@@ -1,6 +1,7 @@
 const CSS_VAR_TYPE = {
-  COLOR: 'Color',
-  SIZE: 'Size',
+  COLOR: 'color',
+  SIZE: 'size',
+  LAYOUT: 'layout',
 };
 
 export { CSS_VAR_TYPE };

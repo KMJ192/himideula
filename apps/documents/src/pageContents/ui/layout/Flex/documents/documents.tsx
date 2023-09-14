@@ -1,12 +1,13 @@
+import { Flex } from '@ssamssam/react-ui';
+
 import type { Documents } from '@src/store/components/DocsContents/state';
-import { Center } from '@ssamssam/react-ui';
 
 const documents: Array<Documents> = [
   {
-    title: 'Center',
+    title: 'Flex',
     description: '',
-    view: <Center>This is Center</Center>,
-    componentString: [`<Center>This is Center</Center>`],
+    view: <Flex>This is Flex</Flex>,
+    componentString: [`<Flex>This is Flex</Flex>`],
   },
 ];
 

@@ -1,12 +1,11 @@
 import type { Documents } from '@src/store/components/DocsContents/state';
-import { Center } from '@ssamssam/react-ui';
 
 const documents: Array<Documents> = [
   {
-    title: 'Center',
+    title: 'Float',
     description: '',
-    view: <Center>This is Center</Center>,
-    componentString: [`<Center>This is Center</Center>`],
+    view: <div>This is Float</div>,
+    componentString: [`<Float>This is Float</Float>`],
   },
 ];
 

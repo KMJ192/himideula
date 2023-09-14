@@ -1,7 +1,7 @@
-import React from 'react';
+import RowDocs from '@src/pageContents/ui/layout/Row/RowDocs';
 
 function Row() {
-  return <div>Row</div>;
+  return <RowDocs />;
 }
 
 export default Row;
