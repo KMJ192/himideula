@@ -2,75 +2,74 @@
 
 import { useState } from 'react';
 
-import {
-  Center,
-  Flex,
-  Text,
-  Badge,
-  RadioGroup,
-  Spacing,
-  type RadioGroupOption,
-} from '@ssamssam/react-ui';
-import Line from '@src/components/Line/Line';
+import { Center, Flex, Text, RadioGroup, Spacing } from '@ssamssam/react-ui';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
+
+import { OPTIONS } from './options';
+
+import pgStyle from './style.module.scss';
 
 import classNames from 'classnames/bind';
 import style from '@src/components/ComponentsDocsContents/Playground/frame.module.scss';
 const cx = classNames.bind(style);
 
-const COLOR_SCHEME: Array<RadioGroupOption> = [
-  {
-    key: 0,
-    children: 'primary',
-  },
-  {
-    key: 1,
-    children: 'success',
-  },
-  {
-    key: 2,
-    children: 'info',
-  },
-  {
-    key: 3,
-    children: 'warning',
-  },
-  {
-    key: 4,
-    children: 'danger',
-  },
-];
-
-const OPTIONS = { COLOR_SCHEME };
-
 function Playground() {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState({
+    vertical: 0,
+    horizontal: 0,
+  });
 
   return (
     <Flex className={cx('contents')}>
       <Spacing direction='vertical' spacing={8} />
-      <Text typo='t1'>Color Scheme</Text>
-      <RadioGroup
-        options={OPTIONS.COLOR_SCHEME}
-        selected={selected}
-        onSelect={(idx: number) => {
-          setSelected(idx);
+      <Text typo='t1'>Center Controller</Text>
+      <Flex className={pgStyle['select-group']}>
+        <Text>Vertical</Text>
+        <RadioGroup
+          options={OPTIONS.TOGGLE}
+          selected={selected.vertical}
+          onSelect={(idx: number) => {
+            setSelected({
+              ...selected,
+              vertical: idx,
+            });
+          }}
+        />
+        <Text>Horizontal</Text>
+        <RadioGroup
+          options={OPTIONS.TOGGLE}
+          selected={selected.horizontal}
+          onSelect={(idx: number) => {
+            setSelected({
+              ...selected,
+              horizontal: idx,
+            });
+          }}
+        />
+      </Flex>
+      <Flex
+        className={cx('view')}
+        style={{
+          height: '100px',
         }}
-      />
-      <Center className={cx('view')} horizontal={false}>
-        <Badge colorSchema={OPTIONS.COLOR_SCHEME[selected].children as any}>
-          {OPTIONS.COLOR_SCHEME[selected].children}
-        </Badge>
-      </Center>
+      >
+        <Center
+          vertical={selected.vertical === 0}
+          horizontal={selected.horizontal === 0}
+        >
+          This is Center
+        </Center>
+      </Flex>
       <CodeGuide
         header='javascript'
         code={[
-          `<Badge colorSchema={${
-            OPTIONS.COLOR_SCHEME[selected].children as any
-          }}>${OPTIONS.COLOR_SCHEME[selected].children}</Badge>`,
+          `<Center vertical={${selected.vertical === 0}} horizontal={${
+            selected.horizontal === 0
+          }}>`,
+          `    This is Center`,
+          `</Center>`,
         ]}
       ></CodeGuide>
-      <Line></Line>
     </Flex>
   );
 }
