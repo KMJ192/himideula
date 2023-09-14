@@ -258,7 +258,7 @@ function GNB() {
             Layout
           </Text>
         </SideNav.Menu>
-        <SideNav.MenuGroup show={show[URL.layout]}>
+        <SideNav.MenuGroup show={show[URL.layout]} className={cx('linker')}>
           {layoutGroup.map(({ url, contents }) => {
             return (
               <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
@@ -277,7 +277,7 @@ function GNB() {
             Components
           </Text>
         </SideNav.Menu>
-        <SideNav.MenuGroup show={show[URL.components]}>
+        <SideNav.MenuGroup show={show[URL.components]} className={cx('linker')}>
           {componentGroup.map(({ url, contents }) => {
             return (
               <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
@@ -295,11 +295,11 @@ function GNB() {
       </SideNav.Menu>
       <SideNav.MenuGroup show>
         <SideNav.Menu data-key={URL.hooks}>
-          <Text typo='t2' data-key={URL.hooks}>
+          <Text typo='t2' data-key={URL.hooks} className={cx('category')}>
             Hooks
           </Text>
         </SideNav.Menu>
-        <SideNav.MenuGroup show={show[URL.hooks]}>
+        <SideNav.MenuGroup show={show[URL.hooks]} className={cx('linker')}>
           <SideNav.Menu>
             <Text typo='b2'>useTrie</Text>
           </SideNav.Menu>

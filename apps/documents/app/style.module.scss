@@ -1,0 +1,26 @@
+.container {
+  flex-direction: column;
+  .header {
+    font-size: 52px;
+    font-weight: 900;
+  }
+  .description {
+    padding: 0 108px;
+    line-height: 1.5;
+  }
+  .start-group {
+    column-gap: 64px;
+    .ui,
+    .modules {
+      flex-direction: column;
+    }
+    .use-guide {
+      flex-direction: column;
+      width: fit-content;
+    }
+    .goto-button {
+      padding: 16px;
+      width: 100%;
+    }
+  }
+}

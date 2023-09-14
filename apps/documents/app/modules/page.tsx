@@ -37,7 +37,7 @@ function Modules() {
         />
       </Flex>
       <Spacing direction='vertical' spacing={36} />
-      <Link href={URL.hooks}>
+      <Link href={URL.useTrie}>
         <Button className={cx('goto')}>
           <Text typo='t2'>문서 보러 가기 (0.0.1v)</Text>
         </Button>
