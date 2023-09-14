@@ -6,12 +6,12 @@ import { usePathname } from 'next/navigation';
 import cloneDeep from 'lodash/cloneDeep';
 
 import { SideNav, Spacing, Text } from '@ssamssam/react-ui';
+import Line from '@src/components/Line/Line';
 
 import { URL } from '@src/utils/url';
 
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';
-import Line from '@src/components/Line/Line';
 const cx = classNames.bind(style);
 
 const urlDictionary = new Set([
@@ -183,7 +183,7 @@ function GNB() {
   });
 
   const onClickUI = () => {
-    router.push(URL.uiKit);
+    router.push(URL.ui);
     setSelected({ ...initSelectedList });
     setShow({
       ...show,
@@ -250,7 +250,7 @@ function GNB() {
   return (
     <SideNav className={cx('gnb')} onClick={onClick} depthGap={0}>
       <SideNav.Menu onClick={onClickUI}>
-        <Text typo='h3'>UI Kit</Text>
+        <Text typo='h3'>UI</Text>
       </SideNav.Menu>
       <SideNav.MenuGroup show>
         <SideNav.Menu data-key={URL.layout} selected={selected[URL.layout]}>

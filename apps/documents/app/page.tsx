@@ -32,9 +32,9 @@ function Home() {
           <Spacing direction='vertical' spacing={24} />
           <CodeGuide header='use yarn' code={['yarn add @ssamssam/react-ui']} />
           <Spacing direction='vertical' spacing={36} />
-          <Link href={URL.uiKit}>
+          <Link href={URL.ui}>
             <Button className={cx('goto-button')}>
-              <Text typo='t2'>UI Kit 보러 가기 (0.0.1v)</Text>
+              <Text typo='t2'>UI 보러 가기 (0.0.1v)</Text>
             </Button>
           </Link>
         </Flex>
