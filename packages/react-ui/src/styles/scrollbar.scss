@@ -1,10 +1,10 @@
-@import 'src/styles/color.module';
+@import 'src/styles/color/color.module';
 
 @mixin scrollbar(
   $width: 16px,
   $height: 16px,
-  $color: $light-primary300,
-  $hoverColor: $light-primary400
+  $color: $light-gray100,
+  $hoverColor: $light-gray200
 ) {
   &::-webkit-scrollbar {
     width: $width;

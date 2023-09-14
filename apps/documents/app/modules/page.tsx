@@ -13,7 +13,7 @@ const cx = classNames.bind(style);
 function Modules() {
   return (
     <Center className={cx('container')}>
-      <Spacing direction='vertical' spacing={106} />
+      <Spacing direction='vertical' spacing={32} />
       <h1 className={cx('header')}>SSamSSam React Modules</h1>
       <Spacing direction='vertical' spacing={56} />
       <Text className={cx('description')} as='p' typo='t1'>
@@ -37,7 +37,7 @@ function Modules() {
         />
       </Flex>
       <Spacing direction='vertical' spacing={36} />
-      <Link href={URL.hooks}>
+      <Link href={URL.useTrie}>
         <Button className={cx('goto')}>
           <Text typo='t2'>문서 보러 가기 (0.0.1v)</Text>
         </Button>

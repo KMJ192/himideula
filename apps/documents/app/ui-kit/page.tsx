@@ -13,7 +13,7 @@ const cx = classNames.bind(style);
 function UIKit() {
   return (
     <Center className={cx('container')}>
-      <Spacing direction='vertical' spacing={106} />
+      <Spacing direction='vertical' spacing={32} />
       <h1 className={cx('header')}>SSamSSam React UI</h1>
       <Spacing direction='vertical' spacing={56} />
       <Text className={cx('description')} as='p' typo='t1'>

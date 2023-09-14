@@ -49,9 +49,11 @@ else
     # yarn wk:rmo tsc && yarn wk:rui tsc && yarn wk:docs tsc
     echo "Workspace 작업"
   elif [[ $commit_msg == *"$react_ui"* ]]; then
-    yarn wk:rui tsc && yarn wk:rui build
+    # yarn wk:rui tsc && yarn wk:rui build
+    echo "React-UI 작업"
   elif [[ $commit_msg == *"$react_modules"* ]]; then
-    yarn wk:rmo tsc && yarn wk:rmo build
+    # yarn wk:rmo tsc && yarn wk:rmo build
+    echo "React-Modules 작업"
   elif [[ $commit_msg == *"$documents"* ]]; then
     # yarn wk:docs tsc && yarn wk:docs build
     echo "Documents 작업"
