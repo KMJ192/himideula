@@ -33,8 +33,11 @@
   --ss-c-radio-border-checked-hover: #{$dark-blue100};
 
   --ss-c-radio-bg: #{$dark-background};
-  --ss-c-radio-bg-disabled: #{$dark-primary300};
+  --ss-c-radio-bg-checked: #{$dark-background};
+  --ss-c-radio-bg-checked-hover: #{$dark-background};
   --ss-c-radio-bg-checked-disabled: #{$dark-primary400};
+  --ss-c-radio-bg-hover: #{$dark-background};
+  --ss-c-radio-bg-disabled: #{$dark-primary400};
 
   --ss-c-radio-text: #{$dark-text};
   --ss-c-radio-text-hover: #{$dark-text};
