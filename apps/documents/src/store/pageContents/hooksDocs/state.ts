@@ -17,10 +17,17 @@ type APIs = {
   }>;
 };
 
+type DataType = {
+  name: string;
+  description: string;
+  code: Array<string>;
+};
+
 type State = {
   title: string;
   usage: Array<Usage>;
   apis: Array<APIs>;
+  dataType: Array<DataType>;
 };
 
 type Action = {
@@ -31,8 +38,9 @@ const useHooksDocsState = create<State & Action>((set) => ({
   title: '',
   usage: [],
   apis: [],
+  dataType: [],
   setInfo: (newState: State) => set(newState),
 }));
 
-export type { Usage, APIs };
+export type { Usage, APIs, DataType };
 export { useHooksDocsState };

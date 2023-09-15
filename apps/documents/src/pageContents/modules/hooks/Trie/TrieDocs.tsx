@@ -29,7 +29,7 @@ function TrieHook() {
           title: '선언',
           description: '',
           code: [
-            `import { useTrie } from '@ssamssam/react-modules'`,
+            `import { useTrie } from '@ssamssam/react-modules';`,
             ``,
             `function Component() {`,
             `    const trie = useTrie({`,
@@ -37,7 +37,7 @@ function TrieHook() {
             `        isBuild: true`,
             `    });`,
             ``,
-            `    return <div></div>`,
+            `    return <div></div>;`,
             `}`,
           ],
         },
@@ -54,6 +54,18 @@ function TrieHook() {
               description: 'description',
             },
           ],
+        },
+      ]}
+      dataType={[
+        {
+          name: 'Test',
+          description: '123',
+          code: [],
+        },
+        {
+          name: 'Test',
+          description: '123',
+          code: [],
         },
       ]}
     />

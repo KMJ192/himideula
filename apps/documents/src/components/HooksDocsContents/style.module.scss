@@ -11,7 +11,6 @@
 
 .apis {
   width: 100%;
-
   .type {
     &.light {
       --ss-c-badge-color: #{$light-text};
@@ -21,5 +20,14 @@
       --ss-c-badge-color: #{$dark-text};
       --ss-c-badge-bg: #{$dark-primary100};
     }
+  }
+}
+
+.data-type {
+  width: 100%;
+  flex-direction: column;
+  .info {
+    width: 100%;
+    flex-direction: column;
   }
 }

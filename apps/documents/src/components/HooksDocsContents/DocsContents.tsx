@@ -15,10 +15,12 @@ import Line from '../Line/Line';
 
 import Usage from './Usage/Usage';
 import APIs from './APIs/APIs';
+import DataType from './DataType/DataType';
 import {
   useHooksDocsState,
   type Usage as Usg,
   type APIs as As,
+  type DataType as Dt,
 } from '@src/store/pageContents/hooksDocs/state';
 
 import classNames from 'classnames/bind';
@@ -30,11 +32,12 @@ type Props = {
   description: string;
   usage?: Array<Usg>;
   apis?: Array<As>;
+  dataType?: Array<Dt>;
 };
 
-const components = [<Usage />, <APIs />];
+const components = [<Usage />, <DataType />, <APIs />];
 
-function DocsContents({ title, description, usage, apis }: Props) {
+function DocsContents({ title, description, usage, apis, dataType }: Props) {
   const [selected, setSelected] = useState(0);
   const options = useRef<Array<TabOption>>([
     {
@@ -48,6 +51,15 @@ function DocsContents({ title, description, usage, apis }: Props) {
     },
     {
       key: 1,
+      contents: (
+        <Text typo='s1' className={cx('option-text')}>
+          DataType
+        </Text>
+      ),
+      disabled: !dataType,
+    },
+    {
+      key: 2,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
           APIs
@@ -70,6 +82,7 @@ function DocsContents({ title, description, usage, apis }: Props) {
       title,
       usage: usage ?? [],
       apis: apis ?? [],
+      dataType: dataType ?? [],
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [usage, apis, title]);

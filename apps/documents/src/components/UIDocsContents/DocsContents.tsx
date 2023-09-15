@@ -16,6 +16,7 @@ import Documents from './Documents/Documents';
 import APIs from './APIs/APIs';
 import CSSVariable from './CSSVariable/CSSVariable';
 import Playground from './Playground/Playground';
+import DataType from './DataType/DataType';
 
 import {
   type Documents as DocType,
@@ -23,6 +24,7 @@ import {
   type CSSVar,
   type Playground as Pg,
   useUIDocsState,
+  type DataType as Dt,
 } from '@src/store/pageContents/uiDocs/state';
 
 import classNames from 'classnames/bind';
@@ -35,10 +37,17 @@ type Props = {
   documents?: Array<DocType>;
   apis?: Array<APIsType>;
   cssVar?: Array<CSSVar>;
+  dataType?: Array<Dt>;
   playground?: Pg;
 };
 
-const components = [<Documents />, <APIs />, <CSSVariable />, <Playground />];
+const components = [
+  <Documents />,
+  <DataType />,
+  <APIs />,
+  <CSSVariable />,
+  <Playground />,
+];
 
 function DocsContents({
   title,
@@ -47,6 +56,7 @@ function DocsContents({
   apis,
   cssVar,
   playground,
+  dataType,
 }: Props) {
   const [selected, setSelected] = useState(0);
   const options = useRef<Array<TabOption>>([
@@ -54,7 +64,7 @@ function DocsContents({
       key: 0,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
-          Documents
+          문서
         </Text>
       ),
       disabled: !documents,
@@ -63,25 +73,34 @@ function DocsContents({
       key: 1,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
-          APIs
+          데이터 타입
         </Text>
       ),
-      disabled: !apis,
+      disabled: !dataType,
     },
     {
       key: 2,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
-          CSS Variable
+          API
         </Text>
       ),
-      disabled: !cssVar,
+      disabled: !apis,
     },
     {
       key: 3,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
-          Playground
+          CSS 변수
+        </Text>
+      ),
+      disabled: !cssVar,
+    },
+    {
+      key: 4,
+      contents: (
+        <Text typo='s1' className={cx('option-text')}>
+          테스트 페이지
         </Text>
       ),
       disabled: !playground,
@@ -117,7 +136,7 @@ function DocsContents({
       <Spacing direction='vertical' spacing={24} />
       <Tab options={options.current} selected={selected} onSelect={onSelect} />
       <Spacing direction='vertical' spacing={56} />
-      <div>{components[selected]}</div>
+      {components[selected]}
     </Flex>
   );
 }

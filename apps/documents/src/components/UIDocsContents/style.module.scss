@@ -62,3 +62,12 @@
     }
   }
 }
+
+.data-type {
+  width: 100%;
+  flex-direction: column;
+  .info {
+    width: 100%;
+    flex-direction: column;
+  }
+}

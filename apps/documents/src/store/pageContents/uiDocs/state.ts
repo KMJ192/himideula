@@ -24,8 +24,15 @@ type CSSVar = {
   defaultValue: string;
   description: string;
 };
+
 type Playground = {
   component: ReactNode;
+};
+
+type DataType = {
+  name: string;
+  description: string;
+  code: Array<string>;
 };
 
 type State = {
@@ -33,6 +40,7 @@ type State = {
   documents: Array<Documents>;
   apis: Array<APIs>;
   cssVar: Array<CSSVar>;
+  dataType?: Array<DataType>;
   playground?: Playground;
 };
 
@@ -46,8 +54,9 @@ const useUIDocsState = create<State & Action>((set) => ({
   documents: [],
   apis: [],
   cssVar: [],
+  dataType: [],
   setInfo: (newState: State) => set(newState),
 }));
 
-export type { Documents, APIs, CSSVar, Playground };
+export type { Documents, APIs, CSSVar, Playground, DataType };
 export { useUIDocsState };
