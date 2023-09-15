@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { useTrie } from './useTrie';
-import { ITrie } from './useTrie/types';
+import useTrie from './useTrie/useTrie';
+import DocsContents from '@src/components/HooksDocsContents/DocsContents';
 
 const test = [
   {
@@ -28,11 +28,9 @@ function TrieHook() {
     dictionary: test,
   });
 
-  useEffect(() => {
-    console.log(trie.containList('pp'));
-  }, [trie]);
+  console.log(trie);
 
-  return <div>Render Docs</div>;
+  return <DocsContents />;
 }
 
 export default TrieHook;

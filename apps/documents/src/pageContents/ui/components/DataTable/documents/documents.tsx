@@ -1,4 +1,4 @@
-import type { Documents } from '@src/store/components/DocsContents/state';
+import type { Documents } from '@src/store/pageContents/uiDocs/state';
 
 import DataTableView from './DataTableView/DataTableView';
 import Container from './Container/Container';
@@ -104,9 +104,7 @@ const documents: Array<Documents> = [
     view: <Pagination />,
     componentString: [
       `<DataTableContainer>`,
-      `    <DataTable>`,
-      `        <DataTable.Pagination lastPageIndex={55} />`,
-      `    </DataTable>`,
+      `    <DataTable.Pagination lastPageIndex={55} />`,
       `</DataTableContainer>`,
     ],
   },

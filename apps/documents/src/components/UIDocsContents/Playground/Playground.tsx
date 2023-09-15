@@ -1,5 +1,5 @@
 import { Flex, Text } from '@ssamssam/react-ui';
-import { useDocsContentsState } from '@src/store/components/DocsContents/state';
+import { useDocsContentsState } from '@src/store/pageContents/uiDocs/state';
 
 import Line from '@src/components/Line/Line';
 

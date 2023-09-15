@@ -158,6 +158,12 @@ const hooksGroup: Array<NavGroup> = [
   },
 ];
 
+const category = {
+  layout: 'layout',
+  components: 'components',
+  hooks: 'hooks',
+};
+
 const validNavGroup = (dataKey: string): string | null => {
   if (
     dataKey === URL.layout ||
@@ -230,22 +236,34 @@ function GNB() {
   };
 
   useEffect(() => {
-    // const group = pathname.split('/');
-    // if (
-    //   group.length > 1 &&
-    //   (group[1] === 'components' || group[1] === 'hooks')
-    // ) {
-    //   setShow({
-    //     ...show,
-    //     [`/${group[1]}`]: true,
-    //   });
-    //   if (urlDictionary.has(pathname)) {
-    //     setSelected({
-    //       ...initSelectedList,
-    //       [pathname]: true,
-    //     });
-    //   }
-    // }
+    const group = pathname.split('/');
+
+    if (group.length === 4) {
+      const c = group[2];
+      if (c === category.layout) {
+        setShow({
+          ...show,
+          [URL.layout]: true,
+        });
+      } else if (c === category.components) {
+        setShow({
+          ...show,
+          [URL.components]: true,
+        });
+      } else if (c === category.hooks) {
+        setShow({
+          ...show,
+          [URL.hooks]: true,
+        });
+      }
+
+      if (urlDictionary.has(pathname)) {
+        setSelected({
+          ...initSelectedList,
+          [pathname]: true,
+        });
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 

@@ -1,6 +1,6 @@
 import { Row } from '@ssamssam/react-ui';
 
-import type { Documents } from '@src/store/components/DocsContents/state';
+import type { Documents } from '@src/store/pageContents/uiDocs/state';
 
 const documents: Array<Documents> = [
   {

@@ -1,4 +1,4 @@
-import type { Documents } from '@src/store/components/DocsContents/state';
+import type { Documents } from '@src/store/pageContents/uiDocs/state';
 import RadioView from './RadioView/RadioView';
 
 const documents: Array<Documents> = [

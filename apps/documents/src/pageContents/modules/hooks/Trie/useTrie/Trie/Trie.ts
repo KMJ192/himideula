@@ -1,25 +1,23 @@
-// eslint-disable-next-line max-classes-per-file
 import Hangul from './Hangul';
 
 import { ITrie, TrieData } from './types';
 
-type TrieObject<T> = { [key: string]: TrieNode<T> };
+import { TrieNode } from './Node';
 
-class TrieNode<T> {
-  public isWord: boolean;
-
-  public info: Array<TrieData<T>> | null;
-
-  public next: TrieObject<T>;
-
-  constructor() {
-    this.isWord = false;
-
-    this.next = {};
-
-    this.info = null;
+const extractStr = (str: string) => {
+  const cur = [];
+  for (let i = 0; i < str.length; i++) {
+    const c = str[i];
+    if (Hangul.isHangul(c)) {
+      const extract = Hangul.make(str[i]);
+      cur.push(...extract.split(''));
+    } else {
+      cur.push(str[i]);
+    }
   }
-}
+
+  return cur;
+};
 
 class Trie<T> implements ITrie<T> {
   private root: TrieNode<T>;
@@ -31,26 +29,6 @@ class Trie<T> implements ITrie<T> {
 
     this.memo = '';
   }
-
-  /**
-   * 입력받은 문자열을 추출하여 배열로 저장
-   * @param str
-   */
-  // eslint-disable-next-line class-methods-use-this
-  private extractStr = (str: string) => {
-    const cur = [];
-    for (let i = 0; i < str.length; i++) {
-      const c = str[i];
-      if (Hangul.isHangul(c)) {
-        const extract = Hangul.make(str[i]);
-        cur.push(...extract.split(''));
-      } else {
-        cur.push(str[i]);
-      }
-    }
-
-    return cur;
-  };
 
   /**
    * 문자열을 trie객체에 주입
@@ -97,7 +75,7 @@ class Trie<T> implements ITrie<T> {
       });
     };
 
-    const extract = this.extractStr(prefix);
+    const extract = extractStr(prefix);
 
     for (let i = 0; i < extract.length; i++) {
       curNode = curNode.next[extract[i]];
@@ -118,13 +96,13 @@ class Trie<T> implements ITrie<T> {
   public containList = (input: string): Array<TrieData<T>> => {
     if (!input || input.length === 0) return [];
     const containList: Array<TrieData<T>> = [];
-    const extractInput = this.extractStr(input).join('');
+    const extractInput = extractStr(input).join('');
 
     const recursion = (node: TrieNode<T>) => {
       if (node === undefined) return;
       if (node.isWord && node.info) {
         node.info.forEach((val: TrieData<T>) => {
-          const extractLabel = this.extractStr(val.label).join('');
+          const extractLabel = extractStr(val.label).join('');
           if (extractLabel.includes(extractInput)) {
             containList.push(val);
           }

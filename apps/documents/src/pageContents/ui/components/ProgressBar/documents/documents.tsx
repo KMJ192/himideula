@@ -1,6 +1,6 @@
 import Pending from './Pending/Pending';
 
-import type { Documents } from '@src/store/components/DocsContents/state';
+import type { Documents } from '@src/store/pageContents/uiDocs/state';
 
 const documents: Array<Documents> = [
   {

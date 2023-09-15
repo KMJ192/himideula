@@ -22,7 +22,7 @@ import {
   type CSSVar,
   type Playground as Pg,
   useDocsContentsState,
-} from '@src/store/components/DocsContents/state';
+} from '@src/store/pageContents/uiDocs/state';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';

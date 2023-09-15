@@ -1,4 +1,4 @@
-import type { Documents } from '@src/store/components/DocsContents/state';
+import type { Documents } from '@src/store/pageContents/uiDocs/state';
 
 import Variant from './Variant/Variant';
 import Shape from './Shape/Shape';

@@ -1,4 +1,4 @@
-import type { APIs } from '@src/store/components/DocsContents/state';
+import type { APIs } from '@src/store/pageContents/uiDocs/state';
 
 const apis: Array<APIs> = [
   {

@@ -7,7 +7,7 @@ import {
   Flex,
 } from '@ssamssam/react-ui';
 
-import { useDocsContentsState } from '@src/store/components/DocsContents/state';
+import { useDocsContentsState } from '@src/store/pageContents/uiDocs/state';
 import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';

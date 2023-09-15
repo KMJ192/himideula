@@ -1,9 +1,9 @@
 import { useMemo, useEffect, useState } from 'react';
 
-import Trie from './Trie';
-import Hangul from './Hangul';
+import Trie from './Trie/Trie';
+import Hangul from './Trie/Hangul';
 
-import type { TrieData } from './types';
+import type { TrieData } from './Trie/types';
 
 type Props<T> = {
   dictionary?: Array<TrieData<T>>;
@@ -18,6 +18,7 @@ type Props<T> = {
  */
 function useTrie<T = any>({ dictionary = [], isBuildTrie = true }: Props<T>) {
   const trie = useMemo(() => new Trie<T>(), []);
+  const [t, setT] = useState(new Trie<T>());
 
   useEffect(() => {
     if (isBuildTrie && trie.isDiff(dictionary)) {
@@ -29,7 +30,11 @@ function useTrie<T = any>({ dictionary = [], isBuildTrie = true }: Props<T>) {
     }
   }, [dictionary, isBuildTrie, trie]);
 
-  return trie;
+  useEffect(() => {
+    setT(trie);
+  }, [trie]);
+
+  return t;
 }
 
 export default useTrie;
