@@ -13,6 +13,7 @@ function DataType() {
   return (
     <Flex className={cx('data-type')}>
       <Text typo='b1'>[{title}]에서 사용되는 타입</Text>
+      <Spacing spacing={32} />
       {dataType.map(({ name, description, code }, idx) => {
         return (
           <Flex key={`${name}-${idx}`} className={cx('info')}>
