@@ -1,0 +1,25 @@
+@import 'src/styles/color/color.module.scss';
+
+.container {
+  flex-direction: column;
+}
+
+.contents {
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.apis {
+  width: 100%;
+
+  .type {
+    &.light {
+      --ss-c-badge-color: #{$light-text};
+      --ss-c-badge-bg: #{$light-primary700};
+    }
+    &.dark {
+      --ss-c-badge-color: #{$dark-text};
+      --ss-c-badge-bg: #{$dark-primary100};
+    }
+  }
+}

@@ -6,7 +6,7 @@ import {
   Text,
 } from '@ssamssam/react-ui';
 
-import { useDocsContentsState } from '@src/store/pageContents/uiDocs/state';
+import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
 import { useTheme } from '@src/store/theme/themeState';
 
 import { CSS_VAR_TYPE } from './types';
@@ -16,7 +16,7 @@ import style from '../style.module.scss';
 const cx = classNames.bind(style);
 
 function CSSVariable() {
-  const { title, cssVar } = useDocsContentsState();
+  const { title, cssVar } = useUIDocsState();
   const { theme } = useTheme();
 
   return (

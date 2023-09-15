@@ -6,8 +6,7 @@ import {
   Text,
   Flex,
 } from '@ssamssam/react-ui';
-
-import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
+import { useHooksDocsState } from '@src/store/pageContents/hooksDocs/state';
 import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';
@@ -16,27 +15,17 @@ const cx = classNames.bind(style);
 
 function APIs() {
   const { theme } = useTheme();
-  const { apis } = useUIDocsState();
+  const { apis } = useHooksDocsState();
 
   return (
-    <Flex className={cx('apis-table')}>
-      {apis.map(({ title, defaultTag, props }, idx) => {
+    <Flex className={cx('apis')}>
+      {apis.map(({ title, description, props }, idx) => {
         return (
           <Fragment key={`${idx}-${title}`}>
-            <Flex className={cx('head')}>
-              <Text typo='h3'>{title} 컴포넌트</Text>
-              {defaultTag && (
-                <Text typo='b2'>
-                  기본 태그는{' '}
-                  <strong className={cx('emphasis')}>[{defaultTag}]</strong>
-                  이며, 해당 태그의 속성을 사용할 수 있습니다.
-                </Text>
-              )}
-            </Flex>
             <DataTableContainer>
               <DataTable>
                 <DataTable.Caption>
-                  <Text typo='t2'>{title} 컴포넌트 Props</Text>
+                  <Text typo='t1'>{description}</Text>
                 </DataTable.Caption>
                 <DataTable.Thead>
                   <DataTable.Tr>
@@ -60,20 +49,18 @@ function APIs() {
                       return (
                         <DataTable.Tr key={`${index}-${name}`}>
                           <DataTable.Td>
-                            <Text typo='s1'>{name}</Text>
+                            <Text>{name}</Text>
                           </DataTable.Td>
                           <DataTable.Td className={cx('type', theme)}>
-                            {type && (
-                              <Badge colorSchema='custom'>
-                                <Text typo='s2'>{type}</Text>
-                              </Badge>
-                            )}
+                            <Badge colorSchema='custom'>
+                              <Text typo='s2'>{type}</Text>
+                            </Badge>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text typo='c1'>{defaultValue}</Text>
+                            <Text>{defaultValue}</Text>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text typo='s2'>{description}</Text>
+                            <Text>{description}</Text>
                           </DataTable.Td>
                         </DataTable.Tr>
                       );

@@ -1,7 +1,3 @@
-'use client';
-
-import React, { useEffect } from 'react';
-import useTrie from './useTrie/useTrie';
 import DocsContents from '@src/components/HooksDocsContents/DocsContents';
 
 const test = [
@@ -24,13 +20,44 @@ const test = [
 ];
 
 function TrieHook() {
-  const trie = useTrie<{ [key: string]: string }>({
-    dictionary: test,
-  });
-
-  console.log(trie);
-
-  return <DocsContents />;
+  return (
+    <DocsContents
+      title='useTrie'
+      description='trie DS를 사용할 수 있는 hooks 입니다.'
+      usage={[
+        {
+          title: '선언',
+          description: '',
+          code: [
+            `import { useTrie } from '@ssamssam/react-modules'`,
+            ``,
+            `function Component() {`,
+            `    const trie = useTrie({`,
+            `        dictionary: ${JSON.stringify(test)},`,
+            `        isBuild: true`,
+            `    });`,
+            ``,
+            `    return <div></div>`,
+            `}`,
+          ],
+        },
+      ]}
+      apis={[
+        {
+          title: 'title',
+          description: 'description',
+          props: [
+            {
+              name: 'name',
+              type: 'type',
+              defaultValue: 'defaultValue',
+              description: 'description',
+            },
+          ],
+        },
+      ]}
+    />
+  );
 }
 
 export default TrieHook;

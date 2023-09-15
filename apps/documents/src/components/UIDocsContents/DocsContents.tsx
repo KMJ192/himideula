@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import {
   Text,
   Tab,
+  Flex,
   Spacing,
   type TabOption,
   type TabOptionKey,
@@ -21,7 +22,7 @@ import {
   type APIs as APIsType,
   type CSSVar,
   type Playground as Pg,
-  useDocsContentsState,
+  useUIDocsState,
 } from '@src/store/pageContents/uiDocs/state';
 
 import classNames from 'classnames/bind';
@@ -86,7 +87,7 @@ function DocsContents({
       disabled: !playground,
     },
   ]);
-  const { viewComponent } = useDocsContentsState();
+  const { setInfo } = useUIDocsState();
 
   const onSelect = (_: TabOptionKey, idx: number) => {
     if (selected !== idx) {
@@ -96,7 +97,7 @@ function DocsContents({
   };
 
   useEffect(() => {
-    viewComponent({
+    setInfo({
       title,
       documents: documents ?? [],
       apis: apis ?? [],
@@ -107,7 +108,7 @@ function DocsContents({
   }, [documents, apis, cssVar, playground, title]);
 
   return (
-    <div className={cx('container')}>
+    <Flex className={cx('container')}>
       <Text typo='h2'>{title}</Text>
       <Spacing direction='vertical' spacing={8} />
       <Text>{description}</Text>
@@ -117,7 +118,7 @@ function DocsContents({
       <Tab options={options.current} selected={selected} onSelect={onSelect} />
       <Spacing direction='vertical' spacing={56} />
       <div>{components[selected]}</div>
-    </div>
+    </Flex>
   );
 }
 

@@ -1,5 +1,5 @@
 import { Flex, Text } from '@ssamssam/react-ui';
-import { useDocsContentsState } from '@src/store/pageContents/uiDocs/state';
+import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
 
 import Line from '@src/components/Line/Line';
 
@@ -8,7 +8,7 @@ import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 function Playground() {
-  const { title, playground } = useDocsContentsState();
+  const { title, playground } = useUIDocsState();
 
   return (
     <Flex className={cx('playground')}>

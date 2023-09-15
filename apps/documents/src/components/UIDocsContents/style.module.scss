@@ -1,7 +1,6 @@
 @import 'src/styles/color/color.module.scss';
 
 .container {
-  display: flex;
   flex-direction: column;
 }
 
@@ -21,7 +20,18 @@
       font-weight: bolder;
     }
   }
+  .type {
+    &.light {
+      --ss-c-badge-color: #{$light-text};
+      --ss-c-badge-bg: #{$light-primary700};
+    }
+    &.dark {
+      --ss-c-badge-color: #{$dark-text};
+      --ss-c-badge-bg: #{$dark-primary100};
+    }
+  }
 }
+
 .css-var {
   flex-direction: column;
   row-gap: 24px;

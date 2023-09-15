@@ -37,17 +37,17 @@ type State = {
 };
 
 type Action = {
-  viewComponent: (state: State) => void;
+  setInfo: (state: State) => void;
 };
 
-const useDocsContentsState = create<State & Action>((set) => ({
+const useUIDocsState = create<State & Action>((set) => ({
   title: '',
   defaultTag: '',
   documents: [],
   apis: [],
   cssVar: [],
-  viewComponent: (newState: State) => set(newState),
+  setInfo: (newState: State) => set(newState),
 }));
 
 export type { Documents, APIs, CSSVar, Playground };
-export { useDocsContentsState };
+export { useUIDocsState };
