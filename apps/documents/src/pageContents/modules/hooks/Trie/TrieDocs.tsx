@@ -1,73 +1,17 @@
 import DocsContents from '@src/components/HooksDocsContents/DocsContents';
 
-const test = [
-  {
-    key: 0,
-    label: 'a',
-  },
-  {
-    key: 1,
-    label: 'apple',
-  },
-  {
-    key: 2,
-    label: 'application',
-  },
-  {
-    key: 3,
-    label: 'app',
-  },
-];
+import { apis } from './apis';
+import { usage } from './usage';
+import { dataType } from './dataType';
 
 function TrieHook() {
   return (
     <DocsContents
       title='useTrie'
       description='trie DS를 사용할 수 있는 hooks 입니다.'
-      usage={[
-        {
-          title: '선언',
-          description: '',
-          code: [
-            `import { useTrie } from '@ssamssam/react-modules';`,
-            ``,
-            `function Component() {`,
-            `    const trie = useTrie({`,
-            `        dictionary: ${JSON.stringify(test)},`,
-            `        isBuild: true`,
-            `    });`,
-            ``,
-            `    return <div></div>;`,
-            `}`,
-          ],
-        },
-      ]}
-      apis={[
-        {
-          title: 'title',
-          description: 'description',
-          props: [
-            {
-              name: 'name',
-              type: 'type',
-              defaultValue: 'defaultValue',
-              description: 'description',
-            },
-          ],
-        },
-      ]}
-      dataType={[
-        {
-          name: 'Test',
-          description: '123',
-          code: [],
-        },
-        {
-          name: 'Test',
-          description: '123',
-          code: [],
-        },
-      ]}
+      usage={usage}
+      dataType={dataType}
+      apis={apis}
     />
   );
 }

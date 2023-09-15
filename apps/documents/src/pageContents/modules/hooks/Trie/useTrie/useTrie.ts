@@ -1,34 +1,32 @@
 import { useMemo, useEffect, useState } from 'react';
 
-import Trie from './Trie/Trie';
+import { Trie, type TrieData } from './Trie';
 import Hangul from './Trie/Hangul';
-
-import type { TrieData } from './Trie/types';
 
 type Props<T> = {
   dictionary?: Array<TrieData<T>>;
-  isBuildTrie?: boolean;
+  isBuild?: boolean;
 };
 
 /**
  * trie 생성
  * @param dictionary trie 생성 데이터
- * @param isBuildTrie trie 생성 여부
+ * @param isBuild trie 생성 여부
  * @returns
  */
-function useTrie<T = any>({ dictionary = [], isBuildTrie = true }: Props<T>) {
+function useTrie<T = any>({ dictionary = [], isBuild = true }: Props<T>) {
   const trie = useMemo(() => new Trie<T>(), []);
   const [t, setT] = useState(new Trie<T>());
 
   useEffect(() => {
-    if (isBuildTrie && trie.isDiff(dictionary)) {
+    if (isBuild && trie.isDiff(dictionary)) {
       trie.initialize();
       dictionary.forEach((val: TrieData<T>) => {
         const extract = Hangul.make(val.label);
         trie.insert(extract, val);
       });
     }
-  }, [dictionary, isBuildTrie, trie]);
+  }, [dictionary, isBuild, trie]);
 
   useEffect(() => {
     setT(trie);

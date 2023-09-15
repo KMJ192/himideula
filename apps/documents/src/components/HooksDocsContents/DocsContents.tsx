@@ -44,7 +44,7 @@ function DocsContents({ title, description, usage, apis, dataType }: Props) {
       key: 0,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
-          Usage
+          사용
         </Text>
       ),
       disabled: !usage,
@@ -53,7 +53,7 @@ function DocsContents({ title, description, usage, apis, dataType }: Props) {
       key: 1,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
-          DataType
+          데이터 타입
         </Text>
       ),
       disabled: !dataType,
@@ -62,7 +62,7 @@ function DocsContents({ title, description, usage, apis, dataType }: Props) {
       key: 2,
       contents: (
         <Text typo='s1' className={cx('option-text')}>
-          APIs
+          API
         </Text>
       ),
       disabled: !apis,
