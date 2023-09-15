@@ -1,4 +1,4 @@
-import { CSS_VAR_TYPE } from '@src/components/ComponentsDocsContents/CSSVariable/types';
+import { CSS_VAR_TYPE } from '@src/components/UIDocsContents/CSSVariable/types';
 import type { CSSVar } from '@src/store/components/DocsContents/state';
 import { COLOR } from '@src/styles/color/color';
 

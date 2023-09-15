@@ -8,7 +8,7 @@ import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 import { OPTIONS } from './options';
 
 import classNames from 'classnames/bind';
-import style from '@src/components/ComponentsDocsContents/Playground/frame.module.scss';
+import style from '@src/components/UIDocsContents/Playground/frame.module.scss';
 const cx = classNames.bind(style);
 
 const options = [

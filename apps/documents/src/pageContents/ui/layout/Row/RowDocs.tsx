@@ -1,4 +1,4 @@
-import DocsContents from '@src/components/ComponentsDocsContents/DocsContents';
+import DocsContents from '@src/components/UIDocsContents/DocsContents';
 
 import { documents } from './documents/documents';
 import { apis } from './apis/apis';

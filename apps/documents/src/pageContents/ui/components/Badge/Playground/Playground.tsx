@@ -15,7 +15,7 @@ import Line from '@src/components/Line/Line';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import classNames from 'classnames/bind';
-import style from '@src/components/ComponentsDocsContents/Playground/frame.module.scss';
+import style from '@src/components/UIDocsContents/Playground/frame.module.scss';
 const cx = classNames.bind(style);
 
 const COLOR_SCHEME: Array<RadioGroupOption> = [

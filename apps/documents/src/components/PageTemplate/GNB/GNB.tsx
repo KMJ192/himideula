@@ -151,12 +151,12 @@ const componentGroup: Array<NavGroup> = [
   },
 ];
 
-// const hooksGroup: Array<NavGroup> = [
-//   {
-//     url: URL.useTrie,
-//     contents: 'useTrie',
-//   },
-// ];
+const hooksGroup: Array<NavGroup> = [
+  {
+    url: URL.useTrie,
+    contents: 'useTrie',
+  },
+];
 
 const validNavGroup = (dataKey: string): string | null => {
   if (
@@ -302,9 +302,15 @@ function GNB() {
           </Text>
         </SideNav.Menu>
         <SideNav.MenuGroup show={show[URL.hooks]} className={cx('linker')}>
-          <SideNav.Menu>
-            <Text typo='b2'>useTrie</Text>
-          </SideNav.Menu>
+          {hooksGroup.map(({ url, contents }) => {
+            return (
+              <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+                <Text typo='b2' data-key={url}>
+                  {contents}
+                </Text>
+              </SideNav.Menu>
+            );
+          })}
         </SideNav.MenuGroup>
       </SideNav.MenuGroup>
       <Spacing direction='vertical' spacing={16} />
