@@ -32,7 +32,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.TOGGLE}
         selected={selected.disabled}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected({
             ...selected,
             disabled: idx,
@@ -68,7 +68,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.TOGGLE}
         selected={selected.error}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected({
             ...selected,
             error: idx,

@@ -17,7 +17,7 @@ import Usage from './Usage/Usage';
 import APIs from './APIs/APIs';
 import DataType from './DataType/DataType';
 import {
-  useHooksDocsState,
+  useModulesDocsState,
   type Usage as Usg,
   type APIs as As,
   type DataType as Dt,
@@ -69,7 +69,7 @@ function DocsContents({ title, description, usage, apis, dataType }: Props) {
     },
   ]);
 
-  const { setInfo } = useHooksDocsState();
+  const { setInfo } = useModulesDocsState();
 
   const onSelect = (_: TabOptionKey, idx: number) => {
     if (selected !== idx) {

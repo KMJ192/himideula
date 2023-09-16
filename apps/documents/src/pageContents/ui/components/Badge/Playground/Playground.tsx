@@ -53,7 +53,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.COLOR_SCHEME}
         selected={selected}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected(idx);
         }}
       />

@@ -4,6 +4,7 @@ import Playground from './Playground/Playground';
 import { documents } from './documents/documents';
 import { apis } from './apis/apis';
 import { cssVar } from './cssVar/cssVar';
+import { dataType } from './dataType/dataType';
 
 function RadioGroupDocs() {
   return (
@@ -16,6 +17,7 @@ function RadioGroupDocs() {
       playground={{
         component: <Playground />,
       }}
+      dataType={dataType}
     />
   );
 }

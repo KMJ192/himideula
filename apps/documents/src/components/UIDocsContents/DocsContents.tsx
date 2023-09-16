@@ -122,6 +122,7 @@ function DocsContents({
       apis: apis ?? [],
       cssVar: cssVar ?? [],
       playground: playground ?? { component: null },
+      dataType: dataType ?? [],
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [documents, apis, cssVar, playground, title]);

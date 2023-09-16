@@ -48,7 +48,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.DIRECTION}
         selected={direction}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setDirection(idx);
         }}
       />

@@ -6,7 +6,7 @@ import {
   Text,
   Flex,
 } from '@upcast/react-ui';
-import { useHooksDocsState } from '@src/store/pageContents/modulesDocs/state';
+import { useModulesDocsState } from '@src/store/pageContents/modulesDocs/state';
 import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';
@@ -15,7 +15,7 @@ const cx = classNames.bind(style);
 
 function APIs() {
   const { theme } = useTheme();
-  const { apis } = useHooksDocsState();
+  const { apis } = useModulesDocsState();
 
   return (
     <Flex className={cx('apis')}>

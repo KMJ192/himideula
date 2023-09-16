@@ -34,7 +34,7 @@ type Action = {
   setInfo: (state: State) => void;
 };
 
-const useHooksDocsState = create<State & Action>((set) => ({
+const useModulesDocsState = create<State & Action>((set) => ({
   title: '',
   usage: [],
   apis: [],
@@ -43,4 +43,4 @@ const useHooksDocsState = create<State & Action>((set) => ({
 }));
 
 export type { Usage, APIs, DataType };
-export { useHooksDocsState };
+export { useModulesDocsState };
