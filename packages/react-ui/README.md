@@ -1,11 +1,13 @@
-# @ssamssam/react-ui
+# @upcast/react-ui
 
 ### Getting start
+
 ```
-yarn add @ssamssam/react-ui
+yarn add @upcast/react-ui
 ```
 
 ### Components
+
 - Center
 - Flex
 - Float

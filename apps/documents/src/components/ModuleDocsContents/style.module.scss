@@ -1,0 +1,33 @@
+@import 'src/styles/color/color.module.scss';
+
+.container {
+  flex-direction: column;
+}
+
+.contents {
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.apis {
+  width: 100%;
+  .type {
+    &.light {
+      --upcast-color-badge-color: #{$light-text};
+      --upcast-color-badge-bg: #{$light-primary700};
+    }
+    &.dark {
+      --upcast-color-badge-color: #{$dark-text};
+      --upcast-color-badge-bg: #{$dark-primary100};
+    }
+  }
+}
+
+.data-type {
+  width: 100%;
+  flex-direction: column;
+  .info {
+    width: 100%;
+    flex-direction: column;
+  }
+}

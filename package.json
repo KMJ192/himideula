@@ -1,5 +1,5 @@
 {
-  "name": "@ssamssam/workspace",
+  "name": "@upcast/workspace",
   "private": true,
   "keywords": [],
   "version": "0.0.1",
@@ -30,9 +30,9 @@
     ]
   },
   "scripts": {
-    "wk:docs": "yarn workspace @ssamssam/documents",
-    "wk:rui": "yarn workspace @ssamssam/react-ui",
-    "wk:rmo": "yarn workspace @ssamssam/react-modules",
+    "wk:docs": "yarn workspace @upcast/documents",
+    "wk:rui": "yarn workspace @upcast/react-ui",
+    "wk:rmo": "yarn workspace @upcast/react-modules",
     "clear:all": "sh ./scripts/clearDependencies.sh",
     "postinstall": "husky install"
   },

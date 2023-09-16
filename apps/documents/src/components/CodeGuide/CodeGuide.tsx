@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, Text } from '@ssamssam/react-ui';
+import { Flex, Text } from '@upcast/react-ui';
 import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';

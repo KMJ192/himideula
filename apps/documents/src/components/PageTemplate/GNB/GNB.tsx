@@ -5,14 +5,19 @@ import { usePathname } from 'next/navigation';
 
 import cloneDeep from 'lodash/cloneDeep';
 
-import { SideNav, Spacing, Text } from '@ssamssam/react-ui';
+import { SideNav, Spacing, Text } from '@upcast/react-ui';
+import Line from '@src/components/Line/Line';
 
 import { URL } from '@src/utils/url';
 
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';
-import Line from '@src/components/Line/Line';
 const cx = classNames.bind(style);
+
+type NavGroup = {
+  url: string;
+  contents: string;
+};
 
 const urlDictionary = new Set([
   URL.layout,
@@ -20,9 +25,10 @@ const urlDictionary = new Set([
   URL.flex,
   URL.grid,
   URL.float,
+  URL.row,
   URL.spacing,
   URL.stack,
-  URL.components,
+  URL.uiComponents,
   URL.badge,
   URL.button,
   URL.checkbox,
@@ -37,6 +43,8 @@ const urlDictionary = new Set([
   URL.dataTable,
   URL.hooks,
   URL.useTrie,
+  URL.moduleComponents,
+  URL.infiniteScroll,
 ]);
 
 const initSelectedList: { [key: string]: boolean } = {
@@ -47,7 +55,7 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.float]: false,
   [URL.spacing]: false,
   [URL.stack]: false,
-  [URL.components]: false,
+  [URL.uiComponents]: false,
   [URL.badge]: false,
   [URL.button]: false,
   [URL.checkbox]: false,
@@ -61,11 +69,8 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.dataTable]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
-};
-
-type NavGroup = {
-  url: string;
-  contents: string;
+  [URL.moduleComponents]: false,
+  [URL.infiniteScroll]: false,
 };
 
 const layoutGroup: Array<NavGroup> = [
@@ -99,7 +104,7 @@ const layoutGroup: Array<NavGroup> = [
   },
 ];
 
-const componentGroup: Array<NavGroup> = [
+const uiComponentGroup: Array<NavGroup> = [
   {
     url: URL.button,
     contents: 'Button',
@@ -150,18 +155,33 @@ const componentGroup: Array<NavGroup> = [
   },
 ];
 
-// const hooksGroup: Array<NavGroup> = [
-//   {
-//     url: URL.useTrie,
-//     contents: 'useTrie',
-//   },
-// ];
+const hooksGroup: Array<NavGroup> = [
+  {
+    url: URL.useTrie,
+    contents: 'useTrie',
+  },
+];
+
+const moduleComponentGroup: Array<NavGroup> = [
+  {
+    url: URL.infiniteScroll,
+    contents: 'InfiniteScroll',
+  },
+];
+
+const category = {
+  layout: 'layout',
+  uiComponents: 'components',
+  hooks: 'hooks',
+  moduleComponents: 'components',
+};
 
 const validNavGroup = (dataKey: string): string | null => {
   if (
     dataKey === URL.layout ||
-    dataKey === URL.components ||
-    dataKey === URL.hooks
+    dataKey === URL.uiComponents ||
+    dataKey === URL.hooks ||
+    dataKey === URL.moduleComponents
   ) {
     return dataKey;
   }
@@ -178,12 +198,12 @@ function GNB() {
   const [selected, setSelected] = useState(cloneDeep(initSelectedList));
   const [show, setShow] = useState<{ [key: string]: boolean }>({
     [URL.layout]: false,
-    [URL.components]: false,
+    [URL.uiComponents]: false,
     [URL.hooks]: false,
   });
 
   const onClickUI = () => {
-    router.push(URL.uiKit);
+    router.push(URL.ui);
     setSelected({ ...initSelectedList });
     setShow({
       ...show,
@@ -197,18 +217,20 @@ function GNB() {
     setShow({
       ...show,
       [URL.layout]: false,
-      [URL.components]: false,
+      [URL.uiComponents]: false,
     });
   };
 
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     const element = e.target as HTMLElement;
     const dataKey = element.dataset.key;
+
     if (dataKey && isURL(dataKey)) {
       if (
-        dataKey !== URL.components &&
+        dataKey !== URL.uiComponents &&
         dataKey !== URL.layout &&
-        dataKey !== URL.hooks
+        dataKey !== URL.hooks &&
+        dataKey !== URL.moduleComponents
       ) {
         router.push(dataKey);
       }
@@ -228,29 +250,46 @@ function GNB() {
   };
 
   useEffect(() => {
-    // const group = pathname.split('/');
-    // if (
-    //   group.length > 1 &&
-    //   (group[1] === 'components' || group[1] === 'hooks')
-    // ) {
-    //   setShow({
-    //     ...show,
-    //     [`/${group[1]}`]: true,
-    //   });
-    //   if (urlDictionary.has(pathname)) {
-    //     setSelected({
-    //       ...initSelectedList,
-    //       [pathname]: true,
-    //     });
-    //   }
-    // }
+    const group = pathname.split('/');
+
+    if (group.length === 4) {
+      const c = group[2];
+      if (c === category.layout) {
+        setShow({
+          ...show,
+          [URL.layout]: true,
+        });
+      } else if (c === category.uiComponents && group[1] === 'ui') {
+        setShow({
+          ...show,
+          [URL.uiComponents]: true,
+        });
+      } else if (c === category.moduleComponents && group[1] === 'modules') {
+        setShow({
+          ...show,
+          [URL.moduleComponents]: true,
+        });
+      } else if (c === category.hooks) {
+        setShow({
+          ...show,
+          [URL.hooks]: true,
+        });
+      }
+
+      if (urlDictionary.has(pathname)) {
+        setSelected({
+          ...initSelectedList,
+          [pathname]: true,
+        });
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (
     <SideNav className={cx('gnb')} onClick={onClick} depthGap={0}>
       <SideNav.Menu onClick={onClickUI}>
-        <Text typo='h3'>UI Kit</Text>
+        <Text typo='h3'>UI</Text>
       </SideNav.Menu>
       <SideNav.MenuGroup show>
         <SideNav.Menu data-key={URL.layout} selected={selected[URL.layout]}>
@@ -270,15 +309,22 @@ function GNB() {
           })}
         </SideNav.MenuGroup>
         <SideNav.Menu
-          data-key={URL.components}
-          selected={selected[URL.components]}
+          data-key={URL.uiComponents}
+          selected={selected[URL.uiComponents]}
         >
-          <Text typo='t2' data-key={URL.components} className={cx('category')}>
+          <Text
+            typo='t2'
+            data-key={URL.uiComponents}
+            className={cx('category')}
+          >
             Components
           </Text>
         </SideNav.Menu>
-        <SideNav.MenuGroup show={show[URL.components]} className={cx('linker')}>
-          {componentGroup.map(({ url, contents }) => {
+        <SideNav.MenuGroup
+          show={show[URL.uiComponents]}
+          className={cx('linker')}
+        >
+          {uiComponentGroup.map(({ url, contents }) => {
             return (
               <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
                 <Text typo='b2' data-key={url}>
@@ -300,9 +346,38 @@ function GNB() {
           </Text>
         </SideNav.Menu>
         <SideNav.MenuGroup show={show[URL.hooks]} className={cx('linker')}>
-          <SideNav.Menu>
-            <Text typo='b2'>useTrie</Text>
-          </SideNav.Menu>
+          {hooksGroup.map(({ url, contents }) => {
+            return (
+              <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+                <Text typo='b2' data-key={url}>
+                  {contents}
+                </Text>
+              </SideNav.Menu>
+            );
+          })}
+        </SideNav.MenuGroup>
+        <SideNav.Menu data-key={URL.moduleComponents}>
+          <Text
+            typo='t2'
+            data-key={URL.moduleComponents}
+            className={cx('category')}
+          >
+            Components
+          </Text>
+        </SideNav.Menu>
+        <SideNav.MenuGroup
+          show={show[URL.moduleComponents]}
+          className={cx('linker')}
+        >
+          {moduleComponentGroup.map(({ url, contents }) => {
+            return (
+              <SideNav.Menu key={url} data-key={url} selected={selected[url]}>
+                <Text typo='b2' data-key={url}>
+                  {contents}
+                </Text>
+              </SideNav.Menu>
+            );
+          })}
         </SideNav.MenuGroup>
       </SideNav.MenuGroup>
       <Spacing direction='vertical' spacing={16} />
