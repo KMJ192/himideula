@@ -35,8 +35,9 @@ export { default as Radio } from './components/Radio/Radio';
 export type { RadioProps } from './components/Radio/Radio';
 export { default as RadioGroup } from './components/RadioGroup/RadioGroup';
 export type {
-  RadioGroupProps,
+  RadioGroupOptionKey,
   RadioGroupOption,
+  RadioGroupProps,
 } from './components/RadioGroup/RadioGroup';
 export { default as Switch } from './components/Switch/Switch';
 export type { SwitchProps } from './components/Switch/Switch';
