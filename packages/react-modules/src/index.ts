@@ -9,4 +9,4 @@ export {
 } from './components/InfiniteScroll/InfiniteScroll';
 
 // Hooks
-export { useTrie, type TrieData } from './hooks/useTrie';
+export { useTrie, type UseTrieParams, type TrieData } from './hooks/useTrie';
