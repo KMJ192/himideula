@@ -8,14 +8,14 @@ $side-nav-width: 164px;
   @include theme;
   .theme {
     z-index: 999;
-    --ss-layout-float-bottom: 16px;
-    --ss-layout-float-right: 16px;
+    --upcast-layout-float-bottom: 16px;
+    --upcast-layout-float-right: 16px;
     .theme-btn {
       padding: 8px;
     }
   }
   .gnb {
-    --ss-size-side-nav-width: #{$side-nav-width};
+    --upcast-size-side-nav-width: #{$side-nav-width};
     position: fixed;
     z-index: 999;
     transition: transform 0.5s ease;
@@ -23,11 +23,11 @@ $side-nav-width: 164px;
       font-weight: 700;
     }
     .linker {
-      --ss-c-side-nav-menu-text: rgb(134, 151, 132);
+      --upcast-color-side-nav-menu-text: rgb(134, 151, 132);
     }
   }
   .space {
-    --ss-layout-spacing-gap: 180px;
+    --upcast-layout-spacing-gap: 180px;
   }
   .contents {
     height: 100%;
@@ -35,8 +35,8 @@ $side-nav-width: 164px;
     .header {
       position: fixed;
       top: 0;
-      --ss-size-header-min-height: 72px;
-      --ss-size-header-max-height: 72px;
+      --upcast-size-header-min-height: 72px;
+      --upcast-size-header-max-height: 72px;
       z-index: 998;
     }
     .page {

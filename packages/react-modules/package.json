@@ -1,6 +1,6 @@
 {
-  "name": "@ssamssam/react-modules",
-  "version": "0.0.12",
+  "name": "@upcast/react-modules",
+  "version": "0.0.1",
   "description": "",
   "author": {
     "name": "MyeongJunKim",
@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KMJ192/ssamssam"
+    "url": "git+https://github.com/KMJ192/upcast"
   },
   "scripts": {
-    "build": "rm -rf build && rollup -c --bundleConfigAsCjs",
+    "build": "rm -rf build && tsc && rollup -c --bundleConfigAsCjs",
     "pub": "yarn build && yarn npm publish"
   },
   "dependencies": {

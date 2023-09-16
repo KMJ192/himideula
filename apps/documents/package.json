@@ -1,5 +1,5 @@
 {
-  "name": "@ssamssam/documents",
+  "name": "@upcast/documents",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ssamssam/react-modules": "^0.0.12",
-    "@ssamssam/react-ui": "^0.0.18",
+    "@upcast/react-modules": "^0.0.1",
+    "@upcast/react-ui": "^0.0.1",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
     "next": "13.4.13",
