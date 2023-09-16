@@ -12,7 +12,7 @@ type BaseProps = {
   children?: ReactNode;
   isLoading?: boolean;
   loadingElement?: ReactNode;
-  onLoad: () => void;
+  onLoad?: () => void;
 };
 
 const DEFAULT_ELEMENT = 'div';
@@ -28,7 +28,7 @@ function InfiniteScroll<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
     isLoading,
     loadingElement,
     isObserve = true,
-    onLoad,
+    onLoad = () => {},
     className,
     ...props
   }: Props<T>,
@@ -40,7 +40,7 @@ function InfiniteScroll<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
   const observingNodeRef = useRef<HTMLDivElement>(null);
 
   const load = () => {
-    if (onLoad) onLoad();
+    onLoad();
     loadCnt += 1;
   };
 
