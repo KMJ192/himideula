@@ -4,7 +4,7 @@ import {
   DataTable,
   DataTableContainer,
   useDataTablePagination,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 
 function DataTableView() {
   const pagination = useDataTablePagination({ lastPageIndex: 55 });

@@ -1,4 +1,4 @@
-import { Stack } from '@ssamssam/react-ui';
+import { Stack } from '@upcast/react-ui';
 
 function Row() {
   return (

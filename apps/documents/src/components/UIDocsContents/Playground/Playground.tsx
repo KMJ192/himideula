@@ -1,4 +1,4 @@
-import { Flex, Text } from '@ssamssam/react-ui';
+import { Flex, Text } from '@upcast/react-ui';
 import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
 
 import Line from '@src/components/Line/Line';

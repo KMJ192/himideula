@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Spacing, Flex, Text } from '@ssamssam/react-ui';
+import { Spacing, Flex, Text } from '@upcast/react-ui';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';

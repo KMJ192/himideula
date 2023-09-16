@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Center } from '@ssamssam/react-ui';
+import { Button, Center } from '@upcast/react-ui';
 
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';

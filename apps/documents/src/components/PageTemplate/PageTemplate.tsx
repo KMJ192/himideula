@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useTheme } from '@src/store/theme/themeState';
 
-import { Flex, Header, Spacing, Float, Button } from '@ssamssam/react-ui';
+import { Flex, Header, Spacing, Float, Button } from '@upcast/react-ui';
 
 import GNB from './GNB/GNB';
 

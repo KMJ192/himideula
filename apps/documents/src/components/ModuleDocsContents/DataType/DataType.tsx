@@ -1,4 +1,4 @@
-import { Spacing, Flex, Text } from '@ssamssam/react-ui';
+import { Spacing, Flex, Text } from '@upcast/react-ui';
 
 import { useHooksDocsState } from '@src/store/pageContents/modulesDocs/state';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';

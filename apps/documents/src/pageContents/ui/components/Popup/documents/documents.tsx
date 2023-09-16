@@ -1,4 +1,4 @@
-import { Popup } from '@ssamssam/react-ui';
+import { Popup } from '@upcast/react-ui';
 
 import type { Documents } from '@src/store/pageContents/uiDocs/state';
 

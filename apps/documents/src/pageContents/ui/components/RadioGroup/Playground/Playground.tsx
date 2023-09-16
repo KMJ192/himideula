@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { Center, Flex, Text, RadioGroup, Spacing } from '@ssamssam/react-ui';
+import { Center, Flex, Text, RadioGroup, Spacing } from '@upcast/react-ui';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import { OPTIONS } from './options';

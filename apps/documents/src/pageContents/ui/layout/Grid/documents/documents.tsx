@@ -1,4 +1,4 @@
-import { Grid } from '@ssamssam/react-ui';
+import { Grid } from '@upcast/react-ui';
 
 import type { Documents } from '@src/store/pageContents/uiDocs/state';
 

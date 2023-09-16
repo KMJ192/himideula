@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Flex } from '@ssamssam/react-ui';
+import { Button, Flex } from '@upcast/react-ui';
 
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';

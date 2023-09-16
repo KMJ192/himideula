@@ -10,7 +10,7 @@ import {
   RadioGroup,
   Spacing,
   type RadioGroupOption,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 import Line from '@src/components/Line/Line';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 

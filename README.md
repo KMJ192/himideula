@@ -1,4 +1,5 @@
-# ssamssam 패키지 워크스페이스
+# upcast 패키지 워크스페이스
+
 - UI 라이브러리
 - UI Documents 페이지
 - React 패키지
@@ -6,33 +7,42 @@
 ### Getting start
 
 - UI
+
 ```
-yarn add @ssamssam/react-ui
+yarn add @upcast/react-ui
 ```
+
 - Modules
+
 ```
-yarn add @ssam/react-modules
+yarn add @upcast/react-modules
 ```
 
 ### Library Package build
+
 - Modules
+
 ```
-yarn workspace @ssamssam/react-modules build
-```
-- UI
-```
-yarn workspace @ssamssam/react-ui build
+yarn workspace @upcast/react-modules build
 ```
 
+- UI
+
+```
+yarn workspace @upcast/react-ui build
+```
 
 ### App start
+
 - Documents
-  - @ssamssam/react-modules와 @ssamssam/react-ui를 순서대로 빌드해주세요.
+  - @upcast/react-modules와 @upcast/react-ui를 순서대로 빌드해주세요.
+
 ```
-yarn workspace @ssamssam/documents start
+yarn workspace @upcast/documents start
 ```
 
 ### dev
+
 - Yarn Workspace
 - React
 - NextJS(13)
@@ -42,9 +52,11 @@ yarn workspace @ssamssam/documents start
 - Yarn berry (zero install)
 
 ##### git commit message
-- 액션(프로젝트): 커밋 내용 
+
+- 액션(프로젝트): 커밋 내용
 
 - 프로젝트
+
 ```
 workspace
 react-ui
@@ -53,6 +65,7 @@ documents
 ```
 
 - 액션
+
 ```
 feat: 기능 추가, 삭제, 변경 (코드 수정)
 fix: 버그 수정

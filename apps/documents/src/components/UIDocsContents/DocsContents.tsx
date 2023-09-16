@@ -9,7 +9,7 @@ import {
   Spacing,
   type TabOption,
   type TabOptionKey,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 import Line from '../Line/Line';
 
 import Documents from './Documents/Documents';

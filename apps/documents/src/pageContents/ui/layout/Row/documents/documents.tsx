@@ -1,4 +1,4 @@
-import { Row } from '@ssamssam/react-ui';
+import { Row } from '@upcast/react-ui';
 
 import type { Documents } from '@src/store/pageContents/uiDocs/state';
 

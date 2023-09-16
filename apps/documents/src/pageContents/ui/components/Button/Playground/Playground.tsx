@@ -9,11 +9,11 @@ import {
   Button,
   RadioGroup,
   Spacing,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 import type {
   Variant,
   Shape,
-} from '@ssamssam/react-ui/build/components/Button/types';
+} from '@upcast/react-ui/build/components/Button/types';
 import Line from '@src/components/Line/Line';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 

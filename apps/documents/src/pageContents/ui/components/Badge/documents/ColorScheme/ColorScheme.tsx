@@ -1,4 +1,4 @@
-import { Badge, Flex } from '@ssamssam/react-ui';
+import { Badge, Flex } from '@upcast/react-ui';
 
 import style from '../style.module.scss';
 

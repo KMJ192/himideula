@@ -1,4 +1,4 @@
-import { Spinner, Flex } from '@ssamssam/react-ui';
+import { Spinner, Flex } from '@upcast/react-ui';
 
 import style from '../style.module.scss';
 

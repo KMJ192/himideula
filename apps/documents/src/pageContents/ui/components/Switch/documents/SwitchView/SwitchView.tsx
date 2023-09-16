@@ -1,4 +1,4 @@
-import { Switch, Flex } from '@ssamssam/react-ui';
+import { Switch, Flex } from '@upcast/react-ui';
 
 import style from '../style.module.scss';
 

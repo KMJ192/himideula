@@ -22,12 +22,12 @@
   }
   .type {
     &.light {
-      --ss-c-badge-color: #{$light-text};
-      --ss-c-badge-bg: #{$light-primary700};
+      --upcast-color-badge-color: #{$light-text};
+      --upcast-color-badge-bg: #{$light-primary700};
     }
     &.dark {
-      --ss-c-badge-color: #{$dark-text};
-      --ss-c-badge-bg: #{$dark-primary100};
+      --upcast-color-badge-color: #{$dark-text};
+      --upcast-color-badge-bg: #{$dark-primary100};
     }
   }
 }
@@ -38,16 +38,16 @@
   .css-var-table {
     .css-type {
       .color {
-        --ss-c-badge-color: #{$black};
-        --ss-c-badge-bg: skyblue;
+        --upcast-color-badge-color: #{$black};
+        --upcast-color-badge-bg: skyblue;
       }
       .size {
-        --ss-c-badge-color: #{$white};
-        --ss-c-badge-bg: magenta;
+        --upcast-color-badge-color: #{$white};
+        --upcast-color-badge-bg: magenta;
       }
       .layout {
-        --ss-c-badge-color: #{$black};
-        --ss-c-badge-bg: coral;
+        --upcast-color-badge-color: #{$black};
+        --upcast-color-badge-bg: coral;
       }
     }
 

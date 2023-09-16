@@ -4,25 +4,25 @@ import { COLOR } from '@src/styles/color/color';
 
 const cssVar: Array<CSSVar> = [
   {
-    name: '--ss-c-spinner-color1',
+    name: '--upcast-color-spinner-color1',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.gray200,
     description: '색상1',
   },
   {
-    name: '--ss-c-spinner-color2',
+    name: '--upcast-color-spinner-color2',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.gray400,
     description: '색상2',
   },
   {
-    name: 'ss-size-spinner',
+    name: 'upcast-size-spinner',
     type: CSS_VAR_TYPE.SIZE,
     defaultValue: '24px',
     description: '크기',
   },
   {
-    name: 'ss-size-border-width',
+    name: 'upcast-size-border-width',
     type: CSS_VAR_TYPE.SIZE,
     defaultValue: '4px',
     description: '굵기',

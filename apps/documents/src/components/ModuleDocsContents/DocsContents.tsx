@@ -9,7 +9,7 @@ import {
   Tab,
   type TabOption,
   type TabOptionKey,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 
 import Line from '../Line/Line';
 

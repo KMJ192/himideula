@@ -24,7 +24,7 @@ const usage: Array<Usage> = [
     title: '선언',
     description: '',
     code: [
-      `import { useTrie } from '@ssamssam/react-modules';`,
+      `import { useTrie } from '@upcast/react-modules';`,
       ``,
       `function Component() {`,
       `    const trie = useTrie({`,

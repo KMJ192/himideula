@@ -1,4 +1,4 @@
-import { Flex, Checkbox } from '@ssamssam/react-ui';
+import { Flex, Checkbox } from '@upcast/react-ui';
 
 import classNames from 'classnames/bind';
 import style from '../style.module.scss';

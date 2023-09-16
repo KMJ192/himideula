@@ -1,25 +1,25 @@
 @import '../color.module.scss';
 
 @mixin tab-light {
-  --ss-c-tab-bg: #{$light-primary000};
-  --ss-c-tab-bg-hover: #{$light-primary200};
-  --ss-c-tab-bg-disabled: #{$light-gray100};
+  --upcast-color-tab-bg: #{$light-primary000};
+  --upcast-color-tab-bg-hover: #{$light-primary200};
+  --upcast-color-tab-bg-disabled: #{$light-gray100};
 
-  --ss-c-tab-select-line: #{$light-blue300};
+  --upcast-color-tab-select-line: #{$light-blue300};
 
-  --ss-c-tab-text: #{$light-text};
-  --ss-c-tab-text-hover: #{$light-text};
-  --ss-c-tab-text-disabled: #{$light-blue000};
+  --upcast-color-tab-text: #{$light-text};
+  --upcast-color-tab-text-hover: #{$light-text};
+  --upcast-color-tab-text-disabled: #{$light-blue000};
 }
 
 @mixin tab-dark {
-  --ss-c-tab-bg: #{$dark-primary200};
-  --ss-c-tab-bg-hover: #{$dark-primary300};
-  --ss-c-tab-bg-disabled: #{$dark-primary100};
+  --upcast-color-tab-bg: #{$dark-primary200};
+  --upcast-color-tab-bg-hover: #{$dark-primary300};
+  --upcast-color-tab-bg-disabled: #{$dark-primary100};
 
-  --ss-c-tab-select-line: #{$dark-blue300};
+  --upcast-color-tab-select-line: #{$dark-blue300};
 
-  --ss-c-tab-text: #{$dark-text};
-  --ss-c-tab-text-hover: #{$dark-primary700};
-  --ss-c-tab-text-disabled: #{$dark-primary300};
+  --upcast-color-tab-text: #{$dark-text};
+  --upcast-color-tab-text-hover: #{$dark-primary700};
+  --upcast-color-tab-text-disabled: #{$dark-primary300};
 }

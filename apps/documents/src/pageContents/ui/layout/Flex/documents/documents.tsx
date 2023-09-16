@@ -1,4 +1,4 @@
-import { Flex } from '@ssamssam/react-ui';
+import { Flex } from '@upcast/react-ui';
 
 import type { Documents } from '@src/store/pageContents/uiDocs/state';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { Button, Center } from '@ssamssam/react-ui';
+import { Button, Center } from '@upcast/react-ui';
 
 import icon from '@static/icons/download_icon.svg';
 

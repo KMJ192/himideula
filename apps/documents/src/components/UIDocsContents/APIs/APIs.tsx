@@ -5,7 +5,7 @@ import {
   DataTableContainer,
   Text,
   Flex,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 
 import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
 import { useTheme } from '@src/store/theme/themeState';

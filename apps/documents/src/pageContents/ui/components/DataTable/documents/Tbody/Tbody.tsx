@@ -1,4 +1,4 @@
-import { DataTableContainer, DataTable } from '@ssamssam/react-ui';
+import { DataTableContainer, DataTable } from '@upcast/react-ui';
 
 function Tbody() {
   return (

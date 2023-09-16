@@ -1,4 +1,4 @@
-import { Radio, Flex } from '@ssamssam/react-ui';
+import { Radio, Flex } from '@upcast/react-ui';
 
 import style from '../style.module.scss';
 

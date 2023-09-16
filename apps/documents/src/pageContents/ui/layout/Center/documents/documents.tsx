@@ -1,5 +1,5 @@
 import type { Documents } from '@src/store/pageContents/uiDocs/state';
-import { Center } from '@ssamssam/react-ui';
+import { Center } from '@upcast/react-ui';
 
 const documents: Array<Documents> = [
   {

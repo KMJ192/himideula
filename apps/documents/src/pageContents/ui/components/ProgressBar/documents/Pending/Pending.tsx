@@ -1,4 +1,4 @@
-import { Flex, ProgressBar } from '@ssamssam/react-ui';
+import { Flex, ProgressBar } from '@upcast/react-ui';
 
 import style from '../style.module.scss';
 import classNames from 'classnames/bind';

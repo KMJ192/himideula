@@ -1,4 +1,4 @@
-import { Input } from '@ssamssam/react-ui';
+import { Input } from '@upcast/react-ui';
 
 import type { Documents } from '@src/store/pageContents/uiDocs/state';
 

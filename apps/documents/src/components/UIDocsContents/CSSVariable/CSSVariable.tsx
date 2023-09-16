@@ -4,7 +4,7 @@ import {
   DataTable,
   DataTableContainer,
   Text,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 
 import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
 import { useTheme } from '@src/store/theme/themeState';

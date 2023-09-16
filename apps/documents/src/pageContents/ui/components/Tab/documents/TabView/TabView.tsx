@@ -1,4 +1,4 @@
-import { Tab, Flex } from '@ssamssam/react-ui';
+import { Tab, Flex } from '@upcast/react-ui';
 
 import style from '../style.module.scss';
 

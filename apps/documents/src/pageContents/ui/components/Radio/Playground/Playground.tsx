@@ -9,7 +9,7 @@ import {
   Radio,
   RadioGroup,
   Spacing,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import { OPTIONS } from './options';

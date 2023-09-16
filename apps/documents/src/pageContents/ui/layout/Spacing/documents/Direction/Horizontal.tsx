@@ -1,4 +1,4 @@
-import { Spacing, Flex } from '@ssamssam/react-ui';
+import { Spacing, Flex } from '@upcast/react-ui';
 
 import style from './style.module.scss';
 

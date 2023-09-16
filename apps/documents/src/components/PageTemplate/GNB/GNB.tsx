@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import cloneDeep from 'lodash/cloneDeep';
 
-import { SideNav, Spacing, Text } from '@ssamssam/react-ui';
+import { SideNav, Spacing, Text } from '@upcast/react-ui';
 import Line from '@src/components/Line/Line';
 
 import { URL } from '@src/utils/url';

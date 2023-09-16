@@ -1,4 +1,4 @@
-import type { RadioGroupOption } from '@ssamssam/react-ui';
+import type { RadioGroupOption } from '@upcast/react-ui';
 
 const TYPE: Array<RadioGroupOption> = [
   {

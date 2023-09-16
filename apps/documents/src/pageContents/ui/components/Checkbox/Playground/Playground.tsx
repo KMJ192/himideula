@@ -9,7 +9,7 @@ import {
   Checkbox,
   RadioGroup,
   Spacing,
-} from '@ssamssam/react-ui';
+} from '@upcast/react-ui';
 import Line from '@src/components/Line/Line';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
