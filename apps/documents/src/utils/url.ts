@@ -8,7 +8,7 @@ const URL = {
   row: '/ui/layout/row',
   spacing: '/ui/layout/spacing',
   stack: '/ui/layout/stack',
-  components: '/ui/components',
+  uiComponents: '/ui/components',
   badge: '/ui/components/badge',
   button: '/ui/components/button',
   input: '/ui/components/input',
@@ -24,6 +24,8 @@ const URL = {
   modules: '/modules',
   hooks: '/modules/hooks',
   useTrie: '/modules/hooks/use-trie',
+  moduleComponents: '/modules/components',
+  infiniteScroll: '/modules/components/infinite-scroll',
 };
 
 export { URL };

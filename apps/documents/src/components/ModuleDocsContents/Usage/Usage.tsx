@@ -1,6 +1,6 @@
 import { Spacing, Flex, Text } from '@ssamssam/react-ui';
 
-import { useHooksDocsState } from '@src/store/pageContents/hooksDocs/state';
+import { useHooksDocsState } from '@src/store/pageContents/modulesDocs/state';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import classNames from 'classnames/bind';

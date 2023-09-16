@@ -21,7 +21,7 @@ import {
   type Usage as Usg,
   type APIs as As,
   type DataType as Dt,
-} from '@src/store/pageContents/hooksDocs/state';
+} from '@src/store/pageContents/modulesDocs/state';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';

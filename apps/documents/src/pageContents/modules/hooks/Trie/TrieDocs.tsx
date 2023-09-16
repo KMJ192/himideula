@@ -1,4 +1,6 @@
-import DocsContents from '@src/components/HooksDocsContents/DocsContents';
+'use client';
+
+import DocsContents from '@src/components/ModuleDocsContents/DocsContents';
 
 import { apis } from './apis';
 import { usage } from './usage';
