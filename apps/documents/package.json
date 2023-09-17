@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@upcast/react-modules": "^0.0.1",
-    "@upcast/react-ui": "^0.0.1",
+    "@upcast/react-modules": "workspace:^",
+    "@upcast/react-ui": "workspace:^",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
     "next": "13.4.13",

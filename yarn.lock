@@ -675,8 +675,8 @@ __metadata:
     "@types/node": 20.4.9
     "@types/react": 18.2.20
     "@types/react-dom": 18.2.7
-    "@upcast/react-modules": ^0.0.1
-    "@upcast/react-ui": ^0.0.1
+    "@upcast/react-modules": "workspace:^"
+    "@upcast/react-ui": "workspace:^"
     classnames: ^2.3.2
     lodash: ^4.17.21
     next: 13.4.13
@@ -688,7 +688,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@upcast/react-modules@^0.0.14, @upcast/react-modules@workspace:packages/react-modules":
+"@upcast/react-modules@^0.0.14, @upcast/react-modules@workspace:^, @upcast/react-modules@workspace:packages/react-modules":
   version: 0.0.0-use.local
   resolution: "@upcast/react-modules@workspace:packages/react-modules"
   dependencies:
@@ -718,31 +718,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@upcast/react-modules@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@upcast/react-modules@npm:0.0.1"
-  dependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-router-dom: ^6.15.0
-  checksum: a4382a0cbab4f3e853d0da74bd303318bcb975dbc086205c91610301f9f6d7632ad16f3e05ab497014d62680f86c7083515b54e5e04579f8ade44bef18cd0a4e
-  languageName: node
-  linkType: hard
-
-"@upcast/react-ui@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@upcast/react-ui@npm:0.0.1"
-  dependencies:
-    "@upcast/react-modules": ^0.0.1
-    lodash: ^4.17.21
-    react: ^18.2.0
-  peerDependencies:
-    react: ^18.2.0
-  checksum: 829fbd5415a2afb0e874b50f7c5b103bdda5e3e244a0523b1a9ba5e814522d86cdda442d1066b894f6fed70285339d0b9f2ab8717c426c38bec136cc86cd29ea
-  languageName: node
-  linkType: hard
-
-"@upcast/react-ui@workspace:packages/react-ui":
+"@upcast/react-ui@workspace:^, @upcast/react-ui@workspace:packages/react-ui":
   version: 0.0.0-use.local
   resolution: "@upcast/react-ui@workspace:packages/react-ui"
   dependencies:
