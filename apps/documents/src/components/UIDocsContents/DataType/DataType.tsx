@@ -4,7 +4,7 @@ import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
 
 import classNames from 'classnames/bind';
-import style from '../style.module.scss';
+import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 function DataType() {

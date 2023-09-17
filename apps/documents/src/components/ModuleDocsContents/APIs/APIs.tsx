@@ -10,7 +10,7 @@ import { useModulesDocsState } from '@src/store/pageContents/modulesDocs/state';
 import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';
-import style from '../style.module.scss';
+import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 function APIs() {
