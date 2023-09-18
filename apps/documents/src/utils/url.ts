@@ -22,6 +22,7 @@ const URL = {
   switch: '/ui/components/switch',
   tab: '/ui/components/tab',
   dataTable: '/ui/components/data-table',
+  textarea: '/ui/components/textarea',
   modules: '/modules',
   hooks: '/modules/hooks',
   useTrie: '/modules/hooks/use-trie',
