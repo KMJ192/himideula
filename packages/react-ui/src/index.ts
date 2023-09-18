@@ -50,6 +50,8 @@ export type {
 } from './components/Tab/types';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
+export { default as Textarea } from './components/Textarea/Textarea';
+export type { TextareaProps } from './components/Textarea/Textarea';
 export {
   DataTable,
   DataTableContainer,
