@@ -10,3 +10,6 @@ export {
 
 // Hooks
 export { useTrie, type UseTrieParams, type TrieData } from './hooks/useTrie';
+
+// Utils
+export { sleep } from './utils/utils';
