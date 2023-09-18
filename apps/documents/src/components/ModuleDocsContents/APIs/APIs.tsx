@@ -52,7 +52,7 @@ function APIs() {
                       return (
                         <DataTable.Tr key={`${index}-${name}`}>
                           <DataTable.Td className={cx('name')}>
-                            <Text>{name}</Text>
+                            <Text typo='s1'>{name}</Text>
                             {essential && (
                               <div className={cx('essential', theme)}>*</div>
                             )}
@@ -63,10 +63,12 @@ function APIs() {
                             </Badge>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text>{essential ? '-' : defaultValue}</Text>
+                            <Text typo='c1'>
+                              {essential ? '-' : defaultValue}
+                            </Text>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text>{description}</Text>
+                            <Text typo='s2'>{description}</Text>
                           </DataTable.Td>
                         </DataTable.Tr>
                       );

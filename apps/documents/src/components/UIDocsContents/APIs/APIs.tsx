@@ -69,14 +69,14 @@ function APIs() {
                             )}
                           </DataTable.Td>
                           <DataTable.Td className={cx('type', theme)}>
-                            {type && (
-                              <Badge colorSchema='custom'>
-                                <Text typo='s2'>{type}</Text>
-                              </Badge>
-                            )}
+                            <Badge colorSchema='custom'>
+                              <Text typo='s2'>{type}</Text>
+                            </Badge>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text typo='c1'>{defaultValue}</Text>
+                            <Text typo='c1'>
+                              {essential ? '-' : defaultValue}
+                            </Text>
                           </DataTable.Td>
                           <DataTable.Td>
                             <Text typo='s2'>{description}</Text>
