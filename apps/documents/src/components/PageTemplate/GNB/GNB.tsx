@@ -212,6 +212,7 @@ function GNB() {
     setShow({
       ...show,
       [URL.hooks]: false,
+      [URL.moduleComponents]: false,
     });
   };
 
