@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { create } from 'zustand';
 
 type Usage = {
@@ -14,6 +15,7 @@ type APIs = {
     type: string;
     defaultValue: string;
     description: string;
+    essential: boolean;
   }>;
 };
 
@@ -23,11 +25,16 @@ type DataType = {
   code: Array<string>;
 };
 
+type Playground = {
+  component: ReactNode;
+};
+
 type State = {
   title: string;
   usage: Array<Usage>;
   apis: Array<APIs>;
   dataType: Array<DataType>;
+  Playground?: Playground;
 };
 
 type Action = {
@@ -42,5 +49,5 @@ const useModulesDocsState = create<State & Action>((set) => ({
   setInfo: (newState: State) => set(newState),
 }));
 
-export type { Usage, APIs, DataType };
+export type { Usage, APIs, DataType, Playground };
 export { useModulesDocsState };
