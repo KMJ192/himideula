@@ -6,11 +6,13 @@ import { useTheme } from '@src/store/theme/themeState';
 import { Flex, Header, Spacing, Switch } from '@upcast/react-ui';
 
 import GNB from './GNB/GNB';
-import Dark from './ModeIcon/Dark';
-import Light from './ModeIcon/Light';
+import Dark from './Icons/Dark';
+import Light from './Icons/Light';
+import GitHubIcon from './Icons/GitHubIcon';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import Link from 'next/link';
 const cx = classNames.bind(style);
 
 type Props = {
@@ -55,8 +57,16 @@ function PageTemplate({ children }: Props) {
       <Spacing direction='horizontal' className={cx('space', theme)} />
       <div className={cx('contents')}>
         <Header className={cx('header')}>
-          <Flex className={cx('theme-toggle', theme)}>
-            <div className={cx('icon')}>
+          <Flex className={cx('right-contents', theme)}>
+            <Link
+              href='https://github.com/KMJ192/upcast'
+              target='_blank'
+              className={cx('github', theme)}
+            >
+              <GitHubIcon />
+            </Link>
+            <Spacing direction='horizontal' spacing={24} />
+            <div>
               <Light />
               <Dark />
             </div>

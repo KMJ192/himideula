@@ -48,7 +48,7 @@ $side-nav-width: 164px;
       --upcast-size-header-min-height: 72px;
       --upcast-size-header-max-height: 72px;
       z-index: 998;
-      .theme-toggle {
+      .right-contents {
         position: relative;
         display: flex;
         column-gap: 8px;
@@ -59,6 +59,18 @@ $side-nav-width: 164px;
         --upcast-color-switch-bg-checked: #{$dark-primary200};
         --upcast-color-switch-bg-hover: #{$light-blue200};
         --upcast-color-switch-bg-checked-hover: #{$dark-gray300};
+        .github > svg {
+          fill: $light-text;
+        }
+        .github:hover > svg {
+          fill: #6a6a6a;
+        }
+        .github.dark > svg {
+          fill: $dark-text;
+        }
+        .github.dark:hover > svg {
+          fill: $dark-primary200;
+        }
       }
     }
     .page {

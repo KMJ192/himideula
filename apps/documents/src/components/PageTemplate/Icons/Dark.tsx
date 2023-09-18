@@ -8,7 +8,7 @@ function Dark() {
   const { theme } = useTheme();
   return (
     <svg
-      className={cx('icon', 'dark-icon', theme)}
+      className={cx('theme-icon', 'dark-icon', theme)}
       viewBox='0 0 24 24'
       xmlns='http://www.w3.org/2000/svg'
     >

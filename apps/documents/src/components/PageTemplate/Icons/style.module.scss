@@ -1,6 +1,6 @@
 @import 'src/styles/color/color.module.scss';
 
-.icon {
+.theme-icon {
   width: 24px;
   height: 24px;
   position: absolute;
@@ -21,4 +21,11 @@
     opacity: 0;
     transform: translate(-24px, -50%) rotate(180deg);
   }
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: fill 0.2s ease-in-out;
 }
