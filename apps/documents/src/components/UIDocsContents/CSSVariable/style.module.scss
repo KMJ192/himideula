@@ -1,0 +1,32 @@
+@import 'src/styles/color/color.module.scss';
+
+.css-var {
+  flex-direction: column;
+  row-gap: 24px;
+  .css-var-table {
+    .css-type {
+      .color {
+        --upcast-color-badge-color: #{$black};
+        --upcast-color-badge-bg: skyblue;
+      }
+      .size {
+        --upcast-color-badge-color: #{$white};
+        --upcast-color-badge-bg: magenta;
+      }
+      .layout {
+        --upcast-color-badge-color: #{$black};
+        --upcast-color-badge-bg: coral;
+      }
+    }
+
+    .color-view {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      -webkit-box-align: center;
+      column-gap: 8px;
+    }
+  }
+}

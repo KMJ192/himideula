@@ -1,4 +1,5 @@
 const URL = {
+  root: '/',
   ui: '/ui',
   layout: '/ui/layout',
   center: '/ui/layout/center',

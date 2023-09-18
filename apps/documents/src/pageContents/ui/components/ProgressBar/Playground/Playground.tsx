@@ -45,7 +45,7 @@ function Playground() {
         <RadioGroup
           options={OPTIONS.TOGGLE}
           selected={selected.pending}
-          onSelect={(idx: number) => {
+          onSelect={(_, idx: number) => {
             setSelected({
               ...selected,
               pending: idx,

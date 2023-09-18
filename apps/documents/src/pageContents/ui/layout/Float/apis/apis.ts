@@ -10,12 +10,14 @@ const apis: Array<APIs> = [
         type: 'React.ReactNode',
         defaultValue: 'undefined',
         description: 'Children 컴포넌트',
+        essential: false,
       },
       {
         name: 'startDirection',
         type: '"lt" | "lb" | "rt" | "rb"',
         defaultValue: 'lt',
         description: '위치 지정',
+        essential: false,
       },
       {
         name: 'left',
@@ -23,6 +25,7 @@ const apis: Array<APIs> = [
         defaultValue: 'undefined',
         description:
           '화면 왼쪽 기준 위치 지정 - startDirection이 "l"인 경우 적용',
+        essential: false,
       },
       {
         name: 'right',
@@ -30,6 +33,7 @@ const apis: Array<APIs> = [
         defaultValue: 'undefined',
         description:
           '화면 오른쪽 기준 위치 지정 - startDirection이 "r"인 경우 적용',
+        essential: false,
       },
       {
         name: 'top',
@@ -37,6 +41,7 @@ const apis: Array<APIs> = [
         defaultValue: 'undefined',
         description:
           '화면 상단 기준 위치 지정 - startDirection이 "t"인 경우 적용',
+        essential: false,
       },
       {
         name: 'bottom',
@@ -44,6 +49,7 @@ const apis: Array<APIs> = [
         defaultValue: 'undefined',
         description:
           '화면 하단 기준 위치 지정 - startDirection이 "b"인 경우 적용',
+        essential: false,
       },
     ],
   },

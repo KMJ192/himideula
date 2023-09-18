@@ -28,7 +28,7 @@ function Playground() {
         <RadioGroup
           options={OPTIONS.TOGGLE}
           selected={selected.vertical}
-          onSelect={(idx: number) => {
+          onSelect={(_, idx: number) => {
             setSelected({
               ...selected,
               vertical: idx,
@@ -39,7 +39,7 @@ function Playground() {
         <RadioGroup
           options={OPTIONS.TOGGLE}
           selected={selected.horizontal}
-          onSelect={(idx: number) => {
+          onSelect={(_, idx: number) => {
             setSelected({
               ...selected,
               horizontal: idx,

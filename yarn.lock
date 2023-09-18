@@ -675,8 +675,8 @@ __metadata:
     "@types/node": 20.4.9
     "@types/react": 18.2.20
     "@types/react-dom": 18.2.7
-    "@upcast/react-modules": ^0.0.1
-    "@upcast/react-ui": ^0.0.1
+    "@upcast/react-modules": "workspace:^"
+    "@upcast/react-ui": "workspace:^"
     classnames: ^2.3.2
     lodash: ^4.17.21
     next: 13.4.13
@@ -688,7 +688,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@upcast/react-modules@^0.0.1, @upcast/react-modules@workspace:packages/react-modules":
+"@upcast/react-modules@^0.0.14, @upcast/react-modules@workspace:^, @upcast/react-modules@workspace:packages/react-modules":
   version: 0.0.0-use.local
   resolution: "@upcast/react-modules@workspace:packages/react-modules"
   dependencies:
@@ -712,12 +712,13 @@ __metadata:
     rollup-plugin-peer-deps-external: ^2.2.4
     rollup-plugin-postcss: ^4.0.2
     sass: ^1.66.1
+    tsc-alias: ^1.8.7
     tslib: ^2.6.2
     typescript: ^5.1.6
   languageName: unknown
   linkType: soft
 
-"@upcast/react-ui@^0.0.1, @upcast/react-ui@workspace:packages/react-ui":
+"@upcast/react-ui@workspace:^, @upcast/react-ui@workspace:packages/react-ui":
   version: 0.0.0-use.local
   resolution: "@upcast/react-ui@workspace:packages/react-ui"
   dependencies:
@@ -729,7 +730,7 @@ __metadata:
     "@types/lodash": ^4
     "@types/node": ^20.5.0
     "@types/react": 18.2.20
-    "@upcast/react-modules": ^0.0.1
+    "@upcast/react-modules": ^0.0.14
     autoprefixer: ^10.4.15
     classnames: ^2.3.2
     lodash: ^4.17.21
@@ -740,10 +741,9 @@ __metadata:
     rollup-plugin-peer-deps-external: ^2.2.4
     rollup-plugin-postcss: ^4.0.2
     sass: ^1.66.1
+    tsc-alias: ^1.8.7
     tslib: ^2.6.2
     typescript: ^5.1.6
-  peerDependencies:
-    react: ^18.2.0
   languageName: unknown
   linkType: soft
 
@@ -1209,7 +1209,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:>=3.0.0 <4.0.0":
+"chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.5.3":
   version: 3.5.3
   resolution: "chokidar@npm:3.5.3"
   dependencies:
@@ -1299,6 +1299,13 @@ __metadata:
   version: 7.2.0
   resolution: "commander@npm:7.2.0"
   checksum: 53501cbeee61d5157546c0bef0fedb6cdfc763a882136284bed9a07225f09a14b82d2a84e7637edfd1a679fb35ed9502fd58ef1d091e6287f60d790147f68ddc
+  languageName: node
+  linkType: hard
+
+"commander@npm:^9.0.0":
+  version: 9.5.0
+  resolution: "commander@npm:9.5.0"
+  checksum: c7a3e27aa59e913b54a1bafd366b88650bc41d6651f0cbe258d4ff09d43d6a7394232a4dadd0bf518b3e696fdf595db1028a0d82c785b88bd61f8a440cecfade
   languageName: node
   linkType: hard
 
@@ -2435,7 +2442,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.1.0":
+"globby@npm:^11.0.4, globby@npm:^11.1.0":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -3384,6 +3391,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mylas@npm:^2.1.9":
+  version: 2.1.13
+  resolution: "mylas@npm:2.1.13"
+  checksum: f861d092137a9ac268cba88042392a5dc2a290eed5c8543954eae849d85e5961332211161d2c08c3644ad893f20dbe9de89b07f5dc027f1f92f13f2d38f4b81f
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.4, nanoid@npm:^3.3.6":
   version: 3.3.6
   resolution: "nanoid@npm:3.3.6"
@@ -3787,6 +3801,15 @@ __metadata:
   version: 5.0.0
   resolution: "pify@npm:5.0.0"
   checksum: 443e3e198ad6bfa8c0c533764cf75c9d5bc976387a163792fb553ffe6ce923887cf14eebf5aea9b7caa8eab930da8c33612990ae85bd8c2bc18bedb9eae94ecb
+  languageName: node
+  linkType: hard
+
+"plimit-lit@npm:^1.2.6":
+  version: 1.5.0
+  resolution: "plimit-lit@npm:1.5.0"
+  dependencies:
+    queue-lit: ^1.5.0
+  checksum: a956e4e5e515a980403ca840b00c9e2381710a3a30e60e0e38f76b7842b24a345c9e59ef03568cb5925b4e9cdf67c088008148febec59e55bd47d1cb4003b024
   languageName: node
   linkType: hard
 
@@ -4271,6 +4294,13 @@ __metadata:
   version: 2.3.0
   resolution: "punycode@npm:2.3.0"
   checksum: 39f760e09a2a3bbfe8f5287cf733ecdad69d6af2fe6f97ca95f24b8921858b91e9ea3c9eeec6e08cede96181b3bb33f95c6ffd8c77e63986508aa2e8159fa200
+  languageName: node
+  linkType: hard
+
+"queue-lit@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "queue-lit@npm:1.5.0"
+  checksum: 2e714b74072e1be9bd76356710af1d3b03763859f466a10ed74f36b5ccc524dbd0d299239adfc5cbd3a4a416c5fc69cf4af34f13ef4f95f6da70cad12cb79771
   languageName: node
   linkType: hard
 
@@ -5047,6 +5077,22 @@ __metadata:
   dependencies:
     is-number: ^7.0.0
   checksum: f76fa01b3d5be85db6a2a143e24df9f60dd047d151062d0ba3df62953f2f697b16fe5dad9b0ac6191c7efc7b1d9dcaa4b768174b7b29da89d4428e64bc0a20ed
+  languageName: node
+  linkType: hard
+
+"tsc-alias@npm:^1.8.7":
+  version: 1.8.7
+  resolution: "tsc-alias@npm:1.8.7"
+  dependencies:
+    chokidar: ^3.5.3
+    commander: ^9.0.0
+    globby: ^11.0.4
+    mylas: ^2.1.9
+    normalize-path: ^3.0.0
+    plimit-lit: ^1.2.6
+  bin:
+    tsc-alias: dist/bin/index.js
+  checksum: 77f721ea797a62a7cc74acda0baf928bb654bccb210471b63fef1e70a27a823c60f5832f51aa5976d573412bc90731e90774abf9127f3b6b13f284839f988d47
   languageName: node
   linkType: hard
 

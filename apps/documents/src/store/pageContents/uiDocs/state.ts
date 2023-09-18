@@ -16,8 +16,10 @@ type APIs = {
     type: string;
     defaultValue: string;
     description: string;
+    essential: boolean;
   }>;
 };
+
 type CSSVar = {
   name: string;
   type: string;
@@ -40,7 +42,7 @@ type State = {
   documents: Array<Documents>;
   apis: Array<APIs>;
   cssVar: Array<CSSVar>;
-  dataType?: Array<DataType>;
+  dataType: Array<DataType>;
   playground?: Playground;
 };
 

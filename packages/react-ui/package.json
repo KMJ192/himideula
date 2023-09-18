@@ -1,6 +1,6 @@
 {
   "name": "@upcast/react-ui",
-  "version": "0.0.1",
+  "version": "0.0.14",
   "description": "",
   "author": {
     "name": "MyeongJunKim",
@@ -22,11 +22,11 @@
     "url": "git+https://github.com/KMJ192/upcast"
   },
   "scripts": {
-    "build": "rm -rf build && tsc && rollup -c --bundleConfigAsCjs",
+    "build": "rm -rf build && rollup -c --bundleConfigAsCjs && tsc-alias",
     "pub": "yarn build && yarn npm publish"
   },
   "dependencies": {
-    "@upcast/react-modules": "^0.0.1",
+    "@upcast/react-modules": "^0.0.14",
     "lodash": "^4.17.21",
     "react": "^18.2.0"
   },
@@ -47,10 +47,8 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.66.1",
+    "tsc-alias": "^1.8.7",
     "tslib": "^2.6.2",
     "typescript": "^5.1.6"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
   }
 }

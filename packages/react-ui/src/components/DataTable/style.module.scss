@@ -71,11 +71,11 @@
 }
 
 @mixin data-table-container {
-  width: inherit;
   border-radius: 8px;
   white-space: nowrap;
   padding: 16px 24px;
   overflow: scroll;
+  box-sizing: border-box;
 }
 
 @mixin data-table {

@@ -62,47 +62,27 @@ function DocsContents({
   const options = useRef<Array<TabOption>>([
     {
       key: 0,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          문서
-        </Text>
-      ),
+      contents: <Text typo='s1'>문서</Text>,
       disabled: !documents,
     },
     {
       key: 1,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          데이터 타입
-        </Text>
-      ),
+      contents: <Text typo='s1'>데이터 타입</Text>,
       disabled: !dataType,
     },
     {
       key: 2,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          API
-        </Text>
-      ),
+      contents: <Text typo='s1'>API</Text>,
       disabled: !apis,
     },
     {
       key: 3,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          CSS 변수
-        </Text>
-      ),
+      contents: <Text typo='s1'>CSS 변수</Text>,
       disabled: !cssVar,
     },
     {
       key: 4,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          테스트 페이지
-        </Text>
-      ),
+      contents: <Text typo='s1'>플레이그라운드</Text>,
       disabled: !playground,
     },
   ]);
@@ -122,6 +102,7 @@ function DocsContents({
       apis: apis ?? [],
       cssVar: cssVar ?? [],
       playground: playground ?? { component: null },
+      dataType: dataType ?? [],
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [documents, apis, cssVar, playground, title]);

@@ -10,6 +10,7 @@ const apis: Array<APIs> = [
         type: 'React.ReactNode',
         defaultValue: 'undefined',
         description: 'Children 컴포넌트',
+        essential: false,
       },
     ],
   },

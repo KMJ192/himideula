@@ -6,16 +6,16 @@ import {
   Text,
   Flex,
 } from '@upcast/react-ui';
-import { useHooksDocsState } from '@src/store/pageContents/modulesDocs/state';
+import { useModulesDocsState } from '@src/store/pageContents/modulesDocs/state';
 import { useTheme } from '@src/store/theme/themeState';
 
 import classNames from 'classnames/bind';
-import style from '../style.module.scss';
+import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 function APIs() {
   const { theme } = useTheme();
-  const { apis } = useHooksDocsState();
+  const { apis } = useModulesDocsState();
 
   return (
     <Flex className={cx('apis')}>
@@ -45,11 +45,17 @@ function APIs() {
                 </DataTable.Thead>
                 <DataTable.Tbody>
                   {props.map(
-                    ({ name, type, description, defaultValue }, index) => {
+                    (
+                      { name, type, description, defaultValue, essential },
+                      index,
+                    ) => {
                       return (
                         <DataTable.Tr key={`${index}-${name}`}>
-                          <DataTable.Td>
-                            <Text>{name}</Text>
+                          <DataTable.Td className={cx('name')}>
+                            <Text typo='s1'>{name}</Text>
+                            {essential && (
+                              <div className={cx('essential', theme)}>*</div>
+                            )}
                           </DataTable.Td>
                           <DataTable.Td className={cx('type', theme)}>
                             <Badge colorSchema='custom'>
@@ -57,10 +63,12 @@ function APIs() {
                             </Badge>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text>{defaultValue}</Text>
+                            <Text typo='c1'>
+                              {essential ? '-' : defaultValue}
+                            </Text>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text>{description}</Text>
+                            <Text typo='s2'>{description}</Text>
                           </DataTable.Td>
                         </DataTable.Tr>
                       );
