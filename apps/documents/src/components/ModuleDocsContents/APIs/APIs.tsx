@@ -45,11 +45,17 @@ function APIs() {
                 </DataTable.Thead>
                 <DataTable.Tbody>
                   {props.map(
-                    ({ name, type, description, defaultValue }, index) => {
+                    (
+                      { name, type, description, defaultValue, essential },
+                      index,
+                    ) => {
                       return (
                         <DataTable.Tr key={`${index}-${name}`}>
-                          <DataTable.Td>
+                          <DataTable.Td className={cx('name')}>
                             <Text>{name}</Text>
+                            {essential && (
+                              <div className={cx('essential', theme)}>*</div>
+                            )}
                           </DataTable.Td>
                           <DataTable.Td className={cx('type', theme)}>
                             <Badge colorSchema='custom'>
@@ -57,7 +63,7 @@ function APIs() {
                             </Badge>
                           </DataTable.Td>
                           <DataTable.Td>
-                            <Text>{defaultValue}</Text>
+                            <Text>{essential ? '-' : defaultValue}</Text>
                           </DataTable.Td>
                           <DataTable.Td>
                             <Text>{description}</Text>

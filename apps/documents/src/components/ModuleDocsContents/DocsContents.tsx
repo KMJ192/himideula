@@ -21,10 +21,12 @@ import {
   type Usage as Usg,
   type APIs as As,
   type DataType as Dt,
+  Playground as Pg,
 } from '@src/store/pageContents/modulesDocs/state';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import Playground from './Playground/Playground';
 const cx = classNames.bind(style);
 
 type Props = {
@@ -33,39 +35,40 @@ type Props = {
   usage?: Array<Usg>;
   apis?: Array<As>;
   dataType?: Array<Dt>;
+  playground?: Pg;
 };
 
-const components = [<Usage />, <DataType />, <APIs />];
+const components = [<Usage />, <DataType />, <APIs />, <Playground />];
 
-function DocsContents({ title, description, usage, apis, dataType }: Props) {
+function DocsContents({
+  title,
+  description,
+  usage,
+  apis,
+  dataType,
+  playground,
+}: Props) {
   const [selected, setSelected] = useState(0);
   const options = useRef<Array<TabOption>>([
     {
       key: 0,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          사용
-        </Text>
-      ),
+      contents: <Text typo='s1'>사용</Text>,
       disabled: !usage,
     },
     {
       key: 1,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          데이터 타입
-        </Text>
-      ),
+      contents: <Text typo='s1'>데이터 타입</Text>,
       disabled: !dataType,
     },
     {
       key: 2,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          API
-        </Text>
-      ),
+      contents: <Text typo='s1'>API</Text>,
       disabled: !apis,
+    },
+    {
+      key: 3,
+      contents: <Text typo='s1'>테스트페이지</Text>,
+      disabled: !playground,
     },
   ]);
 

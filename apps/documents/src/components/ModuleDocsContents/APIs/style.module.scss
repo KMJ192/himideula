@@ -2,6 +2,19 @@
 
 .apis {
   width: 100%;
+  .name {
+    display: flex;
+    column-gap: 2px;
+    .essential {
+      font-size: 20px;
+      &.light {
+        color: $light-danger;
+      }
+      &.dark {
+        color: $dark-danger;
+      }
+    }
+  }
   .type {
     &.light {
       --upcast-color-badge-color: #{$light-text};
