@@ -16,6 +16,7 @@ type APIs = {
     type: string;
     defaultValue: string;
     description: string;
+    essential: boolean;
   }>;
 };
 

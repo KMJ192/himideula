@@ -19,7 +19,7 @@ function APIs() {
   const { apis } = useUIDocsState();
 
   return (
-    <Flex className={cx('apis-table')}>
+    <Flex className={cx('apis')}>
       {apis.map(({ title, defaultTag, props }, idx) => {
         return (
           <Fragment key={`${idx}-${title}`}>
@@ -56,11 +56,17 @@ function APIs() {
                 </DataTable.Thead>
                 <DataTable.Tbody>
                   {props.map(
-                    ({ name, type, description, defaultValue }, index) => {
+                    (
+                      { name, type, description, defaultValue, essential },
+                      index,
+                    ) => {
                       return (
                         <DataTable.Tr key={`${index}-${name}`}>
-                          <DataTable.Td>
+                          <DataTable.Td className={cx('name')}>
                             <Text typo='s1'>{name}</Text>
+                            {essential && (
+                              <div className={cx('essential', theme)}>*</div>
+                            )}
                           </DataTable.Td>
                           <DataTable.Td className={cx('type', theme)}>
                             {type && (
