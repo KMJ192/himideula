@@ -1,0 +1,38 @@
+@import 'src/styles/color/color.module.scss';
+
+.apis {
+  width: 100%;
+  flex-direction: column;
+  row-gap: 32px;
+  .head {
+    flex-direction: column;
+    row-gap: 8px;
+    .emphasis {
+      font-size: 16px;
+      font-weight: bolder;
+    }
+  }
+  .name {
+    display: flex;
+    column-gap: 2px;
+    .essential {
+      font-size: 20px;
+      &.light {
+        color: $light-danger;
+      }
+      &.dark {
+        color: $dark-danger;
+      }
+    }
+  }
+  .type {
+    &.light {
+      --upcast-color-badge-color: #{$light-text};
+      --upcast-color-badge-bg: #{$light-primary700};
+    }
+    &.dark {
+      --upcast-color-badge-color: #{$dark-text};
+      --upcast-color-badge-bg: #{$dark-primary100};
+    }
+  }
+}

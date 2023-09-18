@@ -1,18 +1,18 @@
 import { Spacing, Flex, Text } from '@upcast/react-ui';
 
-import { useHooksDocsState } from '@src/store/pageContents/modulesDocs/state';
+import { useModulesDocsState } from '@src/store/pageContents/modulesDocs/state';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import classNames from 'classnames/bind';
-import style from '../style.module.scss';
+import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 function Usage() {
-  const { usage } = useHooksDocsState();
+  const { usage } = useModulesDocsState();
 
   return usage.map(({ title, description, code }, idx) => {
     return (
-      <Flex className={cx('contents')} key={`${idx}-${title}`}>
+      <Flex className={cx('usage')} key={`${idx}-${title}`}>
         <Text typo='h2'>{title}</Text>
         <Text typo='t1'>{description}</Text>
         <CodeGuide header='javascript' code={code} />

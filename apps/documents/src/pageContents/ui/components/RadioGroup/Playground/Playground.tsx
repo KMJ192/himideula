@@ -40,7 +40,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.DIRECTION}
         selected={direction}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setDirection(idx);
         }}
       />
@@ -49,7 +49,7 @@ function Playground() {
           selected={selected}
           options={options}
           direction={direction === 0 ? 'horizontal' : 'vertical'}
-          onSelect={(idx) => {
+          onSelect={(_, idx) => {
             setSelected(idx);
           }}
         />
@@ -59,7 +59,7 @@ function Playground() {
         code={[
           `<RadioGroup selected={${selected}} direction="${
             direction === 0 ? 'horizontal' : 'vertical'
-          }" onSelect={(idx: number) => { setSelected(${selected}); }} />`,
+          }" onSelect={(key: RadioGroupOptionKey, idx: number) => { setSelected(${selected}); }} />`,
         ]}
       ></CodeGuide>
     </Flex>

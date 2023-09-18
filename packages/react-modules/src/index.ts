@@ -2,11 +2,14 @@
 // export type { RouterMap } from './components/Router/types';
 
 // Components
-export { When, Unless } from './components/IfComponents/WhenUnless';
+export { When, Unless } from './components/WhenUnless';
 export {
   default as InfiniteScroll,
   type InfiniteScrollProps,
 } from './components/InfiniteScroll/InfiniteScroll';
 
 // Hooks
-export { useTrie, type TrieData } from './hooks/useTrie';
+export { useTrie, type UseTrieParams, type TrieData } from './hooks/useTrie';
+
+// Utils
+export { sleep } from './utils/utils';

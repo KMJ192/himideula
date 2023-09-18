@@ -16,11 +16,14 @@ import Line from '../Line/Line';
 import Usage from './Usage/Usage';
 import APIs from './APIs/APIs';
 import DataType from './DataType/DataType';
+import Playground from './Playground/Playground';
+
 import {
-  useHooksDocsState,
+  useModulesDocsState,
   type Usage as Usg,
   type APIs as As,
   type DataType as Dt,
+  Playground as Pg,
 } from '@src/store/pageContents/modulesDocs/state';
 
 import classNames from 'classnames/bind';
@@ -33,43 +36,44 @@ type Props = {
   usage?: Array<Usg>;
   apis?: Array<As>;
   dataType?: Array<Dt>;
+  playground?: Pg;
 };
 
-const components = [<Usage />, <DataType />, <APIs />];
+const components = [<Usage />, <DataType />, <APIs />, <Playground />];
 
-function DocsContents({ title, description, usage, apis, dataType }: Props) {
+function DocsContents({
+  title,
+  description,
+  usage,
+  apis,
+  dataType,
+  playground,
+}: Props) {
   const [selected, setSelected] = useState(0);
   const options = useRef<Array<TabOption>>([
     {
       key: 0,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          사용
-        </Text>
-      ),
+      contents: <Text typo='s1'>사용</Text>,
       disabled: !usage,
     },
     {
       key: 1,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          데이터 타입
-        </Text>
-      ),
+      contents: <Text typo='s1'>데이터 타입</Text>,
       disabled: !dataType,
     },
     {
       key: 2,
-      contents: (
-        <Text typo='s1' className={cx('option-text')}>
-          API
-        </Text>
-      ),
+      contents: <Text typo='s1'>API</Text>,
       disabled: !apis,
+    },
+    {
+      key: 3,
+      contents: <Text typo='s1'>플레이그라운드</Text>,
+      disabled: !playground,
     },
   ]);
 
-  const { setInfo } = useHooksDocsState();
+  const { setInfo } = useModulesDocsState();
 
   const onSelect = (_: TabOptionKey, idx: number) => {
     if (selected !== idx) {
@@ -83,6 +87,7 @@ function DocsContents({ title, description, usage, apis, dataType }: Props) {
       usage: usage ?? [],
       apis: apis ?? [],
       dataType: dataType ?? [],
+      playground,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [usage, apis, title]);

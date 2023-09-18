@@ -10,6 +10,7 @@ const apis: Array<APIs> = [
         type: 'boolean',
         defaultValue: 'false',
         description: 'error 여부',
+        essential: false,
       },
     ],
   },

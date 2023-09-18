@@ -53,8 +53,7 @@ function PageTemplate({ children }: Props) {
         </Button>
       </Float>
       <GNB />
-      <Spacing direction='horizontal' className={cx('space')} />
-      <div className={cx('space')}></div>
+      <Spacing direction='horizontal' className={cx('space', theme)} />
       <div className={cx('contents')}>
         <Header className={cx('header')}></Header>
         <Spacing direction='vertical' spacing={72} />

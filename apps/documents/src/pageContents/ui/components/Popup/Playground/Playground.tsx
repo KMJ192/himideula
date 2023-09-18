@@ -35,7 +35,7 @@ function Playground() {
         <RadioGroup
           options={OPTIONS.TOGGLE}
           selected={selected.visible}
-          onSelect={(idx: number) => {
+          onSelect={(_, idx: number) => {
             setSelected({
               ...selected,
               visible: idx,
@@ -48,7 +48,7 @@ function Playground() {
         <RadioGroup
           options={OPTIONS.ANIMATION}
           selected={selected.animation}
-          onSelect={(idx: number) => {
+          onSelect={(_, idx: number) => {
             setSelected({
               ...selected,
               animation: idx,

@@ -28,7 +28,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.TYPE}
         selected={selected}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected(idx);
         }}
       />

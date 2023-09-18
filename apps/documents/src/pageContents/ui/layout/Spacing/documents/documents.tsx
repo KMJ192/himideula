@@ -5,7 +5,7 @@ import Vertical from './Direction/Vertical';
 const documents: Array<Documents> = [
   {
     title: 'Direction - horizontal',
-    description: '',
+    description: '수평 방향 간격',
     view: <Horizontal />,
     componentString: [
       `<Flex>`,
@@ -17,7 +17,7 @@ const documents: Array<Documents> = [
   },
   {
     title: 'Direction - vertical',
-    description: '',
+    description: '수직 방향 간격',
     view: <Vertical />,
     componentString: [
       `<Flex>`,

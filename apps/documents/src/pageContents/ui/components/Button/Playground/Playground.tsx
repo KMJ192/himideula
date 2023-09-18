@@ -38,7 +38,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.TOGGLE}
         selected={selected.disabled}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected({
             ...selected,
             disabled: idx,
@@ -60,7 +60,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.TOGGLE}
         selected={selected.loading}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected({
             ...selected,
             loading: idx,
@@ -80,7 +80,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.VARIANT}
         selected={selected.variant}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected({
             ...selected,
             variant: idx,
@@ -106,7 +106,7 @@ function Playground() {
       <RadioGroup
         options={OPTIONS.SHAPE}
         selected={selected.shape}
-        onSelect={(idx: number) => {
+        onSelect={(_, idx: number) => {
           setSelected({
             ...selected,
             shape: idx,

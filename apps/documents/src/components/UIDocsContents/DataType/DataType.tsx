@@ -1,14 +1,14 @@
 import { Spacing, Flex, Text } from '@upcast/react-ui';
 
-import { useHooksDocsState } from '@src/store/pageContents/modulesDocs/state';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
+import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
 
 import classNames from 'classnames/bind';
-import style from '../style.module.scss';
+import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 function DataType() {
-  const { title, dataType } = useHooksDocsState();
+  const { title, dataType } = useUIDocsState();
 
   return (
     <Flex className={cx('data-type')}>
@@ -18,7 +18,7 @@ function DataType() {
         return (
           <Flex key={`${name}-${idx}`} className={cx('info')}>
             <Spacing spacing={8}></Spacing>
-            <Text typo='h2'>{name}</Text>
+            <Text typo='t1'>{name}</Text>
             <Spacing spacing={16}></Spacing>
             <Text typo='b1'>{description}</Text>
             <Spacing spacing={8}></Spacing>

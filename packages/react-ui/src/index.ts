@@ -23,8 +23,6 @@ export { default as Card } from './components/Card/Card';
 export type { CardProps } from './components/Card/Card';
 export { default as Checkbox } from './components/Checkbox/Checkbox';
 export type { CheckboxProps } from './components/Checkbox/Checkbox';
-export { default as HamburgerMenu } from './components/HamburgerMenu/HamburgerMenu';
-export type { HamburgerMenuProps } from './components/HamburgerMenu/HamburgerMenu';
 export { default as Input } from './components/Input/Input';
 export type { InputProps } from './components/Input/Input';
 export { default as Popup } from './components/Popup/Popup';
@@ -35,8 +33,9 @@ export { default as Radio } from './components/Radio/Radio';
 export type { RadioProps } from './components/Radio/Radio';
 export { default as RadioGroup } from './components/RadioGroup/RadioGroup';
 export type {
-  RadioGroupProps,
+  RadioGroupOptionKey,
   RadioGroupOption,
+  RadioGroupProps,
 } from './components/RadioGroup/RadioGroup';
 export { default as Switch } from './components/Switch/Switch';
 export type { SwitchProps } from './components/Switch/Switch';
@@ -51,10 +50,6 @@ export type {
 } from './components/Tab/types';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
-export { default as Header } from './components/Header/Header';
-export type { HeaderProps } from './components/Header/Header';
-export { default as Footer } from './components/Footer/Footer';
-export type { FooterProps } from './components/Footer/Footer';
 export {
   DataTable,
   DataTableContainer,
@@ -73,6 +68,13 @@ export type {
   DataTablePaginationProps,
 } from './components/DataTable';
 
+// export { default as HamburgerMenu } from './components/HamburgerMenu/HamburgerMenu';
+// export type { HamburgerMenuProps } from './components/HamburgerMenu/HamburgerMenu';
+
+export { default as Header } from './components/Header/Header';
+export type { HeaderProps } from './components/Header/Header';
+export { default as Footer } from './components/Footer/Footer';
+export type { FooterProps } from './components/Footer/Footer';
 export { SideNav, SideNavTemplate } from './components/SideNav';
 export type {
   SideNavProps,
@@ -81,6 +83,5 @@ export type {
   SideNavItem,
   SideNavKey,
 } from './components/SideNav';
-
 export { default as PageTemplate } from './components/PageTemplate/PageTemplate';
 export type { PageTemplateProps } from './components/PageTemplate/PageTemplate';

@@ -4,8 +4,8 @@ import PageTemplate from '@src/components/PageTemplate/PageTemplate';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SsamSsam',
-  description: 'SsamSsam Documents Page',
+  title: 'UPCAST - 가이드',
+  description: 'Upcast Documents Page',
 };
 
 export default function RootLayout({
