@@ -16,6 +16,8 @@ import Line from '../Line/Line';
 import Usage from './Usage/Usage';
 import APIs from './APIs/APIs';
 import DataType from './DataType/DataType';
+import Playground from './Playground/Playground';
+
 import {
   useModulesDocsState,
   type Usage as Usg,
@@ -26,7 +28,6 @@ import {
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
-import Playground from './Playground/Playground';
 const cx = classNames.bind(style);
 
 type Props = {

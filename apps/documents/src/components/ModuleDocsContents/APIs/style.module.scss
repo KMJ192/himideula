@@ -2,6 +2,7 @@
 
 .apis {
   width: 100%;
+  flex-direction: column;
   .name {
     display: flex;
     column-gap: 2px;

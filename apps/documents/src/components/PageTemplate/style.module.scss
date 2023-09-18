@@ -2,10 +2,21 @@
 
 $side-nav-width: 164px;
 
+@mixin color-template {
+  background: $light-background;
+  color: $light-text;
+  &.dark {
+    background: $dark-background;
+    color: $dark-text;
+  }
+}
+
 .page-template {
   height: 100%;
+  min-height: 100%;
   width: 100%;
   @include theme;
+  @include color-template;
   .theme {
     z-index: 999;
     --upcast-layout-float-bottom: 16px;
@@ -28,6 +39,7 @@ $side-nav-width: 164px;
   }
   .space {
     --upcast-layout-spacing-gap: 180px;
+    @include color-template;
   }
   .contents {
     height: 100%;
@@ -40,13 +52,8 @@ $side-nav-width: 164px;
       z-index: 998;
     }
     .page {
-      background: $light-background;
-      color: $light-text;
       padding: 32px;
-      &.dark {
-        background: $dark-background;
-        color: $dark-text;
-      }
+      @include color-template;
     }
   }
 }
