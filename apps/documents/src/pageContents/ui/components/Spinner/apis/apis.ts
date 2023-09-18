@@ -10,6 +10,7 @@ const apis: Array<APIs> = [
         type: '"type-1" | "type-2"',
         defaultValue: '"type-1"',
         description: 'Spinner 타입',
+        essential: false,
       },
     ],
   },
