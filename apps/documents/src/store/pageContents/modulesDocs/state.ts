@@ -34,7 +34,7 @@ type State = {
   usage: Array<Usage>;
   apis: Array<APIs>;
   dataType: Array<DataType>;
-  Playground?: Playground;
+  playground?: Playground;
 };
 
 type Action = {

@@ -67,7 +67,7 @@ function DocsContents({
     },
     {
       key: 3,
-      contents: <Text typo='s1'>테스트페이지</Text>,
+      contents: <Text typo='s1'>플레이그라운드</Text>,
       disabled: !playground,
     },
   ]);
@@ -86,6 +86,7 @@ function DocsContents({
       usage: usage ?? [],
       apis: apis ?? [],
       dataType: dataType ?? [],
+      playground,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [usage, apis, title]);

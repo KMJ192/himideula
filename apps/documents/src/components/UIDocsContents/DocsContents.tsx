@@ -82,7 +82,7 @@ function DocsContents({
     },
     {
       key: 4,
-      contents: <Text typo='s1'>테스트 페이지</Text>,
+      contents: <Text typo='s1'>플레이그라운드</Text>,
       disabled: !playground,
     },
   ]);
