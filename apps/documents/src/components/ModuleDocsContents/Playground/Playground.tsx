@@ -13,7 +13,7 @@ function Playground() {
   return (
     <Flex className={cx('playground')}>
       <Text as='p' typo='s1'>
-        {title} 컴포넌트를 테스트하는 플레이그라운드 입니다.
+        {title} 컴포넌트를 테스트하는 플레이 그라운드 입니다.
       </Text>
       <Line></Line>
       {playground?.component}

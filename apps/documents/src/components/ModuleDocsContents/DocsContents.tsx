@@ -68,7 +68,7 @@ function DocsContents({
     },
     {
       key: 3,
-      contents: <Text typo='s1'>플레이그라운드</Text>,
+      contents: <Text typo='s1'>플레이 그라운드</Text>,
       disabled: !playground,
     },
   ]);

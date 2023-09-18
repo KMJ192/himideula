@@ -45,11 +45,21 @@ $side-nav-width: 164px;
     height: 100%;
     width: 100%;
     .header {
-      position: fixed;
-      top: 0;
       --upcast-size-header-min-height: 72px;
       --upcast-size-header-max-height: 72px;
       z-index: 998;
+      .theme-toggle {
+        position: relative;
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        margin-left: auto;
+        transform: translateX(-32px);
+        --upcast-color-switch-bg: #{$light-primary000};
+        --upcast-color-switch-bg-checked: #{$dark-primary200};
+        --upcast-color-switch-bg-hover: #{$light-blue200};
+        --upcast-color-switch-bg-checked-hover: #{$dark-gray300};
+      }
     }
     .page {
       padding: 32px;

@@ -1,0 +1,24 @@
+@import 'src/styles/color/color.module.scss';
+
+.icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transform: translate(-24px, -50%) rotate(0deg);
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out, transform 0.35s ease;
+  &.light-icon {
+    fill: $light-text;
+  }
+  &.dark {
+    fill: $dark-gray100;
+  }
+  &.light-icon.dark {
+    opacity: 0;
+    transform: translate(-24px, -50%) rotate(180deg);
+  }
+  &.dark-icon.light {
+    opacity: 0;
+    transform: translate(-24px, -50%) rotate(180deg);
+  }
+}
