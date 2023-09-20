@@ -28,10 +28,28 @@ const cssVar: Array<CSSVar> = [
     description: '경계선 색상 - 비활성화',
   },
   {
+    name: '--upcast-color-textarea-border-hover',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.blue300,
+    description: '경계선 색상 - 마우스 호버',
+  },
+  {
     name: '--upcast-color-textarea-bg',
     type: CSS_VAR_TYPE.COLOR,
-    defaultValue: COLOR.LIGHT.primary000,
+    defaultValue: COLOR.LIGHT.background,
     description: '배경 색상 - 기본',
+  },
+  {
+    name: '--upcast-color-textarea-bg-focus',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경 색상 - 활성화',
+  },
+  {
+    name: '--upcast-color-textarea-bg-error',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경 색상 - 오류',
   },
   {
     name: '--upcast-color-textarea-bg-disabled',
@@ -40,16 +58,40 @@ const cssVar: Array<CSSVar> = [
     description: '배경 색상 - 비활성화',
   },
   {
+    name: '--upcast-color-textarea-bg-hover',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.background,
+    description: '배경 색상 - 마우스 호버',
+  },
+  {
     name: '--upcast-color-textarea-text',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.text,
     description: '글자 색상 - 기본',
   },
   {
-    name: '--upcast-color-textarea-text-disabled',
+    name: '--upcast-color-textarea-text-focus',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.text,
+    description: '글자 색상 - 활성화',
+  },
+  {
+    name: '--upcast-color-textarea-text-error',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.text,
+    description: '글자 색상 - 오류',
+  },
+  {
+    name: '--upcast-color-textarea-text-disabled',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.gray200,
     description: '글자 색상 - 비활성화',
+  },
+  {
+    name: '--upcast-color-textarea-text-hover',
+    type: CSS_VAR_TYPE.COLOR,
+    defaultValue: COLOR.LIGHT.text,
+    description: '글자 색상 - 마우스 호버',
   },
   {
     name: '--upcast-color-textarea-placeholder',
@@ -62,12 +104,6 @@ const cssVar: Array<CSSVar> = [
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.gray100,
     description: 'Placeholder 색상 - 비활성화',
-  },
-  {
-    name: '--upcast-color-textarea-box-shadow',
-    type: CSS_VAR_TYPE.COLOR,
-    defaultValue: '0px 3px 6px rgba(62, 62, 62, 0.1)',
-    description: '그림자 색상',
   },
 ];
 export { cssVar };
