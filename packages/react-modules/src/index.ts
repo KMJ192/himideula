@@ -9,7 +9,12 @@ export {
 } from './components/InfiniteScroll/InfiniteScroll';
 
 // Hooks
-export { useTrie, type UseTrieParams, type TrieData } from './hooks/useTrie';
+export {
+  useTrie,
+  type UseTrieParams,
+  type TrieData,
+  type TrieDataKey,
+} from './hooks/useTrie';
 
 // Utils
 export { sleep } from './utils/utils';

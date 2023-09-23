@@ -102,8 +102,8 @@ class Trie<T> implements ITrie<T> {
       if (node === undefined) return;
       if (node.isWord && node.info) {
         node.info.forEach((val: TrieData<T>) => {
-          const extractLabel = extractStr(val.label).join('');
-          if (extractLabel.includes(extractInput)) {
+          const extract = extractStr(val.content).join('');
+          if (extract.includes(extractInput)) {
             containList.push(val);
           }
         });

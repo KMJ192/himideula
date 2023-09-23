@@ -1,6 +1,8 @@
+type TrieDataKey = string | number;
+
 type TrieData<T> = {
-  key: string | number;
-  label: string;
+  key: TrieDataKey;
+  content: string;
   options?: T;
 };
 
@@ -12,4 +14,4 @@ type ITrie<T> = {
   isDiff: (newData: Array<TrieData<T>>) => boolean;
 };
 
-export type { ITrie, TrieData };
+export type { ITrie, TrieData, TrieDataKey };

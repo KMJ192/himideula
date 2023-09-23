@@ -1,2 +1,2 @@
 export { default as Trie } from './Trie';
-export type { TrieData } from './types';
+export type { TrieData, TrieDataKey } from './types';

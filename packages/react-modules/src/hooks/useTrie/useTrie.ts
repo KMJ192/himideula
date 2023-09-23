@@ -22,7 +22,7 @@ function useTrie<T = any>({ dictionary = [], isBuild = true }: Params<T>) {
     if (isBuild && trie.isDiff(dictionary)) {
       trie.initialize();
       dictionary.forEach((val: TrieData<T>) => {
-        const extract = Hangul.make(val.label);
+        const extract = Hangul.make(val.content);
         trie.insert(extract, val);
       });
     }
