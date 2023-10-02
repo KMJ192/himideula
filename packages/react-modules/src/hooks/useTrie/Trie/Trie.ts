@@ -19,16 +19,35 @@ const extractStr = (str: string) => {
   return cur;
 };
 
+type Params = {
+  caseSensitive?: boolean;
+};
+
 class Trie<T> implements ITrie<T> {
   private root: TrieNode<T>;
 
   private memo: string;
 
-  constructor() {
+  private caseSensitive: boolean;
+
+  constructor(params?: Params) {
     this.root = new TrieNode();
 
     this.memo = '';
+
+    this.caseSensitive = params?.caseSensitive ?? false;
   }
+
+  /**
+   * trie 초기화
+   */
+  public initNode = (): void => {
+    this.root = new TrieNode();
+  };
+
+  public initParams = (params?: Params): void => {
+    this.caseSensitive = params?.caseSensitive ?? false;
+  };
 
   /**
    * 문자열을 trie객체에 주입
@@ -86,7 +105,7 @@ class Trie<T> implements ITrie<T> {
       findWords(curNode);
     }
 
-    return toPrefix;
+    return toPrefix.sort((a, b) => a.index - b.index);
   };
 
   /**
@@ -97,12 +116,20 @@ class Trie<T> implements ITrie<T> {
     if (!input || input.length === 0) return [];
     const containList: Array<TrieData<T>> = [];
     const extractInput = extractStr(input).join('');
+    const lowerCaseExtractInput = extractInput.toLowerCase();
 
     const recursion = (node: TrieNode<T>) => {
       if (node === undefined) return;
       if (node.isWord && node.info) {
         node.info.forEach((val: TrieData<T>) => {
           const extract = extractStr(val.content).join('');
+          if (
+            this.caseSensitive &&
+            extract.toLowerCase().includes(lowerCaseExtractInput)
+          ) {
+            containList.push(val);
+            return;
+          }
           if (extract.includes(extractInput)) {
             containList.push(val);
           }
@@ -115,14 +142,7 @@ class Trie<T> implements ITrie<T> {
 
     recursion(this.root);
 
-    return containList;
-  };
-
-  /**
-   * trie 초기화
-   */
-  public initialize = (): void => {
-    this.root = new TrieNode();
+    return containList.sort((a, b) => a.index - b.index);
   };
 
   /**

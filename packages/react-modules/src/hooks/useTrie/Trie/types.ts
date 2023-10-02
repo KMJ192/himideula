@@ -1,14 +1,15 @@
 type TrieDataKey = string | number;
 
-type TrieData<T> = {
+type TrieData<T = any> = {
   key: TrieDataKey;
   content: string;
-  options?: T;
-};
+  index: number;
+} & T;
 
 type ITrie<T> = {
   insert: (inputStr: string, word: TrieData<T>) => void;
-  initialize: () => void;
+  initNode: () => void;
+  initParams: () => void;
   startPrefixList: (prefix: string) => Array<TrieData<T>>;
   containList: (input: string) => Array<TrieData<T>>;
   isDiff: (newData: Array<TrieData<T>>) => boolean;
