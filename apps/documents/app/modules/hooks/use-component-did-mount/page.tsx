@@ -1,7 +1,7 @@
-import React from 'react';
+import UseComponentDidMountDocs from '@src/pageContents/modules/hooks/UseComponentDidMount/UseComponentDidMountDocs';
 
 function Page() {
-  return <div>Page</div>;
+  return <UseComponentDidMountDocs />;
 }
 
 export default Page;

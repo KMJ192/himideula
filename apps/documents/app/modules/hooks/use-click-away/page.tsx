@@ -1,5 +1,7 @@
+import UseClickAwayDocs from '@src/pageContents/modules/hooks/UseClickAway/UseClickAwayDocs';
+
 function Page() {
-  return <div>Page</div>;
+  return <UseClickAwayDocs />;
 }
 
 export default Page;
