@@ -11,7 +11,7 @@ function TrieHook() {
   return (
     <DocsContents
       title='useTrie'
-      description='trie DS를 사용할 수 있는 hooks 입니다.'
+      description='trie DS를 사용할 수 있는 hook 입니다.'
       usage={usage}
       dataType={dataType}
       apis={apis}

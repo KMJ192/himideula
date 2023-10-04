@@ -2,7 +2,7 @@ import { APIs } from '@src/store/pageContents/modulesDocs/state';
 
 const apis: Array<APIs> = [
   {
-    title: 'Props',
+    title: 'Params',
     description: 'useTrie의 Parameter입니다.',
     props: [
       {
