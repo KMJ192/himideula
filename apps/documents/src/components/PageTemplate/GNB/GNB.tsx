@@ -45,6 +45,8 @@ const urlDictionary = new Set([
   URL.dataTable,
   URL.hooks,
   URL.useTrie,
+  URL.useClickAway,
+  URL.useComponentDidMount,
   URL.moduleComponents,
   URL.infiniteScroll,
 ]);
@@ -72,6 +74,8 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.textarea]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
+  [URL.useClickAway]: false,
+  [URL.useComponentDidMount]: false,
   [URL.moduleComponents]: false,
   [URL.infiniteScroll]: false,
 };
@@ -166,6 +170,14 @@ const hooksGroup: Array<NavGroup> = [
   {
     url: URL.useTrie,
     contents: 'useTrie',
+  },
+  {
+    url: URL.useClickAway,
+    contents: 'useClickAway',
+  },
+  {
+    url: URL.useComponentDidMount,
+    contents: 'useComponentDidMount',
   },
 ];
 

@@ -26,6 +26,8 @@ const URL = {
   modules: '/modules',
   hooks: '/modules/hooks',
   useTrie: '/modules/hooks/use-trie',
+  useClickAway: '/modules/hooks/use-click-away',
+  useComponentDidMount: '/modules/hooks/use-component-did-mount',
   moduleComponents: '/modules/components',
   infiniteScroll: '/modules/components/infinite-scroll',
 };
