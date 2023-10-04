@@ -2,8 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '@src/store/theme/themeState';
+import Link from 'next/link';
 
-import { Flex, Header, Spacing, Switch } from '@upcast/react-ui';
+import { Flex, Spacing, Switch } from '@upcast/react-ui';
+import Header from './Header/Header';
 
 import GNB from './GNB/GNB';
 import Dark from './Icons/Dark';
@@ -12,7 +14,6 @@ import GitHubIcon from './Icons/GitHubIcon';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
-import Link from 'next/link';
 const cx = classNames.bind(style);
 
 type Props = {
