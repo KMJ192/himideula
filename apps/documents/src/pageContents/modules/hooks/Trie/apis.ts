@@ -19,6 +19,13 @@ const apis: Array<APIs> = [
         description: 'Trie 생성 여부',
         essential: false,
       },
+      {
+        name: 'caseSensitive',
+        type: 'boolean',
+        defaultValue: 'false',
+        description: '영문 대소문자 구분 여부',
+        essential: false,
+      },
     ],
   },
 ];

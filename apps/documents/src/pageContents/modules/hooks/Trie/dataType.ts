@@ -7,9 +7,9 @@ const dataType: Array<DataType> = [
     code: [
       `type TrieData<T> = {`,
       `    key: string | number;`,
-      `    label: string;`,
-      `    options?: T;`,
-      `}`,
+      `    content: string;`,
+      `    index: number;`,
+      `} & T`,
     ],
   },
 ];
