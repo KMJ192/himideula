@@ -23,7 +23,7 @@ function Playground() {
 
   return (
     <Flex className={cx('container')}>
-      <Text typo='s1'>InfiniteScroll의 작동 예시 입니다.</Text>
+      <Text>InfiniteScroll의 작동 예시 입니다.</Text>
       <InfiniteScroll
         as='ul'
         className={cx('infinite', theme)}
