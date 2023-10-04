@@ -5,6 +5,7 @@ import DocsContents from '@src/components/ModuleDocsContents/DocsContents';
 import { apis } from './apis';
 import { usage } from './usage';
 import { dataType } from './dataType';
+import Playground from './Playground/Playground';
 
 function TrieHook() {
   return (
@@ -14,6 +15,9 @@ function TrieHook() {
       usage={usage}
       dataType={dataType}
       apis={apis}
+      playground={{
+        component: <Playground />,
+      }}
     />
   );
 }
