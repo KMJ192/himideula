@@ -22,14 +22,14 @@ function Playground() {
   };
 
   return (
-    <Flex className={style.container}>
-      <Text>InfiniteScroll의 작동 예시 입니다.</Text>
+    <Flex className={cx('container')}>
+      <Text typo='s1'>InfiniteScroll의 작동 예시 입니다.</Text>
       <InfiniteScroll
         as='ul'
         className={cx('infinite', theme)}
         isLoading={isLoading}
         loadingElement={
-          <div className={style.spinner}>
+          <div className={cx('spinner')}>
             <Spinner />
           </div>
         }
