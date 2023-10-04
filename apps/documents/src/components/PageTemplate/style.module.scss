@@ -1,6 +1,6 @@
 @import 'src/styles/color/components/theme.module.scss';
 
-$side-nav-width: 164px;
+$side-nav-width: 196px;
 
 @mixin color-template {
   background: $light-background;
@@ -38,7 +38,7 @@ $side-nav-width: 164px;
     }
   }
   .space {
-    --upcast-layout-spacing-gap: 180px;
+    --upcast-layout-spacing-gap: #{calc($side-nav-width + 16px)};
     @include color-template;
   }
   .contents {
