@@ -27,9 +27,7 @@ export default function RootLayout({
           rel='stylesheet'
         />
       </head>
-      <body>
-        <PageTemplate>{children}</PageTemplate>
-      </body>
+      <PageTemplate>{children}</PageTemplate>
     </html>
   );
 }
