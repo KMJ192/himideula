@@ -69,6 +69,21 @@ export type {
   CaptionProps,
   DataTablePaginationProps,
 } from './components/DataTable';
+export {
+  Select,
+  useSelectController,
+  useInputSelectController,
+} from './components/Select';
+export type {
+  SelectProps,
+  SelectBoxProps,
+  SelectInputBoxProps,
+  SelectDropboxProps,
+  SelectOptionProps,
+  SelectOptionKey,
+  SelectOption,
+  InputSelectOption,
+} from './components/Select';
 
 // export { default as HamburgerMenu } from './components/HamburgerMenu/HamburgerMenu';
 // export type { HamburgerMenuProps } from './components/HamburgerMenu/HamburgerMenu';

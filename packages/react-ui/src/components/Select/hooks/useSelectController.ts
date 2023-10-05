@@ -21,7 +21,7 @@ function useSelectController({
     idx: initSelectedIdx,
     key: initSelectedIdx === -1 ? null : optionList[initSelectedIdx].key,
   });
-  const selectRef = useRef<HTMLDivElement>(null);
+  const selectBoxRef = useRef<HTMLDivElement>(null);
   const dropboxRef = useRef<HTMLUListElement>(null);
 
   const scrollTo = (idx: number) => {
@@ -142,10 +142,11 @@ function useSelectController({
     scrollTo(selected.idx);
   };
 
-  useClickAway({ onClickAway, elementRefs: [selectRef, dropboxRef] });
+  useClickAway({ onClickAway, elementRefs: [selectBoxRef, dropboxRef] });
 
   useEffect(() => {
     const initialize = () => {
+      setOpen(false);
       setSelected({
         idx: initSelectedIdx,
         key: initSelectedIdx === -1 ? null : optionList[initSelectedIdx].key,
@@ -168,7 +169,7 @@ function useSelectController({
     onClickSelect,
     onClickOption,
     onKeyDown,
-    selectRef,
+    selectBoxRef,
     dropboxRef,
   };
 }
