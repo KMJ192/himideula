@@ -11,11 +11,14 @@ $side-nav-width: 196px;
   }
 }
 
+.body {
+  @include theme;
+}
+
 .page-template {
   height: 100%;
   min-height: 100%;
   width: 100%;
-  @include theme;
   @include color-template;
   .theme {
     z-index: 999;

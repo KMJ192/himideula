@@ -53,30 +53,32 @@ function PageTemplate({ children }: Props) {
   }, [theme]);
 
   return (
-    <Flex as='main' className={cx('page-template', theme)}>
-      <GNB />
-      <Spacing direction='horizontal' className={cx('space', theme)} />
-      <div className={cx('contents')}>
-        <Header className={cx('header')}>
-          <Flex className={cx('right-contents', theme)}>
-            <Link
-              href='https://github.com/KMJ192/upcast'
-              target='_blank'
-              className={cx('github', theme)}
-            >
-              <GitHubIcon />
-            </Link>
-            <Spacing direction='horizontal' spacing={24} />
-            <div>
-              <Light />
-              <Dark />
-            </div>
-            <Switch onClick={onClickTheme} checked={checked} />
-          </Flex>
-        </Header>
-        <section className={cx('page', theme)}>{children}</section>
-      </div>
-    </Flex>
+    <body className={cx('body', theme)}>
+      <Flex as='main' className={cx('page-template', theme)}>
+        <GNB />
+        <Spacing direction='horizontal' className={cx('space', theme)} />
+        <div className={cx('contents')}>
+          <Header className={cx('header')}>
+            <Flex className={cx('right-contents')}>
+              <Link
+                href='https://github.com/KMJ192/upcast'
+                target='_blank'
+                className={cx('github', theme)}
+              >
+                <GitHubIcon />
+              </Link>
+              <Spacing direction='horizontal' spacing={24} />
+              <div>
+                <Light />
+                <Dark />
+              </div>
+              <Switch onClick={onClickTheme} checked={checked} />
+            </Flex>
+          </Header>
+          <section className={cx('page', theme)}>{children}</section>
+        </div>
+      </Flex>
+    </body>
   );
 }
 
