@@ -20,6 +20,7 @@ const URL = {
   radioGroup: '/ui/components/radio-group',
   spinner: '/ui/components/spinner',
   switch: '/ui/components/switch',
+  select: '/ui/components/select',
   tab: '/ui/components/tab',
   dataTable: '/ui/components/data-table',
   textarea: '/ui/components/textarea',
