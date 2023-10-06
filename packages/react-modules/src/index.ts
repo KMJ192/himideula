@@ -9,7 +9,14 @@ export {
 } from './components/InfiniteScroll/InfiniteScroll';
 
 // Hooks
-export { useTrie, type UseTrieParams, type TrieData } from './hooks/useTrie';
+export {
+  useTrie,
+  type UseTrieParams,
+  type TrieData,
+  type TrieDataKey,
+} from './hooks/useTrie';
+export { default as useComponentDidMount } from './hooks/useComponentDidMount/useComponentDidMount';
+export { useClickAway, type UseClickAwayParams } from './hooks/useClickAway';
 
 // Utils
 export { sleep } from './utils/utils';

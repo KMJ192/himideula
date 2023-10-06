@@ -1,21 +1,26 @@
 import { Usage } from '@src/store/pageContents/modulesDocs/state';
+import { TrieData } from '@upcast/react-modules';
 
-const dictionary = [
+const dictionary: Array<TrieData> = [
   {
     key: 0,
-    label: 'a',
+    content: 'a',
+    index: 0,
   },
   {
     key: 1,
-    label: 'apple',
+    content: 'apple',
+    index: 0,
   },
   {
     key: 2,
-    label: 'append',
+    content: 'append',
+    index: 0,
   },
   {
     key: 3,
-    label: 'app',
+    content: 'app',
+    index: 0,
   },
 ];
 
@@ -27,12 +32,16 @@ const usage: Array<Usage> = [
       `import { useTrie } from '@upcast/react-modules';`,
       ``,
       `function Component() {`,
-      `    const trie = useTrie({`,
+      `    const [value, setValue] = useState<string>("");`,
+      `    const { trie } = useTrie({`,
       `        dictionary: ${JSON.stringify(dictionary)},`,
-      `        isBuild: true`,
+      `        isBuild: true,`,
+      `        caseSensitive: false,`,
       `    });`,
       ``,
-      `    return <div></div>;`,
+      `    return trie.containList(value).map(({ key, content }) => {`,
+      `        return <div key={key}>{content}</div>`,
+      `    })`,
       `}`,
     ],
   },

@@ -16,6 +16,8 @@
 @import './row.module.scss';
 @import './dataTable.module.scss';
 @import './badge.module.scss';
+@import './textarea.module.scss';
+@import './select.module.scss';
 
 @mixin theme {
   &.light {
@@ -33,6 +35,8 @@
     @include spinner-light;
     @include switch-light;
     @include row-light;
+    @include textarea-light;
+    @include select-light;
   }
   &.dark {
     @include sideNav-dark;
@@ -49,5 +53,7 @@
     @include spinner-dark;
     @include switch-dark;
     @include row-dark;
+    @include textarea-dark;
+    @include select-dark;
   }
 }

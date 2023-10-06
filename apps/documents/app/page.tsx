@@ -1,11 +1,13 @@
+import Link from 'next/link';
 import { Button, Center, Spacing, Text, Flex } from '@upcast/react-ui';
+
+import Line from '@src/components/Line/Line';
+import CodeGuide from '@src/components/CodeGuide/CodeGuide';
+
+import { URL } from '@src/utils/url';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
-import Line from '@src/components/Line/Line';
-import { URL } from '@src/utils/url';
-import Link from 'next/link';
-import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 const cx = classNames.bind(style);
 
 function Home() {

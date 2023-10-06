@@ -5,7 +5,8 @@ import { usePathname } from 'next/navigation';
 
 import cloneDeep from 'lodash/cloneDeep';
 
-import { SideNav, Spacing, Text } from '@upcast/react-ui';
+import { Spacing, Text } from '@upcast/react-ui';
+import { SideNav } from './SideNav';
 import Line from '@src/components/Line/Line';
 
 import { URL } from '@src/utils/url';
@@ -39,10 +40,14 @@ const urlDictionary = new Set([
   URL.radioGroup,
   URL.spinner,
   URL.switch,
+  URL.select,
   URL.tab,
+  URL.textarea,
   URL.dataTable,
   URL.hooks,
   URL.useTrie,
+  URL.useClickAway,
+  URL.useComponentDidMount,
   URL.moduleComponents,
   URL.infiniteScroll,
 ]);
@@ -65,10 +70,14 @@ const initSelectedList: { [key: string]: boolean } = {
   [URL.radio]: false,
   [URL.spinner]: false,
   [URL.switch]: false,
+  [URL.select]: false,
   [URL.tab]: false,
   [URL.dataTable]: false,
+  [URL.textarea]: false,
   [URL.hooks]: false,
   [URL.useTrie]: false,
+  [URL.useClickAway]: false,
+  [URL.useComponentDidMount]: false,
   [URL.moduleComponents]: false,
   [URL.infiniteScroll]: false,
 };
@@ -146,6 +155,10 @@ const uiComponentGroup: Array<NavGroup> = [
     contents: 'Switch',
   },
   {
+    url: URL.select,
+    contents: 'Select',
+  },
+  {
     url: URL.tab,
     contents: 'Tab',
   },
@@ -153,12 +166,24 @@ const uiComponentGroup: Array<NavGroup> = [
     url: URL.dataTable,
     contents: 'DataTable',
   },
+  {
+    url: URL.textarea,
+    contents: 'Textarea',
+  },
 ];
 
 const hooksGroup: Array<NavGroup> = [
   {
     url: URL.useTrie,
     contents: 'useTrie',
+  },
+  {
+    url: URL.useClickAway,
+    contents: 'useClickAway',
+  },
+  {
+    url: URL.useComponentDidMount,
+    contents: 'useComponentDidMount',
   },
 ];
 
@@ -212,6 +237,7 @@ function GNB() {
     setShow({
       ...show,
       [URL.hooks]: false,
+      [URL.moduleComponents]: false,
     });
   };
 
@@ -293,7 +319,7 @@ function GNB() {
   return (
     <SideNav className={cx('gnb')} onClick={onClick} depthGap={0}>
       <SideNav.Menu onClick={onClickTitle}>
-        <Text typo='h3'>UpCast</Text>
+        <Text typo='h3'>UPCast</Text>
       </SideNav.Menu>
       <SideNav.Menu onClick={onClickUI}>
         <Text typo='h3'>UI</Text>

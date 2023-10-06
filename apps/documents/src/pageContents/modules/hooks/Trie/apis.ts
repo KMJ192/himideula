@@ -2,7 +2,7 @@ import { APIs } from '@src/store/pageContents/modulesDocs/state';
 
 const apis: Array<APIs> = [
   {
-    title: 'Props',
+    title: 'Params',
     description: 'useTrie의 Parameter입니다.',
     props: [
       {
@@ -17,6 +17,13 @@ const apis: Array<APIs> = [
         type: 'boolean',
         defaultValue: 'true',
         description: 'Trie 생성 여부',
+        essential: false,
+      },
+      {
+        name: 'caseSensitive',
+        type: 'boolean',
+        defaultValue: 'false',
+        description: '영문 대소문자 구분 여부',
         essential: false,
       },
     ],

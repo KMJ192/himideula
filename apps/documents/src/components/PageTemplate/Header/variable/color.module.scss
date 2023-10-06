@@ -1,0 +1,8 @@
+@import 'src/styles/color/color.module.scss';
+
+$upcast-color-header-bg: var(
+  --upcast-color-header-bg,
+  linear-gradient(165deg, #{$light-primary000}, #{$light-primary300})
+);
+
+$upcast-color-header-text: var(--upcast-color-header-text, $light-text);

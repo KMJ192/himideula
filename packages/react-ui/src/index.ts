@@ -50,6 +50,8 @@ export type {
 } from './components/Tab/types';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
+export { default as Textarea } from './components/Textarea/Textarea';
+export type { TextareaProps } from './components/Textarea/Textarea';
 export {
   DataTable,
   DataTableContainer,
@@ -67,21 +69,37 @@ export type {
   CaptionProps,
   DataTablePaginationProps,
 } from './components/DataTable';
+export {
+  Select,
+  useSelectController,
+  useInputSelectController,
+} from './components/Select';
+export type {
+  SelectProps,
+  SelectBoxProps,
+  SelectInputBoxProps,
+  SelectDropboxProps,
+  SelectOptionProps,
+  SelectOptionKey,
+  SelectOption,
+  InputSelectOption,
+} from './components/Select';
 
 // export { default as HamburgerMenu } from './components/HamburgerMenu/HamburgerMenu';
 // export type { HamburgerMenuProps } from './components/HamburgerMenu/HamburgerMenu';
 
-export { default as Header } from './components/Header/Header';
-export type { HeaderProps } from './components/Header/Header';
-export { default as Footer } from './components/Footer/Footer';
-export type { FooterProps } from './components/Footer/Footer';
-export { SideNav, SideNavTemplate } from './components/SideNav';
-export type {
-  SideNavProps,
-  SideNavMenuProps,
-  SideNavMenuGroupProps,
-  SideNavItem,
-  SideNavKey,
-} from './components/SideNav';
-export { default as PageTemplate } from './components/PageTemplate/PageTemplate';
-export type { PageTemplateProps } from './components/PageTemplate/PageTemplate';
+// 페이지 템플릿 요소
+// export { default as Header } from './components/Header/Header';
+// export type { HeaderProps } from './components/Header/Header';
+// export { default as Footer } from './components/Footer/Footer';
+// export type { FooterProps } from './components/Footer/Footer';
+// export { SideNav, SideNavTemplate } from './components/SideNav';
+// export type {
+//   SideNavProps,
+//   SideNavMenuProps,
+//   SideNavMenuGroupProps,
+//   SideNavItem,
+//   SideNavKey,
+// } from './components/SideNav';
+// export { default as PageTemplate } from './components/PageTemplate/PageTemplate';
+// export type { PageTemplateProps } from './components/PageTemplate/PageTemplate';

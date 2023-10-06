@@ -1,6 +1,6 @@
 @import 'src/styles/color/components/theme.module.scss';
 
-$side-nav-width: 164px;
+$side-nav-width: 196px;
 
 @mixin color-template {
   background: $light-background;
@@ -11,11 +11,14 @@ $side-nav-width: 164px;
   }
 }
 
+.body {
+  @include theme;
+}
+
 .page-template {
   height: 100%;
   min-height: 100%;
   width: 100%;
-  @include theme;
   @include color-template;
   .theme {
     z-index: 999;
@@ -38,18 +41,40 @@ $side-nav-width: 164px;
     }
   }
   .space {
-    --upcast-layout-spacing-gap: 180px;
+    --upcast-layout-spacing-gap: #{calc($side-nav-width + 16px)};
     @include color-template;
   }
   .contents {
     height: 100%;
     width: 100%;
     .header {
-      position: fixed;
-      top: 0;
       --upcast-size-header-min-height: 72px;
       --upcast-size-header-max-height: 72px;
       z-index: 998;
+      .right-contents {
+        position: relative;
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        margin-left: auto;
+        transform: translateX(-32px);
+        --upcast-color-switch-bg: #{$light-primary000};
+        --upcast-color-switch-bg-checked: #{$dark-primary200};
+        --upcast-color-switch-bg-hover: #{$light-blue200};
+        --upcast-color-switch-bg-checked-hover: #{$dark-gray300};
+        .github > svg {
+          fill: $light-text;
+        }
+        .github:hover > svg {
+          fill: #6a6a6a;
+        }
+        .github.dark > svg {
+          fill: $dark-text;
+        }
+        .github.dark:hover > svg {
+          fill: $dark-primary200;
+        }
+      }
     }
     .page {
       padding: 32px;
