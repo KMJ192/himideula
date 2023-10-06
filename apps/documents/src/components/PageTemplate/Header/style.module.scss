@@ -1,0 +1,10 @@
+@import './variable/color.module.scss';
+@import './variable/size.module.scss';
+
+.header {
+  width: inherit;
+  background: $upcast-color-header-bg;
+  color: $upcast-color-header-text;
+  min-height: $upcast-size-header-min-height;
+  max-height: $upcast-size-header-max-height;
+}

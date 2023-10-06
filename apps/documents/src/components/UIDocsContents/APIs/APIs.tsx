@@ -5,6 +5,7 @@ import {
   DataTableContainer,
   Text,
   Flex,
+  Spacing,
 } from '@upcast/react-ui';
 
 import { useUIDocsState } from '@src/store/pageContents/uiDocs/state';
@@ -21,10 +22,11 @@ function APIs() {
   return (
     <Flex className={cx('apis')}>
       {apis.map(({ title, defaultTag, props }, idx) => {
+        const isLast = idx === apis.length - 1;
         return (
           <Fragment key={`${idx}-${title}`}>
             <Flex className={cx('head')}>
-              <Text typo='h3'>{title} 컴포넌트</Text>
+              <Text typo='h3'>{title}</Text>
               {defaultTag && (
                 <Text typo='b2'>
                   기본 태그는{' '}
@@ -33,6 +35,7 @@ function APIs() {
                 </Text>
               )}
             </Flex>
+            <Spacing spacing={16} />
             <DataTableContainer>
               <DataTable>
                 <DataTable.Caption>
@@ -88,6 +91,7 @@ function APIs() {
                 </DataTable.Tbody>
               </DataTable>
             </DataTableContainer>
+            {!isLast && <Spacing spacing={32} />}
           </Fragment>
         );
       })}

@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, CSSProperties } from 'react';
 import { create } from 'zustand';
 
 type Documents = {
@@ -6,6 +6,7 @@ type Documents = {
   description: string;
   view: ReactNode;
   componentString: Array<string>;
+  viewStyle?: CSSProperties;
 };
 
 type APIs = {

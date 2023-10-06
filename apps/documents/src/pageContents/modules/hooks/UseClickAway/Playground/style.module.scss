@@ -1,0 +1,11 @@
+.container {
+  flex-direction: column;
+  cursor: pointer;
+  .area {
+    padding: 32px;
+    .contents {
+      flex-direction: column;
+      row-gap: 8px;
+    }
+  }
+}

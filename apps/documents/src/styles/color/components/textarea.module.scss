@@ -1,0 +1,50 @@
+@import '../color.module.scss';
+
+@mixin textarea-light {
+  --upcast-color-textarea-border: #{$light-primary600};
+  --upcast-color-textarea-border-focus: #{$light-blue500};
+  --upcast-color-textarea-border-error: #{$light-danger};
+  --upcast-color-textarea-border-disabled: #{$light-gray100};
+  --upcast-color-textarea-border-hover: #{$light-blue300};
+
+  --upcast-color-textarea-bg: #{$light-background};
+  --upcast-color-textarea-bg-focus: #{$light-background};
+  --upcast-color-textarea-bg-error: #{$light-background};
+  --upcast-color-textarea-bg-disabled: #{$light-gray000};
+  --upcast-color-textarea-bg-hover: #{$light-background};
+
+  --upcast-color-textarea-text: #{$light-text};
+  --upcast-color-textarea-text-focus: #{$light-text};
+  --upcast-color-textarea-text-error: #{$light-text};
+  --upcast-color-textarea-text-disabled: #{$light-gray200};
+  --upcast-color-textarea-text-hover: #{$light-text};
+
+  --upcast-color-textarea-placeholder: #{$light-gray100};
+  --upcast-color-textarea-placeholder-disabled: #{$light-gray100};
+}
+
+@mixin textarea-dark {
+  --upcast-color-textarea-border: #{$dark-primary300};
+  --upcast-color-textarea-border-focus: #{$dark-blue300};
+  --upcast-color-textarea-border-error: #{$dark-danger};
+  --upcast-color-textarea-border-disabled: #{$dark-primary100};
+  --upcast-color-textarea-border-hover: #{$dark-primary300};
+
+  --upcast-color-textarea-bg: #{$dark-primary100};
+  --upcast-color-textarea-bg-disabled: #{$dark-primary200};
+
+  --upcast-color-textarea-bg: #{$dark-primary100};
+  --upcast-color-textarea-bg-focus: #{$dark-primary100};
+  --upcast-color-textarea-bg-error: #{$dark-primary100};
+  --upcast-color-textarea-bg-disabled: #{$dark-primary200};
+  --upcast-color-textarea-bg-hover: #{$dark-primary100};
+
+  --upcast-color-textarea-text: #{$dark-text};
+  --upcast-color-textarea-text-focus: #{$dark-text};
+  --upcast-color-textarea-text-error: #{$dark-text};
+  --upcast-color-textarea-text-disabled: #{$dark-primary100};
+  --upcast-color-textarea-text-hover: #{$dark-text};
+
+  --upcast-color-textarea-placeholder: #{$dark-primary300};
+  --upcast-color-textarea-placeholder-disabled: #{$dark-primary100};
+}

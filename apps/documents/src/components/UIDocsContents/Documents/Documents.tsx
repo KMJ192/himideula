@@ -12,13 +12,18 @@ function Documents() {
   const { documents } = useUIDocsState();
 
   return documents.map(
-    ({ title, description, view, componentString }, index: number) => {
+    (
+      { title, description, view, viewStyle, componentString },
+      index: number,
+    ) => {
       return (
         <Fragment key={index}>
           <Flex className={cx('container')}>
             <Text typo='h3'>{title}</Text>
             <Text typo='title2'>{description}</Text>
-            <div className={cx('view')}>{view}</div>
+            <div className={cx('view')} style={viewStyle}>
+              {view}
+            </div>
             <CodeGuide header='javascript' code={componentString}></CodeGuide>
           </Flex>
           <Spacing direction='vertical' spacing={48} />
