@@ -8,6 +8,7 @@ import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import { version } from '@src/utils/utils';
 const cx = classNames.bind(style);
 
 function Modules() {
@@ -39,7 +40,7 @@ function Modules() {
       <Spacing direction='vertical' spacing={36} />
       <Link href={URL.useTrie}>
         <Button className={cx('goto')}>
-          <Text typo='t2'>문서 보러 가기 (0.0.1v)</Text>
+          <Text typo='t2'>문서 보러 가기 ({version})</Text>
         </Button>
       </Link>
     </Center>
