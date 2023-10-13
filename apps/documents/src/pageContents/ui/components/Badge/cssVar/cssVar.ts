@@ -4,7 +4,7 @@ import { COLOR } from '@src/styles/color/color';
 
 const cssVar: Array<CSSVar> = [
   {
-    name: '--upcast-color-badge-color',
+    name: '--upcast-color-badge-text',
     type: CSS_VAR_TYPE.COLOR,
     defaultValue: COLOR.LIGHT.primary100,
     description: '문자 색상',
