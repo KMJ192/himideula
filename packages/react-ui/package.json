@@ -1,6 +1,6 @@
 {
   "name": "@upcast/react-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": {
     "name": "MyeongJunKim",
@@ -26,7 +26,7 @@
     "pub": "yarn build && yarn npm publish"
   },
   "dependencies": {
-    "@upcast/react-modules": "^1.0.0",
+    "@upcast/react-modules": "^1.0.1",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
