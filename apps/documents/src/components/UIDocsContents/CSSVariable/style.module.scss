@@ -6,15 +6,15 @@
   .css-var-table {
     .css-type {
       .color {
-        --upcast-color-badge-color: #{$black};
+        --upcast-color-badge-text: #{$black};
         --upcast-color-badge-bg: skyblue;
       }
       .size {
-        --upcast-color-badge-color: #{$white};
+        --upcast-color-badge-text: #{$white};
         --upcast-color-badge-bg: magenta;
       }
       .layout {
-        --upcast-color-badge-color: #{$black};
+        --upcast-color-badge-text: #{$black};
         --upcast-color-badge-bg: coral;
       }
     }

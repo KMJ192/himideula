@@ -18,11 +18,11 @@
   }
   .type {
     &.light {
-      --upcast-color-badge-color: #{$light-text};
+      --upcast-color-badge-text: #{$light-text};
       --upcast-color-badge-bg: #{$light-primary700};
     }
     &.dark {
-      --upcast-color-badge-color: #{$dark-text};
+      --upcast-color-badge-text: #{$dark-text};
       --upcast-color-badge-bg: #{$dark-primary100};
     }
   }
