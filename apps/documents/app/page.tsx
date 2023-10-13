@@ -8,6 +8,7 @@ import { URL } from '@src/utils/url';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import { version } from '@src/utils/utils';
 const cx = classNames.bind(style);
 
 function Home() {
@@ -33,7 +34,7 @@ function Home() {
           <Spacing direction='vertical' spacing={36} />
           <Link href={URL.ui}>
             <Button className={cx('goto-button')}>
-              <Text typo='t2'>UI 보러 가기 (0.0.1v)</Text>
+              <Text typo='t2'>UI 보러 가기 ({version})</Text>
             </Button>
           </Link>
         </Flex>
@@ -50,7 +51,7 @@ function Home() {
           <Spacing direction='vertical' spacing={36} />
           <Link href={URL.modules}>
             <Button className={cx('goto-button')}>
-              <Text typo='t2'>Module 보러 가기 (0.0.1v)</Text>
+              <Text typo='t2'>Module 보러 가기 ({version})</Text>
             </Button>
           </Link>
         </Flex>
