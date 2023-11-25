@@ -61,7 +61,7 @@ function PageTemplate({ children }: Props) {
           <Header className={cx('header')}>
             <Flex className={cx('right-contents')}>
               <Link
-                href='https://github.com/KMJ192/upcast'
+                href='https://github.com/KMJ192/cdkit'
                 target='_blank'
                 className={cx('github', theme)}
               >
