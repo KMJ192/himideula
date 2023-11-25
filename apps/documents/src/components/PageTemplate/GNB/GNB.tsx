@@ -319,7 +319,7 @@ function GNB() {
   return (
     <SideNav className={cx('gnb')} onClick={onClick} depthGap={0}>
       <SideNav.Menu onClick={onClickTitle}>
-        <Text typo='h3'>UPCast</Text>
+        <Text typo='h3'>CDKit</Text>
       </SideNav.Menu>
       <SideNav.Menu onClick={onClickUI}>
         <Text typo='h3'>UI</Text>
