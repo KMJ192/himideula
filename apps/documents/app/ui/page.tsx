@@ -15,10 +15,10 @@ function UIKit() {
   return (
     <Center className={cx('container')}>
       <Spacing direction='vertical' spacing={32} />
-      <h1 className={cx('header')}>UPCast React UI</h1>
+      <h1 className={cx('header')}>CDKit React UI</h1>
       <Spacing direction='vertical' spacing={56} />
       <Text className={cx('description')} as='p' typo='t1'>
-        UPCast UI는 React 애플리케이션에 필요한 디자인 요소를 제공하는 간단한
+        CDKit UI는 React 애플리케이션에 필요한 디자인 요소를 제공하는 간단한
         모듈식 구성요소 라이브러리 입니다.
       </Text>
       <Spacing direction='vertical' spacing={24} />
@@ -27,9 +27,9 @@ function UIKit() {
       <Text typo='t1'>시작하기</Text>
       <Spacing direction='vertical' spacing={24} />
       <Flex className={cx('use-guide')}>
-        <CodeGuide header='use npm' code={['npm install @upcast/react-ui']} />
+        <CodeGuide header='use npm' code={['npm install @cdkit/react-ui']} />
         <Spacing direction='vertical' spacing={24} />
-        <CodeGuide header='use yarn' code={['yarn add @upcast/react-ui']} />
+        <CodeGuide header='use yarn' code={['yarn add @cdkit/react-ui']} />
       </Flex>
       <Spacing direction='vertical' spacing={36} />
       <Link href={URL.button}>
